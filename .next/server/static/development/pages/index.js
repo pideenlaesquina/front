@@ -256,7 +256,7 @@ class Map extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
           userMarker: userMarker,
           storeMarkers: storeMarkers
         });
-      } else {}
+      }
     }
   }
 
@@ -370,14 +370,14 @@ class Map extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 184,
+        lineNumber: 180,
         columnNumber: 7
       }
     }, __jsx(next_head__WEBPACK_IMPORTED_MODULE_2___default.a, {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 185,
+        lineNumber: 181,
         columnNumber: 9
       }
     }, __jsx("script", {
@@ -385,14 +385,14 @@ class Map extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 186,
+        lineNumber: 182,
         columnNumber: 11
       }
     })), __jsx("div", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 188,
+        lineNumber: 184,
         columnNumber: 9
       }
     }, __jsx("div", {
@@ -401,7 +401,7 @@ class Map extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 189,
+        lineNumber: 185,
         columnNumber: 11
       }
     }, __jsx("img", {
@@ -411,21 +411,21 @@ class Map extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 190,
+        lineNumber: 186,
         columnNumber: 13
       }
     })), this.state.map ? __jsx(_components_addressBar_js__WEBPACK_IMPORTED_MODULE_3__["default"], {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 193,
+        lineNumber: 189,
         columnNumber: 14
       }
     }) : "", this.state.map && this.props.stores.length == 0 ? __jsx(_components_noStores_js__WEBPACK_IMPORTED_MODULE_4__["default"], {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 197,
+        lineNumber: 193,
         columnNumber: 14
       }
     }) : ""));
@@ -598,8 +598,8 @@ class App extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     this.position();
   }
 
-  componentDidUpdate() {
-    if (this.state.pos != null) {
+  componentDidUpdate(prevProps, prevState) {
+    if (this.state.pos != null && prevState.pos != this.state.pos) {
       this.getStores(this.state.pos);
     }
   }

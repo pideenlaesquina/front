@@ -14,9 +14,9 @@ class App extends Component {
     this.position()
   }
 
-  componentDidUpdate()
+  componentDidUpdate(prevProps, prevState)
   {
-    if (this.state.pos != null)
+    if (this.state.pos != null && (prevState.pos != this.state.pos))
     {
       this.getStores(this.state.pos)
     }

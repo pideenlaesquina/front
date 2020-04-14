@@ -216,7 +216,7 @@ var Map = /*#__PURE__*/function (_React$Component) {
             userMarker: _userMarker,
             storeMarkers: _storeMarkers
           });
-        } else {}
+        }
       }
     }
   }, {
@@ -337,14 +337,14 @@ var Map = /*#__PURE__*/function (_React$Component) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 184,
+          lineNumber: 180,
           columnNumber: 7
         }
       }, __jsx(next_head__WEBPACK_IMPORTED_MODULE_7___default.a, {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 185,
+          lineNumber: 181,
           columnNumber: 9
         }
       }, __jsx("script", {
@@ -352,14 +352,14 @@ var Map = /*#__PURE__*/function (_React$Component) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 186,
+          lineNumber: 182,
           columnNumber: 11
         }
       })), __jsx("div", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 188,
+          lineNumber: 184,
           columnNumber: 9
         }
       }, __jsx("div", {
@@ -368,7 +368,7 @@ var Map = /*#__PURE__*/function (_React$Component) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 189,
+          lineNumber: 185,
           columnNumber: 11
         }
       }, __jsx("img", {
@@ -378,21 +378,21 @@ var Map = /*#__PURE__*/function (_React$Component) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 190,
+          lineNumber: 186,
           columnNumber: 13
         }
       })), this.state.map ? __jsx(_components_addressBar_js__WEBPACK_IMPORTED_MODULE_8__["default"], {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 193,
+          lineNumber: 189,
           columnNumber: 14
         }
       }) : "", this.state.map && this.props.stores.length == 0 ? __jsx(_components_noStores_js__WEBPACK_IMPORTED_MODULE_9__["default"], {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 197,
+          lineNumber: 193,
           columnNumber: 14
         }
       }) : ""));
@@ -24853,8 +24853,8 @@ var App = /*#__PURE__*/function (_Component) {
     }
   }, {
     key: "componentDidUpdate",
-    value: function componentDidUpdate() {
-      if (this.state.pos != null) {
+    value: function componentDidUpdate(prevProps, prevState) {
+      if (this.state.pos != null && prevState.pos != this.state.pos) {
         this.getStores(this.state.pos);
       }
     }

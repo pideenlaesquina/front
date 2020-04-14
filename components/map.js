@@ -51,10 +51,6 @@ class Map extends React.Component {
           storeMarkers: storeMarkers
         })
       }
-      else
-      {
-
-      }
     }
   }
 
