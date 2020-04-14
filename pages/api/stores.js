@@ -12,12 +12,12 @@ module.exports = async (req, res) => {
     const db = await Database()
 
     // Select the "stores" collection from the database
-    const collection = await db.collection('stores')
+    const collection = await db.collection('stores2')
 
     // Select the stores collection from the database
     const stores = await collection.find({
-      lat: { $gt: querry_lat - 0.02, $lt: querry_lat + 0.02 },
-      lng: { $gt: querry_lng - 0.02, $lt: querry_lng + 0.02 }
+      lat: { $gt: querry_lat - 0.01, $lt: querry_lat + 0.01 },
+      lng: { $gt: querry_lng - 0.01, $lt: querry_lng + 0.01 }
     }).toArray()
 
     // Respond with a JSON string of all stores in the collection

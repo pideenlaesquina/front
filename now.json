@@ -3,7 +3,11 @@
   "env": {
     "MONGODB_URI": "@landing-mongodb-uri",
     "GOOGLE_MAPS_API_KEY": "@landing-google-maps-api",
-    "GOOGLE_MAPS_API_URL": "https://maps.googleapis.com/maps/api/geocode/json"
+    "GOOGLE_MAPS_API_URL": "https://maps.googleapis.com/maps/api/geocode/json",
+    "PUSHER_APP_ID":"@landing-pusher-app-ip",
+    "PUSHER_APP_KEY":"@landing-pusher-app-key",
+    "PUSHER_APP_SECRET":"@landing-pusher-app-secret",
+    "PUSHER_APP_CLUSTER":"@landing-pusher-app-cluster"
   },
   "headers": [
     {
