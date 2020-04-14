@@ -1,26 +1,19 @@
 import Database from '../../middleware/mongodb.js'
 
-// The main, exported, function of the endpoint,
-// dealing with the request and subsequent response
 module.exports = async (req, res) => {
   if (req.query.lat != null && req.query.lng != null) {
-    // Get a database connection, cached or otherwise,
-    // using the connection string environment variable as the argument
     let querry_lat = parseFloat(req.query.lat)
     let querry_lng = parseFloat(req.query.lng)
-    /* hola */
-    const db = await Database()
+    let delta = (req.query.delta != null? req.query.delta : 0.02)
 
-    // Select the "stores" collection from the database
+    const db = await Database()
     const collection = await db.collection('stores2')
 
-    // Select the stores collection from the database
     const stores = await collection.find({
-      lat: { $gt: querry_lat - 0.01, $lt: querry_lat + 0.01 },
-      lng: { $gt: querry_lng - 0.01, $lt: querry_lng + 0.01 }
+      lat: { $gt: querry_lat - delta, $lt: querry_lat + delta },
+      lng: { $gt: querry_lng - delta, $lt: querry_lng + delta }
     }).toArray()
 
-    // Respond with a JSON string of all stores in the collection
     res.status(200).json({ stores })
   }
   else {

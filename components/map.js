@@ -177,7 +177,7 @@ class Map extends React.Component {
     }
 
     let google_url = process.env.GOOGLE_MAPS_API_URL + "/js?key="+process.env.GOOGLE_MAPS_API_KEY
-    
+
     return (
       <div>
         <Head>
