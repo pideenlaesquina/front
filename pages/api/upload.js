@@ -22,7 +22,7 @@ module.exports = async (req, res) => {
     const store = await collection.findOne({name: element.name })
     if(!store)
     {
-        let url = "https://maps.googleapis.com/maps/api/geocode/json?latlng="+element.lat+","+element.lng+"&key="+process.env.GOOGLE_MAPS_API_KEY
+        let url = process.env.GOOGLE_MAPS_API_URL + "/geocode/json?latlng="+element.lat+","+element.lng+"&key="+process.env.GOOGLE_MAPS_API_KEY
 
         let res = await fetch(url)
         let jres = await res.json()

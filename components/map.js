@@ -175,11 +175,13 @@ class Map extends React.Component {
       marginLeft:"auto",
       marginRight: "auto"
     }
+
+    let google_url = process.env.GOOGLE_MAPS_API_URL + "/js?key="+process.env.GOOGLE_MAPS_API_KEY
     
     return (
       <div>
         <Head>
-          <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBt0ZCE1kAklBJiBnCYGX6kl0tglLcKlLI"></script>
+          <script src= {google_url}></script>
         </Head>
         <div>
           <div id="map" style={customStyle}>

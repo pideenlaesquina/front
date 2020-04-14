@@ -30,8 +30,8 @@ class App extends Component {
       }}), 
       err => async function()
       {
-        let ip = await fetch('https://api.ipify.org').then(response=>response.text())
-        let pos = await fetch('https://api.ipgeolocation.io/ipgeo?apiKey=02ff42e6f29c453e8d60df6139f5f9ed&ip='+ip).then(response=>response.json())
+        let ip = await fetch(process.env.IPIFY_URL).then(response=>response.text())
+        let pos = await fetch(process.env.IPGEOLOCATION_API_URL +'/ipgeo?apiKey='+process.env.IPGEOLOCATION_API_KEY+'&ip='+ip).then(response=>response.json())
     
         this.setState({ pos:{lat:parseFloat(pos.latitude), lng:parseFloat(pos.longitude)}, stores:null})
       }

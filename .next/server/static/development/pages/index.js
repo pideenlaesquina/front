@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -366,33 +366,34 @@ class Map extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       marginLeft: "auto",
       marginRight: "auto"
     };
+    let google_url = process.env.GOOGLE_MAPS_API_URL + "/js?key=" + process.env.GOOGLE_MAPS_API_KEY;
     return __jsx("div", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 180,
+        lineNumber: 182,
         columnNumber: 7
       }
     }, __jsx(next_head__WEBPACK_IMPORTED_MODULE_2___default.a, {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 181,
+        lineNumber: 183,
         columnNumber: 9
       }
     }, __jsx("script", {
-      src: "https://maps.googleapis.com/maps/api/js?key=AIzaSyBt0ZCE1kAklBJiBnCYGX6kl0tglLcKlLI",
+      src: google_url,
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 182,
+        lineNumber: 184,
         columnNumber: 11
       }
     })), __jsx("div", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 184,
+        lineNumber: 186,
         columnNumber: 9
       }
     }, __jsx("div", {
@@ -401,7 +402,7 @@ class Map extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 185,
+        lineNumber: 187,
         columnNumber: 11
       }
     }, __jsx("img", {
@@ -411,21 +412,21 @@ class Map extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 186,
+        lineNumber: 188,
         columnNumber: 13
       }
     })), this.state.map ? __jsx(_components_addressBar_js__WEBPACK_IMPORTED_MODULE_3__["default"], {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 189,
+        lineNumber: 191,
         columnNumber: 14
       }
     }) : "", this.state.map && this.props.stores.length == 0 ? __jsx(_components_noStores_js__WEBPACK_IMPORTED_MODULE_4__["default"], {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 193,
+        lineNumber: 195,
         columnNumber: 14
       }
     }) : ""));
@@ -576,8 +577,8 @@ class App extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
           lng: position.coords.longitude
         }
       }), err => async function () {
-        let ip = await fetch('https://api.ipify.org').then(response => response.text());
-        let pos = await fetch('https://api.ipgeolocation.io/ipgeo?apiKey=02ff42e6f29c453e8d60df6139f5f9ed&ip=' + ip).then(response => response.json());
+        let ip = await fetch(process.env.IPIFY_URL).then(response => response.text());
+        let pos = await fetch(process.env.IPGEOLOCATION_API_URL + '/ipgeo?apiKey=' + process.env.IPGEOLOCATION_API_KEY + '&ip=' + ip).then(response => response.json());
         this.setState({
           pos: {
             lat: parseFloat(pos.latitude),
@@ -638,7 +639,7 @@ class App extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 
 /***/ }),
 
-/***/ 3:
+/***/ 4:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/

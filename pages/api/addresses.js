@@ -21,7 +21,7 @@ module.exports = async (req, res) => {
     if(googlemaps_address!=null && googlemaps_address!="")
     {
       
-      let url = process.env.GOOGLE_MAPS_API_URL + "?address="+googlemaps_address+"&key="+process.env.GOOGLE_MAPS_API_KEY
+      let url = process.env.GOOGLE_MAPS_API_URL + "/geocode/json?address="+googlemaps_address+"&key="+process.env.GOOGLE_MAPS_API_KEY
       let res = await fetch(url)
       let jres = await res.json()
 
