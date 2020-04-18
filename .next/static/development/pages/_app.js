@@ -1,5 +1,225 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/_app.js"],{
 
+/***/ "./node_modules/@babel/runtime/helpers/esm/extends.js":
+/*!************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/extends.js ***!
+  \************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _extends; });
+function _extends() {
+  _extends = Object.assign || function (target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
+
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+
+    return target;
+  };
+
+  return _extends.apply(this, arguments);
+}
+
+/***/ }),
+
+/***/ "./node_modules/@brainhubeu/react-carousel/lib/style.css":
+/*!***************************************************************!*\
+  !*** ./node_modules/@brainhubeu/react-carousel/lib/style.css ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var content = __webpack_require__(/*! !../../../css-loader/dist/cjs.js??ref--5-oneOf-5-1!../../../next/dist/compiled/postcss-loader??__nextjs_postcss!./style.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/next/dist/compiled/postcss-loader/index.js?!./node_modules/@brainhubeu/react-carousel/lib/style.css");
+
+if (typeof content === 'string') {
+  content = [[module.i, content, '']];
+}
+
+var options = {}
+
+options.insert = function(element){// These elements should always exist. If they do not,
+// this code should fail.
+var anchorElement=document.querySelector('#__next_css__DO_NOT_USE__');var parentNode=anchorElement.parentNode;// Normally <head>
+// Each style tag should be placed right before our
+// anchor. By inserting before and not after, we do not
+// need to track the last inserted element.
+parentNode.insertBefore(element,anchorElement)// Remember: this is development only code.
+//
+// After styles are injected, we need to remove the
+// <style> tags that set `body { display: none; }`.
+//
+// We use `requestAnimationFrame` as a way to defer
+// this operation since there may be multiple style
+// tags.
+;(self.requestAnimationFrame||setTimeout)(function(){for(var x=document.querySelectorAll('[data-next-hide-fouc]'),i=x.length;i--;){x[i].parentNode.removeChild(x[i]);}});};
+options.singleton = false;
+
+var update = __webpack_require__(/*! ../../../style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js")(content, options);
+
+if (content.locals) {
+  module.exports = content.locals;
+}
+
+if (true) {
+  if (!content.locals) {
+    module.hot.accept(
+      /*! !../../../css-loader/dist/cjs.js??ref--5-oneOf-5-1!../../../next/dist/compiled/postcss-loader??__nextjs_postcss!./style.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/next/dist/compiled/postcss-loader/index.js?!./node_modules/@brainhubeu/react-carousel/lib/style.css",
+      function () {
+        var newContent = __webpack_require__(/*! !../../../css-loader/dist/cjs.js??ref--5-oneOf-5-1!../../../next/dist/compiled/postcss-loader??__nextjs_postcss!./style.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/next/dist/compiled/postcss-loader/index.js?!./node_modules/@brainhubeu/react-carousel/lib/style.css");
+
+        if (typeof newContent === 'string') {
+          newContent = [[module.i, newContent, '']];
+        }
+        
+        update(newContent);
+      }
+    )
+  }
+
+  module.hot.dispose(function() { 
+    update();
+  });
+}
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/next/dist/compiled/postcss-loader/index.js?!./node_modules/@brainhubeu/react-carousel/lib/style.css":
+/*!******************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ref--5-oneOf-5-1!./node_modules/next/dist/compiled/postcss-loader??__nextjs_postcss!./node_modules/@brainhubeu/react-carousel/lib/style.css ***!
+  \******************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(true);
+// Module
+exports.push([module.i, ".BrainhubCarouselItem{display:flex;justify-content:center;align-items:center;position:relative}.BrainhubCarouselItem.BrainhubCarouselItem--clickable{cursor:pointer}.BrainhubCarouselItem .debug-number{position:absolute;top:0;bottom:0;left:0;right:0;display:flex;justify-content:center;font-size:2em;text-shadow:0px 0px 9px white}\n.BrainhubCarousel{overflow:hidden;display:flex;align-items:center}.BrainhubCarousel.BrainhubCarousel--isRTL{direction:rtl}.BrainhubCarousel.BrainhubCarousel--isRTL .BrainhubCarousel__trackContainer .BrainhubCarousel__track{direction:rtl}.BrainhubCarousel .BrainhubCarousel__trackContainer{overflow:hidden}.BrainhubCarousel .BrainhubCarousel__trackContainer .BrainhubCarousel__track{display:flex;overflow:hidden;list-style:none;margin:0;padding:0}.BrainhubCarousel .BrainhubCarousel__trackContainer .BrainhubCarousel__track.BrainhubCarousel__track--transition{transition:transform}.BrainhubCarousel__arrows{cursor:pointer}\n.BrainhubCarousel__dots{display:flex;justify-content:center;list-style:none;margin:0;padding:0;font-size:0;line-height:0}.BrainhubCarousel__dots.BrainhubCarousel__dots--isRTL{direction:rtl}.BrainhubCarousel__dots .BrainhubCarousel__dot{outline:0;padding:10px;border:none;opacity:0.5;cursor:pointer;-webkit-appearance:none}.BrainhubCarousel__dots .BrainhubCarousel__dot.BrainhubCarousel__dot--selected{opacity:1 !important}.BrainhubCarousel__dots .BrainhubCarousel__dot:hover{opacity:1}.BrainhubCarousel__dots .BrainhubCarousel__dot:before{content:'';display:block;width:5px;height:5px;border-radius:50%;padding:0;border:none;background:#000}.BrainhubCarousel__dots .BrainhubCarousel__thumbnail{outline:0;padding:10px;border:none;opacity:0.5;cursor:pointer}.BrainhubCarousel__dots .BrainhubCarousel__thumbnail.BrainhubCarousel__thumbnail--selected{opacity:1 !important}.BrainhubCarousel__dots .BrainhubCarousel__thumbnail:hover{opacity:1}.BrainhubCarousel__thumbnail[type=button]{-webkit-appearance:none}.BrainhubCarousel--isRTL+.BrainhubCarousel__dots{direction:rtl}\n.BrainhubCarousel__arrows{position:relative;padding:21px;border:none;overflow:hidden;outline:0;font-size:0;line-height:0;background-color:#7b59ff}.BrainhubCarousel__arrows span{display:block;position:absolute;top:50%;left:50%;border-style:solid;border-color:#fff;border-width:3px 3px 0 0;padding:5px;transition:0.3s;font-size:0}.BrainhubCarousel__arrows:hover{background-color:#8768ff}.BrainhubCarousel__arrows:hover span{display:block;position:absolute;top:50%;left:50%;border-style:solid;border-color:#fff;border-width:3px 3px 0 0;padding:5px;transition:0.3s;font-size:0}.BrainhubCarousel__arrows:hover:enabled{background-color:#8768ff}.BrainhubCarousel__arrows:hover:enabled span{border-color:#fff;margin:0}.BrainhubCarousel__arrows:disabled{background-color:#ccc}.BrainhubCarousel__arrowLeft span{transform:translate(-50%, -50%) rotate(-135deg);margin-left:2.45px}.BrainhubCarousel__arrowRight span{transform:translate(-50%, -50%) rotate(45deg);margin-left:-2.45px}.BrainhubCarousel--isRTL .BrainhubCarousel__arrowLeft span{transform:translate(-50%, -50%) rotate(45deg);margin-left:-2.45px}.BrainhubCarousel--isRTL .BrainhubCarousel__custom-arrowLeft span{transform:rotate(180deg)}.BrainhubCarousel--isRTL .BrainhubCarousel__arrowRight span{transform:translate(-50%, -50%) rotate(-135deg);margin-left:2.45px}.BrainhubCarousel--isRTL .BrainhubCarousel__custom-arrowRight span{transform:rotate(-180deg)}.BrainhubCarousel--isRTL .BrainhubCarousel__arrows:hover span{margin:0}.BrainhubCarousel__arrow--disable{pointer-events:none}\n\n/*# sourceMappingURL=style.css.map*/", "",{"version":3,"sources":["/home/crmock/pideenlaequina/front/webpack:/react-carousel/src/styles/CarouselItem.scss","/home/crmock/pideenlaequina/front/webpack:/react-carousel/src/styles/Carousel.scss","/home/crmock/pideenlaequina/front/webpack:/react-carousel/src/styles/CarouselDots.scss","/home/crmock/pideenlaequina/front/webpack:/react-carousel/src/styles/Arrows.scss","/home/crmock/pideenlaequina/front/node_modules/@brainhubeu/react-carousel/lib/style.css"],"names":[],"mappings":"AAAA,sBACE,YAAa,CACb,sBAAuB,CACvB,kBAAmB,CACnB,iBAAkB,CAJpB,sDAMI,cAAe,CANnB,oCAYI,iBAAkB,CAClB,KAAM,CACN,QAAS,CACT,MAAO,CACP,OAAQ,CACR,YAAa,CACb,sBAAuB,CACvB,aAAc,CACd,6BAA8B;ACpBlC,kBACE,eAAgB,CAChB,YAAa,CACb,kBAAmB,CAHrB,0CAMI,aAAc,CANlB,qGAUQ,aAAc,CAVtB,oDAgBI,eAAgB,CAhBpB,6EAkBM,YAAa,CACb,eAAgB,CAChB,eAAgB,CAChB,QAAS,CACT,SAAU,CAtBhB,iHAyBQ,oBAAqB,CACtB,0BAOL,cAAe;AC9BjB,wBACE,YAAa,CACb,sBAAuB,CACvB,eAAgB,CAChB,QAAS,CACT,SAAU,CACV,WAAY,CACZ,aAAc,CAPhB,sDAUI,aAAc,CAVlB,+CAcI,SAAU,CACV,YAAa,CACb,WAAY,CACZ,WAAY,CACZ,cAAe,CACf,uBAAwB,CAnB5B,+EAsBM,oBAAqB,CAtB3B,qDA0BM,SAAU,CA1BhB,sDA8BM,UAAW,CACX,aAAc,CACd,SAAU,CACV,UAAW,CACX,iBAAkB,CAClB,SAAU,CACV,WAAY,CACZ,eAvCY,CAElB,qDA0CI,SAAU,CACV,YAAa,CACb,WAAY,CACZ,WAAY,CACZ,cAAe,CA9CnB,2FAiDM,oBAAqB,CAjD3B,2DAqDM,SAAU,CACX,0CAKH,uBAAwB,CACzB,iDAIG,aAAc;ACzDlB,0BACE,iBAAkB,CAClB,YAA6B,CAC7B,WAAY,CACZ,eAAgB,CAChB,SAAU,CACV,WAAY,CACZ,aAAc,CACd,wBAjB0B,CAS5B,+BAWI,aAAc,CACd,iBAAkB,CAClB,OAAQ,CACR,QAAS,CACT,kBAAmB,CACnB,iBArBa,CAsBb,wBAA2C,CAC3C,WAAqB,CACrB,eAAgB,CAChB,WAAY,CApBhB,gCAwBI,wBAhC4C,CAQhD,qCA0BQ,aAAc,CACd,iBAAkB,CAClB,OAAQ,CACR,QAAS,CACT,kBAAmB,CACnB,iBApCS,CAqCT,wBAA2C,CAC3C,WAAqB,CACrB,eAAgB,CAChB,WAAY,CAnCpB,wCAuCQ,wBA/CwC,CAQhD,6CAyCY,iBA7CY,CA8CZ,QAAS,CA1CrB,mCAgDI,qBAvDyB,CAwD1B,kCAKC,+CAAgD,CAChD,kBAA+C,CAChD,mCAKC,6CAA8C,CAC9C,mBAAgD,CACjD,2DAMG,6CAA8C,CAC9C,mBAAgD,CAJtD,kEAUM,wBAAyB,CAV/B,4DAgBM,+CAAgD,CAChD,kBAA+C,CAjBrD,mEAuBM,yBAA0B,CAvBhC,8DA8BQ,QAAS,CACV,kCAMH,mBAAoB;;AC5GxB,mCAAmC","file":"style.css","sourcesContent":[".BrainhubCarouselItem {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  position: relative;\n  &.BrainhubCarouselItem--clickable {\n    cursor: pointer;\n  }\n  &.BrainhubCarouselItem--active {\n\n  }\n  .debug-number {\n    position: absolute;\n    top: 0;\n    bottom: 0;\n    left: 0;\n    right: 0;\n    display: flex;\n    justify-content: center;\n    font-size: 2em;\n    text-shadow: 0px 0px 9px white;\n  }\n}\n",".BrainhubCarousel {\n  overflow: hidden;\n  display: flex;\n  align-items: center;\n\n  &.BrainhubCarousel--isRTL {\n    direction: rtl;\n\n    .BrainhubCarousel__trackContainer {\n      .BrainhubCarousel__track {\n        direction: rtl;\n      }\n    }\n  }\n\n  .BrainhubCarousel__trackContainer {\n    overflow: hidden;\n    .BrainhubCarousel__track {\n      display: flex;\n      overflow: hidden;\n      list-style: none;\n      margin: 0;\n      padding: 0;\n\n      &.BrainhubCarousel__track--transition {\n        transition: transform;\n      }\n    }\n  }\n}\n\n/* arrows */\n.BrainhubCarousel__arrows {\n  cursor: pointer;\n}\n","/* variables */\n$dots-color: black;\n\n.BrainhubCarousel__dots {\n  display: flex;\n  justify-content: center;\n  list-style: none;\n  margin: 0;\n  padding: 0;\n  font-size: 0;\n  line-height: 0;\n\n  &.BrainhubCarousel__dots--isRTL {\n    direction: rtl;\n  }\n\n  .BrainhubCarousel__dot {\n    outline: 0;\n    padding: 10px;\n    border: none;\n    opacity: 0.5;\n    cursor: pointer;\n    -webkit-appearance: none;\n\n    &.BrainhubCarousel__dot--selected {\n      opacity: 1 !important;\n    }\n\n    &:hover {\n      opacity: 1;\n    }\n\n    &:before {\n      content: '';\n      display: block;\n      width: 5px;\n      height: 5px;\n      border-radius: 50%;\n      padding: 0;\n      border: none;\n      background: $dots-color;\n    }\n  }\n\n  .BrainhubCarousel__thumbnail {\n    outline: 0;\n    padding: 10px;\n    border: none;\n    opacity: 0.5;\n    cursor: pointer;\n\n    &.BrainhubCarousel__thumbnail--selected {\n      opacity: 1 !important;\n    }\n\n    &:hover {\n      opacity: 1;\n    }\n  }\n}\n\n.BrainhubCarousel__thumbnail[type=button] {\n  -webkit-appearance: none;\n}\n\n.BrainhubCarousel--isRTL {\n  + .BrainhubCarousel__dots {\n    direction: rtl;\n  }\n}\n","$clickableAreaSize: 42px;\n$clickableAreaColor: #7b59ff;\n$clickableAreaColor__hover: lighten(#7b59ff, 3%);\n$disabledButtonColor: #cccccc;\n\n$arrowColor: #fff;\n$arrowColor__hover: #fff;\n$arrowSize: 10px;\n$arrowWeight: 3px;\n\n.BrainhubCarousel__arrows {\n  position: relative;\n  padding: $clickableAreaSize/2;\n  border: none;\n  overflow: hidden;\n  outline: 0;\n  font-size: 0;\n  line-height: 0;\n  background-color: $clickableAreaColor;\n\n  span {\n    display: block;\n    position: absolute;\n    top: 50%;\n    left: 50%;\n    border-style: solid;\n    border-color: $arrowColor;\n    border-width: $arrowWeight $arrowWeight 0 0;\n    padding: $arrowSize/2;\n    transition: 0.3s;\n    font-size: 0;\n  }\n\n  &:hover {\n    background-color: $clickableAreaColor__hover;\n    span {\n        display: block;\n        position: absolute;\n        top: 50%;\n        left: 50%;\n        border-style: solid;\n        border-color: $arrowColor;\n        border-width: $arrowWeight $arrowWeight 0 0;\n        padding: $arrowSize/2;\n        transition: 0.3s;\n        font-size: 0;\n    }\n\n    &:enabled {\n        background-color: $clickableAreaColor__hover;\n        span {\n            border-color: $arrowColor__hover;\n            margin: 0;\n        }\n    }\n  }\n  \n  &:disabled {\n    background-color: $disabledButtonColor;\n  }\n}\n\n.BrainhubCarousel__arrowLeft {\n  span {\n    transform: translate(-50%, -50%) rotate(-135deg);\n    margin-left: 0.35 * ($arrowSize - $arrowWeight);\n  }\n}\n\n.BrainhubCarousel__arrowRight {\n  span {\n    transform: translate(-50%, -50%) rotate(45deg);\n    margin-left: -0.35 * ($arrowSize - $arrowWeight);\n  }\n}\n\n.BrainhubCarousel--isRTL {\n  .BrainhubCarousel__arrowLeft {\n    span {\n      transform: translate(-50%, -50%) rotate(45deg);\n      margin-left: -0.35 * ($arrowSize - $arrowWeight);\n    }\n  }\n\n  .BrainhubCarousel__custom-arrowLeft {\n    span {\n      transform: rotate(180deg);\n    }\n  }\n\n  .BrainhubCarousel__arrowRight {\n    span {\n      transform: translate(-50%, -50%) rotate(-135deg);\n      margin-left: 0.35 * ($arrowSize - $arrowWeight);\n    }\n  }\n\n  .BrainhubCarousel__custom-arrowRight {\n    span {\n      transform: rotate(-180deg);\n    }\n  }\n\n  .BrainhubCarousel__arrows {\n    &:hover {\n      span {\n        margin: 0;\n      }\n    }\n  }\n}\n\n.BrainhubCarousel__arrow--disable {\n    pointer-events: none;\n}\n\n",".BrainhubCarouselItem{display:flex;justify-content:center;align-items:center;position:relative}.BrainhubCarouselItem.BrainhubCarouselItem--clickable{cursor:pointer}.BrainhubCarouselItem .debug-number{position:absolute;top:0;bottom:0;left:0;right:0;display:flex;justify-content:center;font-size:2em;text-shadow:0px 0px 9px white}\n.BrainhubCarousel{overflow:hidden;display:flex;align-items:center}.BrainhubCarousel.BrainhubCarousel--isRTL{direction:rtl}.BrainhubCarousel.BrainhubCarousel--isRTL .BrainhubCarousel__trackContainer .BrainhubCarousel__track{direction:rtl}.BrainhubCarousel .BrainhubCarousel__trackContainer{overflow:hidden}.BrainhubCarousel .BrainhubCarousel__trackContainer .BrainhubCarousel__track{display:flex;overflow:hidden;list-style:none;margin:0;padding:0}.BrainhubCarousel .BrainhubCarousel__trackContainer .BrainhubCarousel__track.BrainhubCarousel__track--transition{transition:transform}.BrainhubCarousel__arrows{cursor:pointer}\n.BrainhubCarousel__dots{display:flex;justify-content:center;list-style:none;margin:0;padding:0;font-size:0;line-height:0}.BrainhubCarousel__dots.BrainhubCarousel__dots--isRTL{direction:rtl}.BrainhubCarousel__dots .BrainhubCarousel__dot{outline:0;padding:10px;border:none;opacity:0.5;cursor:pointer;-webkit-appearance:none}.BrainhubCarousel__dots .BrainhubCarousel__dot.BrainhubCarousel__dot--selected{opacity:1 !important}.BrainhubCarousel__dots .BrainhubCarousel__dot:hover{opacity:1}.BrainhubCarousel__dots .BrainhubCarousel__dot:before{content:'';display:block;width:5px;height:5px;border-radius:50%;padding:0;border:none;background:#000}.BrainhubCarousel__dots .BrainhubCarousel__thumbnail{outline:0;padding:10px;border:none;opacity:0.5;cursor:pointer}.BrainhubCarousel__dots .BrainhubCarousel__thumbnail.BrainhubCarousel__thumbnail--selected{opacity:1 !important}.BrainhubCarousel__dots .BrainhubCarousel__thumbnail:hover{opacity:1}.BrainhubCarousel__thumbnail[type=button]{-webkit-appearance:none}.BrainhubCarousel--isRTL+.BrainhubCarousel__dots{direction:rtl}\n.BrainhubCarousel__arrows{position:relative;padding:21px;border:none;overflow:hidden;outline:0;font-size:0;line-height:0;background-color:#7b59ff}.BrainhubCarousel__arrows span{display:block;position:absolute;top:50%;left:50%;border-style:solid;border-color:#fff;border-width:3px 3px 0 0;padding:5px;transition:0.3s;font-size:0}.BrainhubCarousel__arrows:hover{background-color:#8768ff}.BrainhubCarousel__arrows:hover span{display:block;position:absolute;top:50%;left:50%;border-style:solid;border-color:#fff;border-width:3px 3px 0 0;padding:5px;transition:0.3s;font-size:0}.BrainhubCarousel__arrows:hover:enabled{background-color:#8768ff}.BrainhubCarousel__arrows:hover:enabled span{border-color:#fff;margin:0}.BrainhubCarousel__arrows:disabled{background-color:#ccc}.BrainhubCarousel__arrowLeft span{transform:translate(-50%, -50%) rotate(-135deg);margin-left:2.45px}.BrainhubCarousel__arrowRight span{transform:translate(-50%, -50%) rotate(45deg);margin-left:-2.45px}.BrainhubCarousel--isRTL .BrainhubCarousel__arrowLeft span{transform:translate(-50%, -50%) rotate(45deg);margin-left:-2.45px}.BrainhubCarousel--isRTL .BrainhubCarousel__custom-arrowLeft span{transform:rotate(180deg)}.BrainhubCarousel--isRTL .BrainhubCarousel__arrowRight span{transform:translate(-50%, -50%) rotate(-135deg);margin-left:2.45px}.BrainhubCarousel--isRTL .BrainhubCarousel__custom-arrowRight span{transform:rotate(-180deg)}.BrainhubCarousel--isRTL .BrainhubCarousel__arrows:hover span{margin:0}.BrainhubCarousel__arrow--disable{pointer-events:none}\n\n/*# sourceMappingURL=style.css.map*/"]}]);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/next/dist/compiled/postcss-loader/index.js?!./styles.css":
+/*!***********************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ref--5-oneOf-5-1!./node_modules/next/dist/compiled/postcss-loader??__nextjs_postcss!./styles.css ***!
+  \***********************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ./node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(true);
+// Module
+exports.push([module.i, "body {\n    font-family: 'SF Pro Text', 'SF Pro Icons', 'Helvetica Neue', 'Helvetica',\n      'Arial', sans-serif;\n    padding: 0;\n    margin: 0;\n}", "",{"version":3,"sources":["/home/crmock/pideenlaequina/front/styles.css"],"names":[],"mappings":"AAAA;IACI;yBACqB;IACrB,UAAU;IACV,SAAS;AACb","file":"styles.css","sourcesContent":["body {\n    font-family: 'SF Pro Text', 'SF Pro Icons', 'Helvetica Neue', 'Helvetica',\n      'Arial', sans-serif;\n    padding: 0;\n    margin: 0;\n}"]}]);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/runtime/api.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/css-loader/dist/runtime/api.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+/*
+  MIT License http://www.opensource.org/licenses/mit-license.php
+  Author Tobias Koppers @sokra
+*/
+// css base code, injected by the css-loader
+// eslint-disable-next-line func-names
+module.exports = function (useSourceMap) {
+  var list = []; // return the list of modules as css string
+
+  list.toString = function toString() {
+    return this.map(function (item) {
+      var content = cssWithMappingToString(item, useSourceMap);
+
+      if (item[2]) {
+        return "@media ".concat(item[2], "{").concat(content, "}");
+      }
+
+      return content;
+    }).join('');
+  }; // import a list of modules into the list
+  // eslint-disable-next-line func-names
+
+
+  list.i = function (modules, mediaQuery) {
+    if (typeof modules === 'string') {
+      // eslint-disable-next-line no-param-reassign
+      modules = [[null, modules, '']];
+    }
+
+    var alreadyImportedModules = {};
+
+    for (var i = 0; i < this.length; i++) {
+      // eslint-disable-next-line prefer-destructuring
+      var id = this[i][0];
+
+      if (id != null) {
+        alreadyImportedModules[id] = true;
+      }
+    }
+
+    for (var _i = 0; _i < modules.length; _i++) {
+      var item = modules[_i]; // skip already imported module
+      // this implementation is not 100% perfect for weird media query combinations
+      // when a module is imported multiple times with different media queries.
+      // I hope this will never occur (Hey this way we have smaller bundles)
+
+      if (item[0] == null || !alreadyImportedModules[item[0]]) {
+        if (mediaQuery && !item[2]) {
+          item[2] = mediaQuery;
+        } else if (mediaQuery) {
+          item[2] = "(".concat(item[2], ") and (").concat(mediaQuery, ")");
+        }
+
+        list.push(item);
+      }
+    }
+  };
+
+  return list;
+};
+
+function cssWithMappingToString(item, useSourceMap) {
+  var content = item[1] || ''; // eslint-disable-next-line prefer-destructuring
+
+  var cssMapping = item[3];
+
+  if (!cssMapping) {
+    return content;
+  }
+
+  if (useSourceMap && typeof btoa === 'function') {
+    var sourceMapping = toComment(cssMapping);
+    var sourceURLs = cssMapping.sources.map(function (source) {
+      return "/*# sourceURL=".concat(cssMapping.sourceRoot).concat(source, " */");
+    });
+    return [content].concat(sourceURLs).concat([sourceMapping]).join('\n');
+  }
+
+  return [content].join('\n');
+} // Adapted from convert-source-map (MIT)
+
+
+function toComment(sourceMap) {
+  // eslint-disable-next-line no-undef
+  var base64 = btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap))));
+  var data = "sourceMappingURL=data:application/json;charset=utf-8;base64,".concat(base64);
+  return "/*# ".concat(data, " */");
+}
+
+/***/ }),
+
 /***/ "./node_modules/native-url/dist/index.js":
 /*!***********************************************!*\
   !*** ./node_modules/native-url/dist/index.js ***!
@@ -13,20 +233,20 @@ var e,t=(e=__webpack_require__(/*! querystring */ "./node_modules/querystring-es
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F_app&absolutePagePath=next%2Fdist%2Fpages%2F_app!./":
-/*!*******************************************************************************************************************************************!*\
-  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F_app&absolutePagePath=next%2Fdist%2Fpages%2F_app ***!
-  \*******************************************************************************************************************************************/
+/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F_app&absolutePagePath=private-next-pages%2F_app.js!./":
+/*!*********************************************************************************************************************************************!*\
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F_app&absolutePagePath=private-next-pages%2F_app.js ***!
+  \*********************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 
     (window.__NEXT_P=window.__NEXT_P||[]).push(["/_app", function() {
-      var mod = __webpack_require__(/*! next/dist/pages/_app */ "./node_modules/next/dist/pages/_app.js")
+      var mod = __webpack_require__(/*! private-next-pages/_app.js */ "./pages/_app.js")
       if(true) {
-        module.hot.accept(/*! next/dist/pages/_app */ "./node_modules/next/dist/pages/_app.js", function() {
+        module.hot.accept(/*! private-next-pages/_app.js */ "./pages/_app.js", function() {
           if(!next.router.components["/_app"]) return
-          var updatedPage = __webpack_require__(/*! next/dist/pages/_app */ "./node_modules/next/dist/pages/_app.js")
+          var updatedPage = __webpack_require__(/*! private-next-pages/_app.js */ "./pages/_app.js")
           next.router.update("/_app", updatedPage)
         })
       }
@@ -1429,183 +1649,6 @@ exports.ST = exports.SP && typeof performance.mark === 'function' && typeof perf
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/pages/_app.js":
-/*!**********************************************!*\
-  !*** ./node_modules/next/dist/pages/_app.js ***!
-  \**********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _classCallCheck = __webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/next/node_modules/@babel/runtime/helpers/classCallCheck.js");
-
-var _createClass = __webpack_require__(/*! @babel/runtime/helpers/createClass */ "./node_modules/next/node_modules/@babel/runtime/helpers/createClass.js");
-
-var _possibleConstructorReturn = __webpack_require__(/*! @babel/runtime/helpers/possibleConstructorReturn */ "./node_modules/next/node_modules/@babel/runtime/helpers/possibleConstructorReturn.js");
-
-var _getPrototypeOf = __webpack_require__(/*! @babel/runtime/helpers/getPrototypeOf */ "./node_modules/next/node_modules/@babel/runtime/helpers/getPrototypeOf.js");
-
-var _inherits = __webpack_require__(/*! @babel/runtime/helpers/inherits */ "./node_modules/next/node_modules/@babel/runtime/helpers/inherits.js");
-
-var _regeneratorRuntime = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/next/node_modules/@babel/runtime/regenerator/index.js");
-
-function _createSuper(Derived) { return function () { var Super = _getPrototypeOf(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/next/node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-
-exports.__esModule = true;
-exports.Container = Container;
-exports.createUrl = createUrl;
-exports["default"] = void 0;
-
-var _react = _interopRequireDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
-
-var _utils = __webpack_require__(/*! ../next-server/lib/utils */ "./node_modules/next/dist/next-server/lib/utils.js");
-
-exports.AppInitialProps = _utils.AppInitialProps;
-/**
-* `App` component is used for initialize of pages. It allows for overwriting and full control of the `page` initialization.
-* This allows for keeping state between navigation, custom error handling, injecting additional data.
-*/
-
-function appGetInitialProps(_ref) {
-  var Component, ctx, pageProps;
-  return _regeneratorRuntime.async(function appGetInitialProps$(_context) {
-    while (1) {
-      switch (_context.prev = _context.next) {
-        case 0:
-          Component = _ref.Component, ctx = _ref.ctx;
-          _context.next = 3;
-          return _regeneratorRuntime.awrap((0, _utils.loadGetInitialProps)(Component, ctx));
-
-        case 3:
-          pageProps = _context.sent;
-          return _context.abrupt("return", {
-            pageProps: pageProps
-          });
-
-        case 5:
-        case "end":
-          return _context.stop();
-      }
-    }
-  }, null, null, null, Promise);
-}
-
-var App = /*#__PURE__*/function (_react$default$Compon) {
-  _inherits(App, _react$default$Compon);
-
-  var _super = _createSuper(App);
-
-  function App() {
-    _classCallCheck(this, App);
-
-    return _super.apply(this, arguments);
-  }
-
-  _createClass(App, [{
-    key: "componentDidCatch",
-    // Kept here for backwards compatibility.
-    // When someone ended App they could call `super.componentDidCatch`.
-    // @deprecated This method is no longer needed. Errors are caught at the top level
-    value: function componentDidCatch(error, _errorInfo) {
-      throw error;
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      var _this$props = this.props,
-          router = _this$props.router,
-          Component = _this$props.Component,
-          pageProps = _this$props.pageProps,
-          __N_SSG = _this$props.__N_SSG,
-          __N_SSP = _this$props.__N_SSP;
-      return _react["default"].createElement(Component, Object.assign({}, pageProps, // we don't add the legacy URL prop if it's using non-legacy
-      // methods like getStaticProps and getServerSideProps
-      !(__N_SSG || __N_SSP) ? {
-        url: createUrl(router)
-      } : {}));
-    }
-  }]);
-
-  return App;
-}(_react["default"].Component);
-
-exports["default"] = App;
-App.origGetInitialProps = appGetInitialProps;
-App.getInitialProps = appGetInitialProps;
-var warnContainer;
-var warnUrl;
-
-if (true) {
-  warnContainer = (0, _utils.execOnce)(function () {
-    console.warn("Warning: the `Container` in `_app` has been deprecated and should be removed. https://err.sh/zeit/next.js/app-container-deprecated");
-  });
-  warnUrl = (0, _utils.execOnce)(function () {
-    console.error("Warning: the 'url' property is deprecated. https://err.sh/zeit/next.js/url-deprecated");
-  });
-} // @deprecated noop for now until removal
-
-
-function Container(p) {
-  if (true) warnContainer();
-  return p.children;
-}
-
-function createUrl(router) {
-  // This is to make sure we don't references the router object at call time
-  var pathname = router.pathname,
-      asPath = router.asPath,
-      query = router.query;
-  return {
-    get query() {
-      if (true) warnUrl();
-      return query;
-    },
-
-    get pathname() {
-      if (true) warnUrl();
-      return pathname;
-    },
-
-    get asPath() {
-      if (true) warnUrl();
-      return asPath;
-    },
-
-    back: function back() {
-      if (true) warnUrl();
-      router.back();
-    },
-    push: function push(url, as) {
-      if (true) warnUrl();
-      return router.push(url, as);
-    },
-    pushTo: function pushTo(href, as) {
-      if (true) warnUrl();
-      var pushRoute = as ? href : '';
-      var pushUrl = as || href;
-      return router.push(pushRoute, pushUrl);
-    },
-    replace: function replace(url, as) {
-      if (true) warnUrl();
-      return router.replace(url, as);
-    },
-    replaceTo: function replaceTo(href, as) {
-      if (true) warnUrl();
-      var replaceRoute = as ? href : '';
-      var replaceUrl = as || href;
-      return router.replace(replaceRoute, replaceUrl);
-    }
-  };
-}
-
-/***/ }),
-
 /***/ "./node_modules/next/node_modules/@babel/runtime/helpers/arrayWithHoles.js":
 /*!*********************************************************************************!*\
   !*** ./node_modules/next/node_modules/@babel/runtime/helpers/arrayWithHoles.js ***!
@@ -1618,25 +1661,6 @@ function _arrayWithHoles(arr) {
 }
 
 module.exports = _arrayWithHoles;
-
-/***/ }),
-
-/***/ "./node_modules/next/node_modules/@babel/runtime/helpers/assertThisInitialized.js":
-/*!****************************************************************************************!*\
-  !*** ./node_modules/next/node_modules/@babel/runtime/helpers/assertThisInitialized.js ***!
-  \****************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function _assertThisInitialized(self) {
-  if (self === void 0) {
-    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-  }
-
-  return self;
-}
-
-module.exports = _assertThisInitialized;
 
 /***/ }),
 
@@ -1724,52 +1748,6 @@ function _createClass(Constructor, protoProps, staticProps) {
 }
 
 module.exports = _createClass;
-
-/***/ }),
-
-/***/ "./node_modules/next/node_modules/@babel/runtime/helpers/getPrototypeOf.js":
-/*!*********************************************************************************!*\
-  !*** ./node_modules/next/node_modules/@babel/runtime/helpers/getPrototypeOf.js ***!
-  \*********************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function _getPrototypeOf(o) {
-  module.exports = _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
-    return o.__proto__ || Object.getPrototypeOf(o);
-  };
-  return _getPrototypeOf(o);
-}
-
-module.exports = _getPrototypeOf;
-
-/***/ }),
-
-/***/ "./node_modules/next/node_modules/@babel/runtime/helpers/inherits.js":
-/*!***************************************************************************!*\
-  !*** ./node_modules/next/node_modules/@babel/runtime/helpers/inherits.js ***!
-  \***************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var setPrototypeOf = __webpack_require__(/*! ./setPrototypeOf */ "./node_modules/next/node_modules/@babel/runtime/helpers/setPrototypeOf.js");
-
-function _inherits(subClass, superClass) {
-  if (typeof superClass !== "function" && superClass !== null) {
-    throw new TypeError("Super expression must either be null or a function");
-  }
-
-  subClass.prototype = Object.create(superClass && superClass.prototype, {
-    constructor: {
-      value: subClass,
-      writable: true,
-      configurable: true
-    }
-  });
-  if (superClass) setPrototypeOf(subClass, superClass);
-}
-
-module.exports = _inherits;
 
 /***/ }),
 
@@ -1908,29 +1886,6 @@ function _nonIterableRest() {
 }
 
 module.exports = _nonIterableRest;
-
-/***/ }),
-
-/***/ "./node_modules/next/node_modules/@babel/runtime/helpers/possibleConstructorReturn.js":
-/*!********************************************************************************************!*\
-  !*** ./node_modules/next/node_modules/@babel/runtime/helpers/possibleConstructorReturn.js ***!
-  \********************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var _typeof = __webpack_require__(/*! ../helpers/typeof */ "./node_modules/next/node_modules/@babel/runtime/helpers/typeof.js");
-
-var assertThisInitialized = __webpack_require__(/*! ./assertThisInitialized */ "./node_modules/next/node_modules/@babel/runtime/helpers/assertThisInitialized.js");
-
-function _possibleConstructorReturn(self, call) {
-  if (call && (_typeof(call) === "object" || typeof call === "function")) {
-    return call;
-  }
-
-  return assertThisInitialized(self);
-}
-
-module.exports = _possibleConstructorReturn;
 
 /***/ }),
 
@@ -3230,14 +3185,407 @@ module.exports = (__webpack_require__(/*! dll-reference dll_2adc2403d89adc16ead0
 
 /***/ }),
 
-/***/ 0:
-/*!*****************************************************************************************************************************************!*\
-  !*** multi next-client-pages-loader?page=%2F_app&absolutePagePath=next%2Fdist%2Fpages%2F_app ./node_modules/next/dist/client/router.js ***!
-  \*****************************************************************************************************************************************/
+/***/ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js":
+/*!****************************************************************************!*\
+  !*** ./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js ***!
+  \****************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! next-client-pages-loader?page=%2F_app&absolutePagePath=next%2Fdist%2Fpages%2F_app! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F_app&absolutePagePath=next%2Fdist%2Fpages%2F_app!./");
+"use strict";
+
+
+var stylesInDom = {};
+
+var isOldIE = function isOldIE() {
+  var memo;
+  return function memorize() {
+    if (typeof memo === 'undefined') {
+      // Test for IE <= 9 as proposed by Browserhacks
+      // @see http://browserhacks.com/#hack-e71d8692f65334173fee715c222cb805
+      // Tests for existence of standard globals is to allow style-loader
+      // to operate correctly into non-standard environments
+      // @see https://github.com/webpack-contrib/style-loader/issues/177
+      memo = Boolean(window && document && document.all && !window.atob);
+    }
+
+    return memo;
+  };
+}();
+
+var getTarget = function getTarget() {
+  var memo = {};
+  return function memorize(target) {
+    if (typeof memo[target] === 'undefined') {
+      var styleTarget = document.querySelector(target); // Special case to return head of iframe instead of iframe itself
+
+      if (window.HTMLIFrameElement && styleTarget instanceof window.HTMLIFrameElement) {
+        try {
+          // This will throw an exception if access to iframe is blocked
+          // due to cross-origin restrictions
+          styleTarget = styleTarget.contentDocument.head;
+        } catch (e) {
+          // istanbul ignore next
+          styleTarget = null;
+        }
+      }
+
+      memo[target] = styleTarget;
+    }
+
+    return memo[target];
+  };
+}();
+
+function listToStyles(list, options) {
+  var styles = [];
+  var newStyles = {};
+
+  for (var i = 0; i < list.length; i++) {
+    var item = list[i];
+    var id = options.base ? item[0] + options.base : item[0];
+    var css = item[1];
+    var media = item[2];
+    var sourceMap = item[3];
+    var part = {
+      css: css,
+      media: media,
+      sourceMap: sourceMap
+    };
+
+    if (!newStyles[id]) {
+      styles.push(newStyles[id] = {
+        id: id,
+        parts: [part]
+      });
+    } else {
+      newStyles[id].parts.push(part);
+    }
+  }
+
+  return styles;
+}
+
+function addStylesToDom(styles, options) {
+  for (var i = 0; i < styles.length; i++) {
+    var item = styles[i];
+    var domStyle = stylesInDom[item.id];
+    var j = 0;
+
+    if (domStyle) {
+      domStyle.refs++;
+
+      for (; j < domStyle.parts.length; j++) {
+        domStyle.parts[j](item.parts[j]);
+      }
+
+      for (; j < item.parts.length; j++) {
+        domStyle.parts.push(addStyle(item.parts[j], options));
+      }
+    } else {
+      var parts = [];
+
+      for (; j < item.parts.length; j++) {
+        parts.push(addStyle(item.parts[j], options));
+      }
+
+      stylesInDom[item.id] = {
+        id: item.id,
+        refs: 1,
+        parts: parts
+      };
+    }
+  }
+}
+
+function insertStyleElement(options) {
+  var style = document.createElement('style');
+
+  if (typeof options.attributes.nonce === 'undefined') {
+    var nonce =  true ? __webpack_require__.nc : undefined;
+
+    if (nonce) {
+      options.attributes.nonce = nonce;
+    }
+  }
+
+  Object.keys(options.attributes).forEach(function (key) {
+    style.setAttribute(key, options.attributes[key]);
+  });
+
+  if (typeof options.insert === 'function') {
+    options.insert(style);
+  } else {
+    var target = getTarget(options.insert || 'head');
+
+    if (!target) {
+      throw new Error("Couldn't find a style target. This probably means that the value for the 'insert' parameter is invalid.");
+    }
+
+    target.appendChild(style);
+  }
+
+  return style;
+}
+
+function removeStyleElement(style) {
+  // istanbul ignore if
+  if (style.parentNode === null) {
+    return false;
+  }
+
+  style.parentNode.removeChild(style);
+}
+/* istanbul ignore next  */
+
+
+var replaceText = function replaceText() {
+  var textStore = [];
+  return function replace(index, replacement) {
+    textStore[index] = replacement;
+    return textStore.filter(Boolean).join('\n');
+  };
+}();
+
+function applyToSingletonTag(style, index, remove, obj) {
+  var css = remove ? '' : obj.css; // For old IE
+
+  /* istanbul ignore if  */
+
+  if (style.styleSheet) {
+    style.styleSheet.cssText = replaceText(index, css);
+  } else {
+    var cssNode = document.createTextNode(css);
+    var childNodes = style.childNodes;
+
+    if (childNodes[index]) {
+      style.removeChild(childNodes[index]);
+    }
+
+    if (childNodes.length) {
+      style.insertBefore(cssNode, childNodes[index]);
+    } else {
+      style.appendChild(cssNode);
+    }
+  }
+}
+
+function applyToTag(style, options, obj) {
+  var css = obj.css;
+  var media = obj.media;
+  var sourceMap = obj.sourceMap;
+
+  if (media) {
+    style.setAttribute('media', media);
+  }
+
+  if (sourceMap && btoa) {
+    css += "\n/*# sourceMappingURL=data:application/json;base64,".concat(btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))), " */");
+  } // For old IE
+
+  /* istanbul ignore if  */
+
+
+  if (style.styleSheet) {
+    style.styleSheet.cssText = css;
+  } else {
+    while (style.firstChild) {
+      style.removeChild(style.firstChild);
+    }
+
+    style.appendChild(document.createTextNode(css));
+  }
+}
+
+var singleton = null;
+var singletonCounter = 0;
+
+function addStyle(obj, options) {
+  var style;
+  var update;
+  var remove;
+
+  if (options.singleton) {
+    var styleIndex = singletonCounter++;
+    style = singleton || (singleton = insertStyleElement(options));
+    update = applyToSingletonTag.bind(null, style, styleIndex, false);
+    remove = applyToSingletonTag.bind(null, style, styleIndex, true);
+  } else {
+    style = insertStyleElement(options);
+    update = applyToTag.bind(null, style, options);
+
+    remove = function remove() {
+      removeStyleElement(style);
+    };
+  }
+
+  update(obj);
+  return function updateStyle(newObj) {
+    if (newObj) {
+      if (newObj.css === obj.css && newObj.media === obj.media && newObj.sourceMap === obj.sourceMap) {
+        return;
+      }
+
+      update(obj = newObj);
+    } else {
+      remove();
+    }
+  };
+}
+
+module.exports = function (list, options) {
+  options = options || {};
+  options.attributes = typeof options.attributes === 'object' ? options.attributes : {}; // Force single-tag solution on IE6-9, which has a hard limit on the # of <style>
+  // tags it will allow on a page
+
+  if (!options.singleton && typeof options.singleton !== 'boolean') {
+    options.singleton = isOldIE();
+  }
+
+  var styles = listToStyles(list, options);
+  addStylesToDom(styles, options);
+  return function update(newList) {
+    var mayRemove = [];
+
+    for (var i = 0; i < styles.length; i++) {
+      var item = styles[i];
+      var domStyle = stylesInDom[item.id];
+
+      if (domStyle) {
+        domStyle.refs--;
+        mayRemove.push(domStyle);
+      }
+    }
+
+    if (newList) {
+      var newStyles = listToStyles(newList, options);
+      addStylesToDom(newStyles, options);
+    }
+
+    for (var _i = 0; _i < mayRemove.length; _i++) {
+      var _domStyle = mayRemove[_i];
+
+      if (_domStyle.refs === 0) {
+        for (var j = 0; j < _domStyle.parts.length; j++) {
+          _domStyle.parts[j]();
+        }
+
+        delete stylesInDom[_domStyle.id];
+      }
+    }
+  };
+};
+
+/***/ }),
+
+/***/ "./pages/_app.js":
+/*!***********************!*\
+  !*** ./pages/_app.js ***!
+  \***********************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return MyApp; });
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../styles.css */ "./styles.css");
+/* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_styles_css__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _brainhubeu_react_carousel_lib_style_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @brainhubeu/react-carousel/lib/style.css */ "./node_modules/@brainhubeu/react-carousel/lib/style.css");
+/* harmony import */ var _brainhubeu_react_carousel_lib_style_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_brainhubeu_react_carousel_lib_style_css__WEBPACK_IMPORTED_MODULE_3__);
+
+var _jsxFileName = "/home/crmock/pideenlaequina/front/pages/_app.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
+
+ // This default export is required in a new `pages/_app.js` file.
+
+function MyApp(_ref) {
+  var Component = _ref.Component,
+      pageProps = _ref.pageProps;
+  return __jsx(Component, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, pageProps, {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6,
+      columnNumber: 10
+    }
+  }));
+}
+
+/***/ }),
+
+/***/ "./styles.css":
+/*!********************!*\
+  !*** ./styles.css ***!
+  \********************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var content = __webpack_require__(/*! !./node_modules/css-loader/dist/cjs.js??ref--5-oneOf-5-1!./node_modules/next/dist/compiled/postcss-loader??__nextjs_postcss!./styles.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/next/dist/compiled/postcss-loader/index.js?!./styles.css");
+
+if (typeof content === 'string') {
+  content = [[module.i, content, '']];
+}
+
+var options = {}
+
+options.insert = function(element){// These elements should always exist. If they do not,
+// this code should fail.
+var anchorElement=document.querySelector('#__next_css__DO_NOT_USE__');var parentNode=anchorElement.parentNode;// Normally <head>
+// Each style tag should be placed right before our
+// anchor. By inserting before and not after, we do not
+// need to track the last inserted element.
+parentNode.insertBefore(element,anchorElement)// Remember: this is development only code.
+//
+// After styles are injected, we need to remove the
+// <style> tags that set `body { display: none; }`.
+//
+// We use `requestAnimationFrame` as a way to defer
+// this operation since there may be multiple style
+// tags.
+;(self.requestAnimationFrame||setTimeout)(function(){for(var x=document.querySelectorAll('[data-next-hide-fouc]'),i=x.length;i--;){x[i].parentNode.removeChild(x[i]);}});};
+options.singleton = false;
+
+var update = __webpack_require__(/*! ./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js")(content, options);
+
+if (content.locals) {
+  module.exports = content.locals;
+}
+
+if (true) {
+  if (!content.locals) {
+    module.hot.accept(
+      /*! !./node_modules/css-loader/dist/cjs.js??ref--5-oneOf-5-1!./node_modules/next/dist/compiled/postcss-loader??__nextjs_postcss!./styles.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/next/dist/compiled/postcss-loader/index.js?!./styles.css",
+      function () {
+        var newContent = __webpack_require__(/*! !./node_modules/css-loader/dist/cjs.js??ref--5-oneOf-5-1!./node_modules/next/dist/compiled/postcss-loader??__nextjs_postcss!./styles.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/next/dist/compiled/postcss-loader/index.js?!./styles.css");
+
+        if (typeof newContent === 'string') {
+          newContent = [[module.i, newContent, '']];
+        }
+        
+        update(newContent);
+      }
+    )
+  }
+
+  module.hot.dispose(function() { 
+    update();
+  });
+}
+
+/***/ }),
+
+/***/ 0:
+/*!*******************************************************************************************************************************************!*\
+  !*** multi next-client-pages-loader?page=%2F_app&absolutePagePath=private-next-pages%2F_app.js ./node_modules/next/dist/client/router.js ***!
+  \*******************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(/*! next-client-pages-loader?page=%2F_app&absolutePagePath=private-next-pages%2F_app.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F_app&absolutePagePath=private-next-pages%2F_app.js!./");
 module.exports = __webpack_require__(/*! /home/crmock/pideenlaequina/front/node_modules/next/dist/client/router.js */"./node_modules/next/dist/client/router.js");
 
 

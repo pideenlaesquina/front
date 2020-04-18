@@ -1,8 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import Head from 'next/head'
-import AddressBar from '../components/addressBar.js'
+
 import NoStores from '../components/noStores.js'
+import AddressBar from '../components/addressBar.js'
+
+const initialZoom = 15
 
 class Map extends React.Component {
 
@@ -61,7 +64,8 @@ class Map extends React.Component {
     {
       map = new google.maps.Map(document.getElementById('map'), {
         center: pos,
-        zoom: 15,
+        zoom: initialZoom,
+        zoomControl:false,
         mapTypeControl: false,
         fullscreenControl: false,
         clickableIcons: false,
@@ -97,6 +101,7 @@ class Map extends React.Component {
 
   panToPos(map, pos)
   {
+    map.setZoom(initialZoom);
     map.panTo(pos);
   }
 
@@ -138,7 +143,7 @@ class Map extends React.Component {
       icon: icon_normal,
       title:store.name,
       draggable:false,
-      id:store.id, //custom data
+      id:store._id, //custom data
     })
 
     google.maps.event.addListener(marker, 'click', function() {
@@ -158,44 +163,15 @@ class Map extends React.Component {
   }
 
   render () {
-    let customStyle = {
-      padding:"0",
-      margin:"0",
-      display: 'flex',
-      height: '97vh',
-
-      alignItems:'center', 
-      justifyContent: 'center',
-      
-      background:'WhiteSmoke'
-    }
-
-    let imageStyle = {
-      width: "50%",
-      marginLeft:"auto",
-      marginRight: "auto"
-    }
-
     let google_url = process.env.GOOGLE_MAPS_API_URL + "/js?key="+process.env.GOOGLE_MAPS_API_KEY
 
     return (
-      <div>
+      <div style={{height:"100%", width:'100%'}}>
         <Head>
-          <script src= {google_url}></script>
+          <script src={google_url} ></script>
         </Head>
-        <div>
-          <div id="map" style={customStyle}>
-            <img src="/loading.svg" alt="Pajarito escuchando música feliz" style={imageStyle}></img>
-          </div>
-          {this.state.map
-            ?<AddressBar/>
-            :""
-          }
-          {this.state.map && this.props.stores.length==0
-            ?<NoStores/>
-            :""
-          }
-        </div>
+        <div id="map" style={{height:"100%", width:'100%'}}></div>
+        {this.state.map && this.props.stores.length==0?<NoStores/>:""}
       </div>
     )
   }

@@ -1,25 +1,22 @@
 import React, { Component, Fragment} from 'react'
-import Map from '../components/map.js'
+import FridgeMagnetsSection from '../components/fridgeMagnetsSection.js'
+import SearchSection from '../components/searchSection.js'
 
 class App extends Component {
   constructor(props) {
     super(props)
     this.state = { 
       pos:null,
-      stores:null
+      favoriteStores:null,
+      featuredStores:null,
+      ready:false
     }
   }
 
   componentDidMount() {
     this.position()
-  }
-
-  componentDidUpdate(prevProps, prevState)
-  {
-    if (this.state.pos != null && (prevState.pos != this.state.pos))
-    {
-      this.getStores(this.state.pos)
-    }
+    this.favoriteStores()
+    this.featuredStores()
   }
 
   position = async () => {
@@ -38,18 +35,58 @@ class App extends Component {
     )
   }
 
-  async getStores(pos)
+  async favoriteStores(pos)
   {
-    let url = '/api/stores?lat='+ pos.lat +'&lng='+pos.lng
-    let res = await fetch(url).then(response=>response.json())
+    let stores= [
+      {_id:"1", name:"Carnes Y Mas Carnes", address:"KR 6 166 -18", type:"butchery", acceptsCards:true},
+      {_id:"2", name:"Carnes Y Mas Carnes", address:"KR 6 166 -18", type:"pharmacy", acceptsCards:true},
+      {_id:"3", name:"Carnes Y Mas Carnes", address:"KR 6 166 -18", type:"bakery", acceptsCards:true},
+      {_id:"4", name:"Carnes Y Mas Carnes", address:"KR 6 166 -18", type:"vegetableStore", acceptsCards:true},
+      {_id:"5", name:"Carnes Y Mas Carnes", address:"KR 6 166 -18", type:"liquorStore", acceptsCards:true},
+      {_id:"6", name:"Carnes Y Mas Carnes", address:"KR 6 166 -18", type:"petStore", acceptsCards:true},
+      {_id:"7", name:"Carnes Y Mas Carnes", address:"KR 6 166 -18", type:"hardwareStore", acceptsCards:true},
+      {_id:"8", name:"Carnes Y Mas Carnes", address:"KR 6 166 -18", type:"restaurant", acceptsCards:true},
+      {_id:"9", name:"Carnes Y Mas Carnes", address:"KR 6 166 -18", type:"fastFoodRestaurant", acceptsCards:true},
+      {_id:"10", name:"Carnes Y Mas Carnes", address:"KR 6 166 -18", type:"groceryStore", acceptsCards:true},
+      {_id:"11", name:"Carnes Y Mas Carnes", address:"KR 6 166 -18", type:"stationeryStore", acceptsCards:true},
+      {_id:"12", name:"Carnes Y Mas Carnes", address:"KR 6 166 -18", type:"store", acceptsCards:true},
+      {_id:"13", name:"Carnes Y Mas Carnes", address:"KR 6 166 -18", type:"drycleaner", acceptsCards:true}
+    ]
     
-    this.setState({ stores:res.stores })
+    this.setState({ favoriteStores:stores })
+  }
+
+  async featuredStores(pos)
+  {
+    let stores= [
+      {_id:"1", name:"Carnes Y Mas Carnes", address:"KR 6 166 -18", type:"butchery", acceptsCards:true},
+      {_id:"2", name:"Carnes Y Mas Carnes", address:"KR 6 166 -18", type:"pharmacy", acceptsCards:true},
+      {_id:"3", name:"Carnes Y Mas Carnes", address:"KR 6 166 -18", type:"bakery", acceptsCards:true},
+      {_id:"4", name:"Carnes Y Mas Carnes", address:"KR 6 166 -18", type:"vegetableStore", acceptsCards:true},
+      {_id:"5", name:"Carnes Y Mas Carnes", address:"KR 6 166 -18", type:"liquorStore", acceptsCards:true},
+      {_id:"6", name:"Carnes Y Mas Carnes", address:"KR 6 166 -18", type:"petStore", acceptsCards:true},
+      {_id:"7", name:"Carnes Y Mas Carnes", address:"KR 6 166 -18", type:"hardwareStore", acceptsCards:true},
+      {_id:"8", name:"Carnes Y Mas Carnes", address:"KR 6 166 -18", type:"restaurant", acceptsCards:true},
+      {_id:"9", name:"Carnes Y Mas Carnes", address:"KR 6 166 -18", type:"fastFoodRestaurant", acceptsCards:true},
+      {_id:"10", name:"Carnes Y Mas Carnes", address:"KR 6 166 -18", type:"groceryStore", acceptsCards:true},
+      {_id:"11", name:"Carnes Y Mas Carnes", address:"KR 6 166 -18", type:"stationeryStore", acceptsCards:true},
+      {_id:"12", name:"Carnes Y Mas Carnes", address:"KR 6 166 -18", type:"store", acceptsCards:true},
+      {_id:"13", name:"Carnes Y Mas Carnes", address:"KR 6 166 -18", type:"drycleaner", acceptsCards:true}
+    ]
+    
+    this.setState({ featuredStores:stores })
+  }
+
+  async user(id)
+  {
+
   }
   
   render() {
     return (
-      <div>
-        <Map pos={this.state.pos} stores={this.state.stores}/>
+      <div style={{height:'100vh'}}>
+        <SearchSection />
+        <FridgeMagnetsSection favoriteStores={this.state.favoriteStores} featuredStores={this.state.featuredStores}/>
       </div>
     );
   }
