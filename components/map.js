@@ -1,9 +1,7 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
 import Head from 'next/head'
 
 import NoStores from '../components/noStores.js'
-import AddressBar from '../components/addressBar.js'
 
 const initialZoom = 15
 

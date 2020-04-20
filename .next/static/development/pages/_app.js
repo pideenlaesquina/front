@@ -114,7 +114,7 @@ exports.push([module.i, ".BrainhubCarouselItem{display:flex;justify-content:cent
 
 exports = module.exports = __webpack_require__(/*! ./node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(true);
 // Module
-exports.push([module.i, "body {\n    font-family: 'SF Pro Text', 'SF Pro Icons', 'Helvetica Neue', 'Helvetica',\n      'Arial', sans-serif;\n    padding: 0;\n    margin: 0;\n}", "",{"version":3,"sources":["/home/crmock/pideenlaequina/front/styles.css"],"names":[],"mappings":"AAAA;IACI;yBACqB;IACrB,UAAU;IACV,SAAS;AACb","file":"styles.css","sourcesContent":["body {\n    font-family: 'SF Pro Text', 'SF Pro Icons', 'Helvetica Neue', 'Helvetica',\n      'Arial', sans-serif;\n    padding: 0;\n    margin: 0;\n}"]}]);
+exports.push([module.i, "body {\n    font-family: 'SF Pro Text', 'SF Pro Icons', 'Helvetica Neue', 'Helvetica',\n      'Arial', sans-serif;\n    padding: 0;\n    margin: 0;\n    height:100vh;\n}", "",{"version":3,"sources":["/home/crmock/pideenlaequina/front/styles.css"],"names":[],"mappings":"AAAA;IACI;yBACqB;IACrB,UAAU;IACV,SAAS;IACT,YAAY;AAChB","file":"styles.css","sourcesContent":["body {\n    font-family: 'SF Pro Text', 'SF Pro Icons', 'Helvetica Neue', 'Helvetica',\n      'Arial', sans-serif;\n    padding: 0;\n    margin: 0;\n    height:100vh;\n}"]}]);
 
 
 /***/ }),

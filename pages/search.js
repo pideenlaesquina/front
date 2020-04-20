@@ -1,6 +1,9 @@
 import React, { Component, Fragment} from 'react'
-import FridgeMagnets from '../components/fridgeMagnets.js'
-import Navbar from '../components/navbar.js'
+import { withRouter } from 'react-router-dom'
+import Map from '../components/map.js'
+
+import Fab from '@material-ui/core/Fab'
+import ArrowBackIcon from '@material-ui/icons/ArrowBack'
 
 class Search extends Component {
   constructor(props) {
@@ -49,12 +52,14 @@ class Search extends Component {
   
   render() {
     return (
-      <div style={{height:'100vh'}}>
-        <Navbar></Navbar>
-        <FridgeMagnets stores={this.state.stores}/>
+      <div style={{height:'100%'}}>
+        <Fab size="small" aria-label="menu" onClick={() => this.props.history.goBack()} style={{position:"fixed", top:"15px", left:"15px", zIndex:'3'}}>
+          <ArrowBackIcon />
+        </Fab>
+        <Map/>
       </div>
     );
   }
 }
 
-export default Search;
+export default withRouter(Search)
