@@ -1,9 +1,10 @@
 import React, { Component, createContext } from 'react';
+
 import Context from "./Context"
 import createAuth0Client from '@auth0/auth0-spa-js';
 
 // create a provider
-class LocationContextProvider extends Component {
+class ContextProvider extends Component {
    
   constructor(props)
   {
@@ -24,13 +25,7 @@ class LocationContextProvider extends Component {
       isReady:false,
       isLoading:true
     }
-
-    this.config = {
-      domain: process.env.AUTH0_DOMAIN,
-      client_id: process.env.AUTH0_CLIENT_ID,
-      redirect_uri: window.location.origin
-    }
-
+    
     this.startedAt = new Date()
   }
 
@@ -114,7 +109,13 @@ class LocationContextProvider extends Component {
   }
 
   initializeAuth0 = async () => {
-    const auth0Client = await createAuth0Client(this.config)
+    const config = {
+      domain: process.env.AUTH0_DOMAIN,
+      client_id: process.env.AUTH0_CLIENT_ID,
+      redirect_uri: window.location.origin
+    }
+
+    const auth0Client = await createAuth0Client(config)
     const isAuthenticated = await auth0Client.isAuthenticated()
     const user = isAuthenticated ? await auth0Client.getUser() : null
 
@@ -176,8 +177,8 @@ class LocationContextProvider extends Component {
       logout: (...p) => auth0Client.logout(...p)
     }
   
-    return (<LocationContext.Provider value={values}>{this.props.children}</LocationContext.Provider>);
+    return (<Context.Provider value={values}>{this.props.children}</Context.Provider>);
   }
 }
 
-export default LocationContextProvider
+export default ContextProvider

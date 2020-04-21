@@ -133,7 +133,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
  // create a provider
 
-class LocationContextProvider extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
+class ContextProvider extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   constructor(props) {
     super(props);
 
@@ -156,7 +156,12 @@ class LocationContextProvider extends react__WEBPACK_IMPORTED_MODULE_0__["Compon
     });
 
     _defineProperty(this, "initializeAuth0", async () => {
-      const auth0Client = await _auth0_auth0_spa_js__WEBPACK_IMPORTED_MODULE_2___default()(this.config);
+      const config = {
+        domain: process.env.AUTH0_DOMAIN,
+        client_id: process.env.AUTH0_CLIENT_ID,
+        redirect_uri: window.location.origin
+      };
+      const auth0Client = await _auth0_auth0_spa_js__WEBPACK_IMPORTED_MODULE_2___default()(config);
       const isAuthenticated = await auth0Client.isAuthenticated();
       const user = isAuthenticated ? await auth0Client.getUser() : null;
       this.setState({
@@ -179,11 +184,6 @@ class LocationContextProvider extends react__WEBPACK_IMPORTED_MODULE_0__["Compon
       user: null,
       isReady: false,
       isLoading: true
-    };
-    this.config = {
-      domain: process.env.AUTH0_DOMAIN,
-      client_id: process.env.AUTH0_CLIENT_ID,
-      redirect_uri: window.location.origin
     };
     this.startedAt = new Date();
   }
@@ -279,12 +279,12 @@ class LocationContextProvider extends react__WEBPACK_IMPORTED_MODULE_0__["Compon
       getIdTokenClaims: (...p) => auth0Client.getIdTokenClaims(...p),
       logout: (...p) => auth0Client.logout(...p)
     };
-    return __jsx(LocationContext.Provider, {
+    return __jsx(_Context__WEBPACK_IMPORTED_MODULE_1__["default"].Provider, {
       value: values,
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 179,
+        lineNumber: 180,
         columnNumber: 13
       }
     }, this.props.children);
@@ -292,7 +292,7 @@ class LocationContextProvider extends react__WEBPACK_IMPORTED_MODULE_0__["Compon
 
 }
 
-/* harmony default export */ __webpack_exports__["default"] = (LocationContextProvider);
+/* harmony default export */ __webpack_exports__["default"] = (ContextProvider);
 
 /***/ }),
 

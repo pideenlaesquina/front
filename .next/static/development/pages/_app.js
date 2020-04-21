@@ -58,15 +58,15 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 
  // create a provider
 
-var LocationContextProvider = /*#__PURE__*/function (_Component) {
-  Object(_babel_runtime_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_6__["default"])(LocationContextProvider, _Component);
+var ContextProvider = /*#__PURE__*/function (_Component) {
+  Object(_babel_runtime_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_6__["default"])(ContextProvider, _Component);
 
-  var _super = _createSuper(LocationContextProvider);
+  var _super = _createSuper(ContextProvider);
 
-  function LocationContextProvider(props) {
+  function ContextProvider(props) {
     var _this;
 
-    Object(_babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_1__["default"])(this, LocationContextProvider);
+    Object(_babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_1__["default"])(this, ContextProvider);
 
     _this = _super.call(this, props);
 
@@ -129,39 +129,44 @@ var LocationContextProvider = /*#__PURE__*/function (_Component) {
     });
 
     Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_7__["default"])(Object(_babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__["default"])(_this), "initializeAuth0", function _callee3() {
-      var auth0Client, isAuthenticated, user;
+      var config, auth0Client, isAuthenticated, user;
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.async(function _callee3$(_context3) {
         while (1) {
           switch (_context3.prev = _context3.next) {
             case 0:
-              _context3.next = 2;
-              return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(Object(_auth0_auth0_spa_js__WEBPACK_IMPORTED_MODULE_10__["default"])(_this.config));
+              config = {
+                domain: process.env.AUTH0_DOMAIN,
+                client_id: process.env.AUTH0_CLIENT_ID,
+                redirect_uri: window.location.origin
+              };
+              _context3.next = 3;
+              return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(Object(_auth0_auth0_spa_js__WEBPACK_IMPORTED_MODULE_10__["default"])(config));
 
-            case 2:
+            case 3:
               auth0Client = _context3.sent;
-              _context3.next = 5;
+              _context3.next = 6;
               return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(auth0Client.isAuthenticated());
 
-            case 5:
+            case 6:
               isAuthenticated = _context3.sent;
 
               if (!isAuthenticated) {
-                _context3.next = 12;
+                _context3.next = 13;
                 break;
               }
 
-              _context3.next = 9;
+              _context3.next = 10;
               return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(auth0Client.getUser());
 
-            case 9:
+            case 10:
               _context3.t0 = _context3.sent;
-              _context3.next = 13;
+              _context3.next = 14;
               break;
 
-            case 12:
+            case 13:
               _context3.t0 = null;
 
-            case 13:
+            case 14:
               user = _context3.t0;
 
               _this.setState({
@@ -171,7 +176,7 @@ var LocationContextProvider = /*#__PURE__*/function (_Component) {
                 user: user
               });
 
-            case 15:
+            case 16:
             case "end":
               return _context3.stop();
           }
@@ -192,16 +197,11 @@ var LocationContextProvider = /*#__PURE__*/function (_Component) {
       isReady: false,
       isLoading: true
     };
-    _this.config = {
-      domain: process.env.AUTH0_DOMAIN,
-      client_id: process.env.AUTH0_CLIENT_ID,
-      redirect_uri: window.location.origin
-    };
     _this.startedAt = new Date();
     return _this;
   }
 
-  Object(_babel_runtime_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_2__["default"])(LocationContextProvider, [{
+  Object(_babel_runtime_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_2__["default"])(ContextProvider, [{
     key: "componentDidMount",
     value: function componentDidMount() {
       this.initialLocation();
@@ -352,22 +352,22 @@ var LocationContextProvider = /*#__PURE__*/function (_Component) {
           return (_auth0Client4 = auth0Client).logout.apply(_auth0Client4, arguments);
         }
       };
-      return __jsx(LocationContext.Provider, {
+      return __jsx(_Context__WEBPACK_IMPORTED_MODULE_9__["default"].Provider, {
         value: values,
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 179,
+          lineNumber: 180,
           columnNumber: 13
         }
       }, this.props.children);
     }
   }]);
 
-  return LocationContextProvider;
+  return ContextProvider;
 }(react__WEBPACK_IMPORTED_MODULE_8__["Component"]);
 
-/* harmony default export */ __webpack_exports__["default"] = (LocationContextProvider);
+/* harmony default export */ __webpack_exports__["default"] = (ContextProvider);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../node_modules/process/browser.js */ "./node_modules/process/browser.js")))
 
 /***/ }),
