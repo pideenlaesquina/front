@@ -123,7 +123,7 @@ class fridgeMagnets extends Component {
             }
           `}
         </style>
-          <Paper elevation={5} style={{width:"140px", marginTop:"50px", marginBottom:"5px", marginLeft:"5px", marginRight:"5px", paddingLeft:"5px", paddingRight:"5px", paddingTop:"45px", paddingBottom:"40px", position:'relative', borderRadius:'15px'}}>
+          <Paper elevation={10} style={{width:"140px", marginTop:"50px", marginBottom:"5px", marginLeft:"5px", marginRight:"5px", paddingLeft:"5px", paddingRight:"5px", paddingTop:"45px", paddingBottom:"40px", position:'relative', borderRadius:'15px'}}>
           <div className={"sideButton top "+(this.props.store.type!=null && storeTypes.includes(this.props.store.type) ?this.props.store.type:"store")}>
               <StorefrontIcon fontSize="large"/> 
           </div>
