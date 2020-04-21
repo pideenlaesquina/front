@@ -10,7 +10,9 @@
     "PUSHER_APP_ID":"@landing-pusher-app-ip",
     "PUSHER_APP_KEY":"@landing-pusher-app-key",
     "PUSHER_APP_SECRET":"@landing-pusher-app-secret",
-    "PUSHER_APP_CLUSTER":"@landing-pusher-app-cluster"
+    "PUSHER_APP_CLUSTER":"@landing-pusher-app-cluster",
+    "AUTH0_DOMAIN":"@landing-auth0-domain",
+    "AUTH0_CLIENT_ID":"@landing-auth0-cliend-id"
   },
   "headers": [
     {

@@ -31,11 +31,11 @@ class fridgeMagnetsSection extends Component {
             }
 
             .featured{
-              background: linear-gradient(180deg, #ffcf0200 0%, #ffcf02cc 80%, #e94e1b80 90%);
+              background: linear-gradient(180deg, #ffcf0200 0%, #e94e1b80 90%);
             }
 
             .favorite{
-              background: linear-gradient(180deg, #e94e1b80 0%,  #e94e1b1A 100%);
+              background: #e94e1b80;
             }
           `}
         </style>

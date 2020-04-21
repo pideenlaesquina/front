@@ -33,20 +33,20 @@ class sideMenu extends Component {
     {
       menu = (
         <div>
-          <Avatar alt="Remy Sharp" src="/noProfilePicture.svg" style={{width:'100px', height:'100px', marginLeft:'auto', marginRight:'auto', marginTop:'20px', marginBottom:"20px"}}/>
+          <Avatar alt="Remy Sharp" src="/brand/logo_fondo_naranja.svg" style={{width:'150px', height:'150px', marginLeft:'auto', marginRight:'auto', marginTop:'20px', marginBottom:"20px"}}/>
           <Button
             href="/register" 
-            size="small" 
+            size="large"
+            color="primary" 
             variant="contained"
-            startIcon={<ExitToAppIcon />}
-            style={{widht:'70%', marginRight:'18%', marginLeft:'18%', marginTop:'20px', marginBottom:'10px'}}
+            style={{widht:'70%', marginRight:'20%', marginLeft:'20%', marginTop:'20px', marginBottom:'10px'}}
           >
             Registrarse
           </Button>
           <Button 
             href="/login" 
             size='small'
-            startIcon={<EditIcon />}
+            style={{widht:'70%', marginRight:'27%', marginLeft:'26%', marginTop:'20px', marginBottom:'10px'}}
           >
             Iniciar sesión
           </Button>
