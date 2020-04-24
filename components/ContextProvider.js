@@ -10,10 +10,8 @@ class ContextProvider extends Component {
   {
     super(props)
     this. state = {
-      location_lat:null,
-      location_lng: null,
-      selectedLocationLat: null,
-      selectedLocationLng: null,
+      location:null,
+      address:null,
 
       featuredStores:null,
       stores:null,
@@ -22,38 +20,36 @@ class ContextProvider extends Component {
       isAuthenticated: false,
       user:null,
 
-      isReady:false,
-      isLoading:true
+      isReady:false
     }
     
     this.startedAt = new Date()
   }
 
   componentDidMount() {
-    this.initialLocation();
+    this.initialLocation()
+    this.initializeAuth0()
   }
 
   componentDidUpdate(prevProps, prevState) {
-    if(this.state.selectedLocationLat != null 
-      && this.state.selectedLocationLng != null 
-      && (
-        (prevState.selectedLocationLat != this.state.selectedLocationLat)) 
-        || (prevState.selectedLocationLng != this.state.selectedLocationLng)
-      )
+    if(this.state.location !== null  
+      && (prevState.location !== this.state.location))
     {
-      console.log("Location change")
-      this.featuredStores(this.state.selectedLocationLat, this.state.selectedLocationLng)
-      this.stores(this.state.selectedLocationLat, this.state.selectedLocationLng)
+      this.featuredStores(this.state.location.lat, this.state.location.lng)
+      this.stores(this.state.location.lat, this.state.location.lng)
+      this.addressFromLocation(this.state.location.lat, this.state.location.lng)
     }
 
     if(
         !this.state.isReady 
-        && this.state.selectedLocationLat !=null
-        && this.state.selectedLocationLng !=null)
+        && this.state.location !== null
+        && this.state.address !== null
+        && this.state.stores !== null
+        && this.state.featuredStores !== null
+        && this.state.authClient !== null)
     {
-      console.log("Initial location -> isReady=true")
       let now = new Date()
-      let towait = now.getTime() + 2000 - this.startedAt.getTime()
+      let towait = 2000 - (now.getTime() - this.startedAt.getTime())
       
       if(towait>0)
       {
@@ -66,61 +62,62 @@ class ContextProvider extends Component {
         this.setState({ isReady:true })
       }
     }
-
-    if(this.state.isLoading 
-      && this.state.stores != null 
-      && this.state.featuredStores != null)
-    {
-      console.log("Stores loaded")
-      this.setState({ isLoading:false })
-    }
   }
   
   initialLocation = async () => {
     await navigator.geolocation.getCurrentPosition(
       position => this.setState({ 
-        locationLat:position.coords.latitude, 
-        locationLng:position.coords.longitude,
-        selectedLocationLat:position.coords.latitude, 
-        selectedLocationLng: position.coords.longitude
+        location:{
+          lat:position.coords.latitude, 
+          lng:position.coords.longitude
+        }
       }), 
-      err => async function()
-      {
-        let ip = await fetch(process.env.IPIFY_URL).then(response=>response.text())
-        let pos = await fetch(process.env.IPGEOLOCATION_API_URL +'/ipgeo?apiKey='+process.env.IPGEOLOCATION_API_KEY+'&ip='+ip).then(response=>response.json())
-    
-        this.setState({ 
-          locationLat:parseFloat(pos.latitude),
-          locationLng:parseFloat(pos.longitude),
-          selectedLocationLat:parseFloat(pos.latitude),
-          selectedLocationLng:parseFloat(pos.longitude)
-        })
-      }
+      err => this.locationFromIp()
     )
   }
 
   updateLocation(newLat, newLng)
   {
     this.setState({ 
-      selected_location_lat:parseFloat(newLat), 
-      selected_location_lng:parseFloat(newLng),
-      isLoading: true
+      location:{
+        lat:parseFloat(newLat), 
+        lng:parseFloat(newLng)
+      }
     })
+
+    localStorage.setItem('_selectedLocationLat', newLat)  
   }
 
   initializeAuth0 = async () => {
     const config = {
-      domain: process.env.AUTH0_DOMAIN,
-      client_id: process.env.AUTH0_CLIENT_ID,
-      redirect_uri: window.location.origin
+      domain: 'acacerca.auth0.com',//process.env.AUTH0_DOMAIN,
+      client_id: 'd8Pv88MjaYWNSUKUHnO9JcudrUPZ6THl',//process.env.AUTH0_CLIENT_ID,
+      redirect_uri: window.location.origin,
+      cacheLocation: 'localstorage'
     }
 
     const auth0Client = await createAuth0Client(config)
     const isAuthenticated = await auth0Client.isAuthenticated()
     const user = isAuthenticated ? await auth0Client.getUser() : null
 
-    this.setState({ auth0Client, isLoading:false, isAuthenticated, user })
-  };
+    this.setState({ authClient:auth0Client, isAuthenticated, user })
+  }
+
+  async locationFromIp()
+  {
+    let url = '/api/locationFromIp'
+    let res = await fetch(url).then(response=>response.json())
+
+    this.setState({ location:res.location })
+  }
+
+  async addressFromLocation(lat, lng)
+  {
+    let url = '/api/addressFromLocation?lat='+ lat +'&lng='+lng
+    let res = await fetch(url).then(response=>response.json())
+
+    this.setState({ address:res.address })
+  }
 
   async featuredStores(lat, lng)
   {
@@ -128,6 +125,7 @@ class ContextProvider extends Component {
     let res = await fetch(url).then(response=>response.json())
     
     this.setState({ featuredStores:res.stores })
+    //localStorage.setItem('_featuredStores', JSON.stringify(res.stores))  
   }
 
   async stores(lat, lng)
@@ -136,15 +134,13 @@ class ContextProvider extends Component {
     let res = await fetch(url).then(response=>response.json())
     
     this.setState({ stores:res.stores })
+    //localStorage.setItem('_stores', JSON.stringify(res.stores))  
   }
 
   render() {
     const { 
-      location_lat,
-      location_lng,
-      selectedLocationLat,
-      selectedLocationLng,
-
+      location,
+      address,
       featuredStores,
       stores,
 
@@ -152,16 +148,12 @@ class ContextProvider extends Component {
       isAuthenticated,
       user,
 
-      isReady,
-      isLoading
+      isReady
     } = this.state;
 
     const values = { 
-      location_lat,
-      location_lng,
-      selectedLocationLat,
-      selectedLocationLng,
-
+      location,
+      address,
       featuredStores,
       stores,
 
@@ -169,12 +161,11 @@ class ContextProvider extends Component {
       user,
 
       isReady,
-      isLoading,
 
-      loginWithRedirect: (...p) => auth0Client.loginWithRedirect(...p),
-      getTokenSilently: (...p) => auth0Client.getTokenSilently(...p),
-      getIdTokenClaims: (...p) => auth0Client.getIdTokenClaims(...p),
-      logout: (...p) => auth0Client.logout(...p)
+      loginWithRedirect: (...p) => authClient.loginWithRedirect(...p),
+      getTokenSilently: (...p) => authClient.getTokenSilently(...p),
+      getIdTokenClaims: (...p) => authClient.getIdTokenClaims(...p),
+      logout: (...p) => authClient.logout(...p)
     }
   
     return (<Context.Provider value={values}>{this.props.children}</Context.Provider>);

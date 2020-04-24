@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -110,9 +110,9 @@ const LocationContext = react__WEBPACK_IMPORTED_MODULE_0___default.a.createConte
 
 /***/ }),
 
-/***/ "./components/fridgeMagnets.js":
+/***/ "./components/FridgeMagnets.js":
 /*!*************************************!*\
-  !*** ./components/fridgeMagnets.js ***!
+  !*** ./components/FridgeMagnets.js ***!
   \*************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -123,17 +123,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _components_magnet_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/magnet.js */ "./components/magnet.js");
+/* harmony import */ var _components_Magnet__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Magnet */ "./components/Magnet.js");
 /* harmony import */ var _brainhubeu_react_carousel__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @brainhubeu/react-carousel */ "@brainhubeu/react-carousel");
 /* harmony import */ var _brainhubeu_react_carousel__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_brainhubeu_react_carousel__WEBPACK_IMPORTED_MODULE_3__);
-var _jsxFileName = "/home/crmock/pideenlaequina/front/components/fridgeMagnets.js";
+var _jsxFileName = "/home/crmock/pideenlaequina/front/components/FridgeMagnets.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 
 
 
-class fridgeMagnets extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
+class FridgeMagnets extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
   constructor(props) {
     super(props);
   }
@@ -150,7 +150,7 @@ class fridgeMagnets extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
     }, __jsx(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
       id: "1842012620",
       __self: this
-    }, "\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2NybW9jay9waWRlZW5sYWVxdWluYS9mcm9udC9jb21wb25lbnRzL2ZyaWRnZU1hZ25ldHMuanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBa0JXIiwiZmlsZSI6Ii9ob21lL2NybW9jay9waWRlZW5sYWVxdWluYS9mcm9udC9jb21wb25lbnRzL2ZyaWRnZU1hZ25ldHMuanMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgUmVhY3QsIHsgQ29tcG9uZW50LCBGcmFnbWVudH0gZnJvbSAncmVhY3QnXG5pbXBvcnQgTWFnbmV0IGZyb20gJy4uL2NvbXBvbmVudHMvbWFnbmV0LmpzJ1xuXG5pbXBvcnQgQ2Fyb3VzZWwsIHsgRG90cyB9IGZyb20gJ0BicmFpbmh1YmV1L3JlYWN0LWNhcm91c2VsJ1xuXG5jbGFzcyBmcmlkZ2VNYWduZXRzIGV4dGVuZHMgQ29tcG9uZW50IHtcblxuICBjb25zdHJ1Y3Rvcihwcm9wcylcbiAge1xuICAgIHN1cGVyKHByb3BzKVxuICB9XG4gIFxuICByZW5kZXIoKSB7XG4gICAgXG4gICAgcmV0dXJuIChcbiAgICAgIDxkaXY+XG5cbiAgICAgICAgPHN0eWxlIGpzeD5cbiAgICAgICAgICB7YFxuICAgICAgICAgICAgXG4gICAgICAgICAgYH1cbiAgICAgICAgPC9zdHlsZT5cblxuICAgICAgICA8Q2Fyb3VzZWxcbiAgICAgICAgICBjbGlja1RvQ2hhbmdlXG4gICAgICAgICAgY2VudGVyZWRcbiAgICAgICAgICBpbmZpbml0ZVxuICAgICAgICAgIHNsaWRlc1BlclBhZ2U9ezJ9XG4gICAgICAgID5cbiAgICAgICAgICB7KFxuICAgICAgICAgIHRoaXMucHJvcHMuc3RvcmVzPT1udWxsXG4gICAgICAgICAgICA/XCJcIlxuICAgICAgICAgICAgOnRoaXMucHJvcHMuc3RvcmVzLm1hcCgoc3RvcmUpID0+IChcbiAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJcIj48TWFnbmV0IHN0b3JlPXtzdG9yZX0vPjwvZGl2PlxuICAgICAgICAgICAgKSlcbiAgICAgICAgICApfVxuICAgICAgICA8L0Nhcm91c2VsPlxuICAgICAgPC9kaXY+XG4gICAgKVxuICB9XG59XG5cbmV4cG9ydCBkZWZhdWx0IGZyaWRnZU1hZ25ldHM7XG4iXX0= */\n/*@ sourceURL=/home/crmock/pideenlaequina/front/components/fridgeMagnets.js */"), __jsx(_brainhubeu_react_carousel__WEBPACK_IMPORTED_MODULE_3___default.a, {
+    }, "\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2NybW9jay9waWRlZW5sYWVxdWluYS9mcm9udC9jb21wb25lbnRzL0ZyaWRnZU1hZ25ldHMuanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBa0JXIiwiZmlsZSI6Ii9ob21lL2NybW9jay9waWRlZW5sYWVxdWluYS9mcm9udC9jb21wb25lbnRzL0ZyaWRnZU1hZ25ldHMuanMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgUmVhY3QsIHsgQ29tcG9uZW50LCBGcmFnbWVudH0gZnJvbSAncmVhY3QnXG5pbXBvcnQgTWFnbmV0IGZyb20gJy4uL2NvbXBvbmVudHMvTWFnbmV0J1xuXG5pbXBvcnQgQ2Fyb3VzZWwsIHsgRG90cyB9IGZyb20gJ0BicmFpbmh1YmV1L3JlYWN0LWNhcm91c2VsJ1xuXG5jbGFzcyBGcmlkZ2VNYWduZXRzIGV4dGVuZHMgQ29tcG9uZW50IHtcblxuICBjb25zdHJ1Y3Rvcihwcm9wcylcbiAge1xuICAgIHN1cGVyKHByb3BzKVxuICB9XG4gIFxuICByZW5kZXIoKSB7XG4gICAgXG4gICAgcmV0dXJuIChcbiAgICAgIDxkaXY+XG5cbiAgICAgICAgPHN0eWxlIGpzeD5cbiAgICAgICAgICB7YFxuICAgICAgICAgICAgXG4gICAgICAgICAgYH1cbiAgICAgICAgPC9zdHlsZT5cblxuICAgICAgICA8Q2Fyb3VzZWxcbiAgICAgICAgICBjbGlja1RvQ2hhbmdlXG4gICAgICAgICAgY2VudGVyZWRcbiAgICAgICAgICBpbmZpbml0ZVxuICAgICAgICAgIHNsaWRlc1BlclBhZ2U9ezJ9XG4gICAgICAgID5cbiAgICAgICAgICB7KFxuICAgICAgICAgIHRoaXMucHJvcHMuc3RvcmVzPT1udWxsXG4gICAgICAgICAgICA/XCJcIlxuICAgICAgICAgICAgOnRoaXMucHJvcHMuc3RvcmVzLm1hcCgoc3RvcmUpID0+IChcbiAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJcIiBrZXk9e3N0b3JlLmlkfT48TWFnbmV0IHN0b3JlPXtzdG9yZX0vPjwvZGl2PlxuICAgICAgICAgICAgKSlcbiAgICAgICAgICApfVxuICAgICAgICA8L0Nhcm91c2VsPlxuICAgICAgPC9kaXY+XG4gICAgKVxuICB9XG59XG5cbmV4cG9ydCBkZWZhdWx0IEZyaWRnZU1hZ25ldHM7XG4iXX0= */\n/*@ sourceURL=/home/crmock/pideenlaequina/front/components/FridgeMagnets.js */"), __jsx(_brainhubeu_react_carousel__WEBPACK_IMPORTED_MODULE_3___default.a, {
       clickToChange: true,
       centered: true,
       infinite: true,
@@ -162,6 +162,7 @@ class fridgeMagnets extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
         columnNumber: 9
       }
     }, this.props.stores == null ? "" : this.props.stores.map(store => __jsx("div", {
+      key: store.id,
       className: "jsx-1842012620" + " " + "",
       __self: this,
       __source: {
@@ -169,26 +170,26 @@ class fridgeMagnets extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
         lineNumber: 34,
         columnNumber: 15
       }
-    }, __jsx(_components_magnet_js__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    }, __jsx(_components_Magnet__WEBPACK_IMPORTED_MODULE_2__["default"], {
       store: store,
       __self: this,
       __source: {
         fileName: _jsxFileName,
         lineNumber: 34,
-        columnNumber: 33
+        columnNumber: 48
       }
     })))));
   }
 
 }
 
-/* harmony default export */ __webpack_exports__["default"] = (fridgeMagnets);
+/* harmony default export */ __webpack_exports__["default"] = (FridgeMagnets);
 
 /***/ }),
 
-/***/ "./components/fridgeMagnetsNoFavorites.js":
+/***/ "./components/FridgeMagnetsNoFavorites.js":
 /*!************************************************!*\
-  !*** ./components/fridgeMagnetsNoFavorites.js ***!
+  !*** ./components/FridgeMagnetsNoFavorites.js ***!
   \************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -205,9 +206,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _material_ui_icons_Map__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_Map__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _material_ui_core_Paper__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material-ui/core/Paper */ "@material-ui/core/Paper");
 /* harmony import */ var _material_ui_core_Paper__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Paper__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _brainhubeu_react_carousel__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @brainhubeu/react-carousel */ "@brainhubeu/react-carousel");
-/* harmony import */ var _brainhubeu_react_carousel__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_brainhubeu_react_carousel__WEBPACK_IMPORTED_MODULE_5__);
-var _jsxFileName = "/home/crmock/pideenlaequina/front/components/fridgeMagnetsNoFavorites.js";
+var _jsxFileName = "/home/crmock/pideenlaequina/front/components/FridgeMagnetsNoFavorites.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
@@ -215,32 +214,31 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 
 
-
-class fridgeMagnetsNoFavorites extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
+class FridgeMagnetsNoFavorites extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
   render() {
     return __jsx("div", {
-      className: "jsx-1455261083",
+      className: "jsx-153926401",
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 12,
+        lineNumber: 10,
         columnNumber: 7
       }
     }, __jsx(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
-      id: "1455261083",
+      id: "153926401",
       __self: this
-    }, ".root.jsx-1455261083{text-align:center;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2NybW9jay9waWRlZW5sYWVxdWluYS9mcm9udC9jb21wb25lbnRzL2ZyaWRnZU1hZ25ldHNOb0Zhdm9yaXRlcy5qcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFhVyxBQUdnQyxrQkFDbkIiLCJmaWxlIjoiL2hvbWUvY3Jtb2NrL3BpZGVlbmxhZXF1aW5hL2Zyb250L2NvbXBvbmVudHMvZnJpZGdlTWFnbmV0c05vRmF2b3JpdGVzLmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IFJlYWN0LCB7IENvbXBvbmVudCwgRnJhZ21lbnR9IGZyb20gJ3JlYWN0J1xuaW1wb3J0IEJ1dHRvbiBmcm9tICdAbWF0ZXJpYWwtdWkvY29yZS9CdXR0b24nXG5pbXBvcnQgTWFwSWNvbiBmcm9tICdAbWF0ZXJpYWwtdWkvaWNvbnMvTWFwJ1xuaW1wb3J0IFBhcGVyIGZyb20gJ0BtYXRlcmlhbC11aS9jb3JlL1BhcGVyJ1xuXG5pbXBvcnQgQ2Fyb3VzZWwsIHsgRG90cyB9IGZyb20gJ0BicmFpbmh1YmV1L3JlYWN0LWNhcm91c2VsJ1xuXG5jbGFzcyBmcmlkZ2VNYWduZXRzTm9GYXZvcml0ZXMgZXh0ZW5kcyBDb21wb25lbnQge1xuICByZW5kZXIoKSB7XG4gICAgXG4gICAgcmV0dXJuIChcbiAgICAgIDxkaXY+XG4gICAgICAgIDxzdHlsZSBqc3g+XG4gICAgICAgICAge2BcbiAgICAgICAgICAgIC5yb290e1xuICAgICAgICAgICAgICB0ZXh0LWFsaWduOmNlbnRlcjtcbiAgICAgICAgICAgIH1cbiAgICAgICAgICBgfVxuICAgICAgICA8L3N0eWxlPlxuXG4gICAgICAgIDxkaXYgY2xhc3NOYW1lPVwicm9vdFwiPlxuICAgICAgICAgIDxQYXBlciBlbGV2YXRpb249ezEwfSBzdHlsZT17e3dpZHRoOlwiODAlXCIsIG1hcmdpblJpZ2h0OlwiYXV0b1wiLCBtYXJnaW5MZWZ0OlwiYXV0b1wiLCBwYWRkaW5nOlwiMjBweFwifX0+XG4gICAgICAgICAgICA8aDM+wqFObyB0aWVuZXMgZmF2b3JpdG9zITwvaDM+XG4gICAgICAgICAgICA8cD5Mb3MgZmF2b3JpdG9zIGhhY2VuIHF1ZSBwZWRpciBzZWEgbcOhcyBmw6FjaWwuIEFncmVnYSB0dSBwcmltZXIgZmF2b3JpdG88L3A+XG4gICAgICAgICAgICA8QnV0dG9uXG4gICAgICAgICAgICAgIHZhcmlhbnQ9XCJjb250YWluZWRcIlxuICAgICAgICAgICAgICBjb2xvcj1cInByaW1hcnlcIlxuICAgICAgICAgICAgICBzaXplPVwibGFyZ2VcIlxuICAgICAgICAgICAgICBzdGFydEljb249ezxNYXBJY29uIC8+fVxuICAgICAgICAgICAgICBocmVmPVwiL3NlYXJjaFwiXG4gICAgICAgICAgICA+XG4gICAgICAgICAgICAgIEJ1c2NhciB0aWVuZGFzXG4gICAgICAgICAgICA8L0J1dHRvbj5cbiAgICAgICAgICA8L1BhcGVyPlxuICAgICAgICA8L2Rpdj5cbiAgICAgIDwvZGl2PlxuICAgIClcbiAgfVxufVxuXG5leHBvcnQgZGVmYXVsdCBmcmlkZ2VNYWduZXRzTm9GYXZvcml0ZXM7XG4iXX0= */\n/*@ sourceURL=/home/crmock/pideenlaequina/front/components/fridgeMagnetsNoFavorites.js */"), __jsx("div", {
-      className: "jsx-1455261083" + " " + "root",
+    }, ".root.jsx-153926401{text-align:center;padding-bottom:20px;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2NybW9jay9waWRlZW5sYWVxdWluYS9mcm9udC9jb21wb25lbnRzL0ZyaWRnZU1hZ25ldHNOb0Zhdm9yaXRlcy5qcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFXVyxBQUdnQyxrQkFDRSxvQkFDckIiLCJmaWxlIjoiL2hvbWUvY3Jtb2NrL3BpZGVlbmxhZXF1aW5hL2Zyb250L2NvbXBvbmVudHMvRnJpZGdlTWFnbmV0c05vRmF2b3JpdGVzLmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IFJlYWN0LCB7IENvbXBvbmVudCwgRnJhZ21lbnR9IGZyb20gJ3JlYWN0J1xuaW1wb3J0IEJ1dHRvbiBmcm9tICdAbWF0ZXJpYWwtdWkvY29yZS9CdXR0b24nXG5pbXBvcnQgTWFwSWNvbiBmcm9tICdAbWF0ZXJpYWwtdWkvaWNvbnMvTWFwJ1xuaW1wb3J0IFBhcGVyIGZyb20gJ0BtYXRlcmlhbC11aS9jb3JlL1BhcGVyJ1xuXG5jbGFzcyBGcmlkZ2VNYWduZXRzTm9GYXZvcml0ZXMgZXh0ZW5kcyBDb21wb25lbnQge1xuICByZW5kZXIoKSB7XG4gICAgXG4gICAgcmV0dXJuIChcbiAgICAgIDxkaXY+XG4gICAgICAgIDxzdHlsZSBqc3g+XG4gICAgICAgICAge2BcbiAgICAgICAgICAgIC5yb290e1xuICAgICAgICAgICAgICB0ZXh0LWFsaWduOmNlbnRlcjtcbiAgICAgICAgICAgICAgcGFkZGluZy1ib3R0b206MjBweDtcbiAgICAgICAgICAgIH1cbiAgICAgICAgICBgfVxuICAgICAgICA8L3N0eWxlPlxuXG4gICAgICAgIDxkaXYgY2xhc3NOYW1lPVwicm9vdFwiPlxuICAgICAgICAgIDxQYXBlciBlbGV2YXRpb249ezEwfSBzdHlsZT17e3dpZHRoOlwiMjIwcHhcIiwgbWFyZ2luUmlnaHQ6XCJhdXRvXCIsIG1hcmdpbkxlZnQ6XCJhdXRvXCIsIHBhZGRpbmc6XCIyMHB4XCJ9fT5cbiAgICAgICAgICAgIDxoMz7CoU5vIHRpZW5lcyBmYXZvcml0b3MhPC9oMz5cbiAgICAgICAgICAgIDxwPkxvcyBmYXZvcml0b3MgaGFjZW4gcXVlIHBlZGlyIHNlYSBtw6FzIGbDoWNpbC4gQWdyZWdhIHR1IHByaW1lciBmYXZvcml0bzwvcD5cbiAgICAgICAgICAgIDxCdXR0b25cbiAgICAgICAgICAgICAgdmFyaWFudD1cIm91dGxpbmVkXCJcbiAgICAgICAgICAgICAgc2l6ZT1cImxhcmdlXCJcbiAgICAgICAgICAgICAgc3RhcnRJY29uPXs8TWFwSWNvbiAvPn1cbiAgICAgICAgICAgICAgaHJlZj1cIi9zZWFyY2hcIlxuICAgICAgICAgICAgPlxuICAgICAgICAgICAgICBCdXNjYXIgdGllbmRhc1xuICAgICAgICAgICAgPC9CdXR0b24+XG4gICAgICAgICAgPC9QYXBlcj5cbiAgICAgICAgPC9kaXY+XG4gICAgICA8L2Rpdj5cbiAgICApXG4gIH1cbn1cblxuZXhwb3J0IGRlZmF1bHQgRnJpZGdlTWFnbmV0c05vRmF2b3JpdGVzO1xuIl19 */\n/*@ sourceURL=/home/crmock/pideenlaequina/front/components/FridgeMagnetsNoFavorites.js */"), __jsx("div", {
+      className: "jsx-153926401" + " " + "root",
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 21,
+        lineNumber: 20,
         columnNumber: 9
       }
     }, __jsx(_material_ui_core_Paper__WEBPACK_IMPORTED_MODULE_4___default.a, {
       elevation: 10,
       style: {
-        width: "80%",
+        width: "220px",
         marginRight: "auto",
         marginLeft: "auto",
         padding: "20px"
@@ -248,34 +246,33 @@ class fridgeMagnetsNoFavorites extends react__WEBPACK_IMPORTED_MODULE_1__["Compo
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 22,
+        lineNumber: 21,
         columnNumber: 11
       }
     }, __jsx("h3", {
-      className: "jsx-1455261083",
+      className: "jsx-153926401",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 22,
+        columnNumber: 13
+      }
+    }, "\xA1No tienes favoritos!"), __jsx("p", {
+      className: "jsx-153926401",
       __self: this,
       __source: {
         fileName: _jsxFileName,
         lineNumber: 23,
         columnNumber: 13
       }
-    }, "\xA1No tienes favoritos!"), __jsx("p", {
-      className: "jsx-1455261083",
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 24,
-        columnNumber: 13
-      }
     }, "Los favoritos hacen que pedir sea m\xE1s f\xE1cil. Agrega tu primer favorito"), __jsx(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_2___default.a, {
-      variant: "contained",
-      color: "primary",
+      variant: "outlined",
       size: "large",
       startIcon: __jsx(_material_ui_icons_Map__WEBPACK_IMPORTED_MODULE_3___default.a, {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 29,
+          lineNumber: 27,
           columnNumber: 26
         }
       }),
@@ -283,7 +280,7 @@ class fridgeMagnetsNoFavorites extends react__WEBPACK_IMPORTED_MODULE_1__["Compo
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 25,
+        lineNumber: 24,
         columnNumber: 13
       }
     }, "Buscar tiendas"))));
@@ -291,13 +288,13 @@ class fridgeMagnetsNoFavorites extends react__WEBPACK_IMPORTED_MODULE_1__["Compo
 
 }
 
-/* harmony default export */ __webpack_exports__["default"] = (fridgeMagnetsNoFavorites);
+/* harmony default export */ __webpack_exports__["default"] = (FridgeMagnetsNoFavorites);
 
 /***/ }),
 
-/***/ "./components/fridgeMagnetsSection.js":
+/***/ "./components/FridgeMagnetsSection.js":
 /*!********************************************!*\
-  !*** ./components/fridgeMagnetsSection.js ***!
+  !*** ./components/FridgeMagnetsSection.js ***!
   \********************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -308,8 +305,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _fridgeMagnets_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./fridgeMagnets.js */ "./components/fridgeMagnets.js");
-/* harmony import */ var _fridgeMagnetsNoFavorites_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./fridgeMagnetsNoFavorites.js */ "./components/fridgeMagnetsNoFavorites.js");
+/* harmony import */ var _FridgeMagnets__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./FridgeMagnets */ "./components/FridgeMagnets.js");
+/* harmony import */ var _FridgeMagnetsNoFavorites__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./FridgeMagnetsNoFavorites */ "./components/FridgeMagnetsNoFavorites.js");
 /* harmony import */ var _material_ui_core_List__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material-ui/core/List */ "@material-ui/core/List");
 /* harmony import */ var _material_ui_core_List__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_List__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _material_ui_core_ListItem__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @material-ui/core/ListItem */ "@material-ui/core/ListItem");
@@ -324,7 +321,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _material_ui_icons_Favorite__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_Favorite__WEBPACK_IMPORTED_MODULE_9__);
 /* harmony import */ var _material_ui_icons_Star__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @material-ui/icons/Star */ "@material-ui/icons/Star");
 /* harmony import */ var _material_ui_icons_Star__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_Star__WEBPACK_IMPORTED_MODULE_10__);
-var _jsxFileName = "/home/crmock/pideenlaequina/front/components/fridgeMagnetsSection.js";
+var _jsxFileName = "/home/crmock/pideenlaequina/front/components/FridgeMagnetsSection.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
@@ -338,14 +335,14 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 
 
-class fridgeMagnetsSection extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
+class FridgeMagnetsSection extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
   constructor(props) {
     super(props);
   }
 
   render() {
     return __jsx("div", {
-      className: "jsx-2220928235",
+      className: "jsx-1096499017",
       __self: this,
       __source: {
         fileName: _jsxFileName,
@@ -353,9 +350,9 @@ class fridgeMagnetsSection extends react__WEBPACK_IMPORTED_MODULE_1__["Component
         columnNumber: 7
       }
     }, __jsx(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
-      id: "2220928235",
+      id: "1096499017",
       __self: this
-    }, ".divider.jsx-2220928235{padding-top:5px;padding-bottom:25px;}.featured.jsx-2220928235{background:linear-gradient(180deg,#ffcf0200 0%,#ffcf02ff 100%);}.favorite.jsx-2220928235{background:#ffcf02ff;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2NybW9jay9waWRlZW5sYWVxdWluYS9mcm9udC9jb21wb25lbnRzL2ZyaWRnZU1hZ25ldHNTZWN0aW9uLmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQTBCVyxBQUcrQixBQUtpRCxBQUk1QyxnQkFSRCxLQVN0QixlQVJBLDJCQUlBIiwiZmlsZSI6Ii9ob21lL2NybW9jay9waWRlZW5sYWVxdWluYS9mcm9udC9jb21wb25lbnRzL2ZyaWRnZU1hZ25ldHNTZWN0aW9uLmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IFJlYWN0LCB7IENvbXBvbmVudCwgRnJhZ21lbnR9IGZyb20gJ3JlYWN0J1xuaW1wb3J0IEZyaWRnZU1hZ25ldHMgZnJvbSAnLi9mcmlkZ2VNYWduZXRzLmpzJ1xuaW1wb3J0IEZyaWRnZU1hZ25ldHNOb0Zhdm9yaXRlcyBmcm9tICcuL2ZyaWRnZU1hZ25ldHNOb0Zhdm9yaXRlcy5qcydcblxuaW1wb3J0IExpc3QgZnJvbSAnQG1hdGVyaWFsLXVpL2NvcmUvTGlzdCdcbmltcG9ydCBMaXN0SXRlbSBmcm9tICdAbWF0ZXJpYWwtdWkvY29yZS9MaXN0SXRlbSdcbmltcG9ydCBMaXN0SXRlbVRleHQgZnJvbSAnQG1hdGVyaWFsLXVpL2NvcmUvTGlzdEl0ZW1UZXh0J1xuaW1wb3J0IExpc3RJdGVtQXZhdGFyIGZyb20gJ0BtYXRlcmlhbC11aS9jb3JlL0xpc3RJdGVtQXZhdGFyJ1xuaW1wb3J0IEF2YXRhciBmcm9tICdAbWF0ZXJpYWwtdWkvY29yZS9BdmF0YXInXG5pbXBvcnQgRmF2b3JpdGVJY29uIGZyb20gJ0BtYXRlcmlhbC11aS9pY29ucy9GYXZvcml0ZSdcbmltcG9ydCBTdGFySWNvbiBmcm9tICdAbWF0ZXJpYWwtdWkvaWNvbnMvU3RhcidcblxuXG5jbGFzcyBmcmlkZ2VNYWduZXRzU2VjdGlvbiBleHRlbmRzIENvbXBvbmVudCB7XG5cbiAgY29uc3RydWN0b3IocHJvcHMpXG4gIHtcbiAgICBzdXBlcihwcm9wcylcbiAgfVxuICBcbiAgcmVuZGVyKCkge1xuICAgIFxuICAgIHJldHVybiAoXG4gICAgICA8ZGl2PlxuXG4gICAgICAgIDxzdHlsZSBqc3g+XG4gICAgICAgICAge2BcbiAgICAgICAgICAgIC5kaXZpZGVye1xuICAgICAgICAgICAgICBwYWRkaW5nLXRvcDogNXB4O1xuICAgICAgICAgICAgICBwYWRkaW5nLWJvdHRvbTogMjVweDtcbiAgICAgICAgICAgIH1cblxuICAgICAgICAgICAgLmZlYXR1cmVke1xuICAgICAgICAgICAgICBiYWNrZ3JvdW5kOiBsaW5lYXItZ3JhZGllbnQoMTgwZGVnLCAjZmZjZjAyMDAgMCUsICNmZmNmMDJmZiAxMDAlKTtcbiAgICAgICAgICAgIH1cblxuICAgICAgICAgICAgLmZhdm9yaXRle1xuICAgICAgICAgICAgICBiYWNrZ3JvdW5kOiAjZmZjZjAyZmY7XG4gICAgICAgICAgICB9XG4gICAgICAgICAgYH1cbiAgICAgICAgPC9zdHlsZT5cblxuICAgICAgICA8TGlzdCBzdHlsZT17e3BhZGRpbmdUb3A6JzAnLCBwYWRkaW5nQm90dG9tOicwJ319PlxuICAgICAgICAgIHt0aGlzLnByb3BzLmZlYXR1cmVkU3RvcmVzICE9IG51bGwgJiYgKDxkaXYgY2xhc3NOYW1lPVwiZGl2aWRlciBmZWF0dXJlZFwiPlxuICAgICAgICAgICAgPExpc3RJdGVtPlxuICAgICAgICAgICAgICA8TGlzdEl0ZW1BdmF0YXI+XG4gICAgICAgICAgICAgICAgPEF2YXRhcj5cbiAgICAgICAgICAgICAgICAgIDxTdGFySWNvbiAvPlxuICAgICAgICAgICAgICAgIDwvQXZhdGFyPlxuICAgICAgICAgICAgICA8L0xpc3RJdGVtQXZhdGFyPlxuICAgICAgICAgICAgICA8TGlzdEl0ZW1UZXh0IHByaW1hcnk9XCJEZXN0YWNhZG9zXCIgc2Vjb25kYXJ5PVwiRXNwZWNpYWxtZW50ZSBlc2NvZ2lkYXMgcGFyYSB0w61cIiAvPlxuICAgICAgICAgICAgPC9MaXN0SXRlbT5cbiAgICAgICAgICAgIDxGcmlkZ2VNYWduZXRzIHN0b3Jlcz17dGhpcy5wcm9wcy5mZWF0dXJlZFN0b3Jlc30gLz5cbiAgICAgICAgICA8L2Rpdj4pfVxuICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiZGl2aWRlciBmYXZvcml0ZVwiPlxuICAgICAgICAgICAgPExpc3RJdGVtPlxuICAgICAgICAgICAgICA8TGlzdEl0ZW1BdmF0YXI+XG4gICAgICAgICAgICAgICAgPEF2YXRhcj5cbiAgICAgICAgICAgICAgICAgIDxGYXZvcml0ZUljb24gLz5cbiAgICAgICAgICAgICAgICA8L0F2YXRhcj5cbiAgICAgICAgICAgICAgPC9MaXN0SXRlbUF2YXRhcj5cbiAgICAgICAgICAgICAgPExpc3RJdGVtVGV4dCBwcmltYXJ5PVwiRmF2b3JpdG9zXCIgc2Vjb25kYXJ5PVwiVHVzIGVzdGFibGVjaW1pZW50b3MgZmF2b3JpdG9zXCIgLz5cbiAgICAgICAgICAgIDwvTGlzdEl0ZW0+XG4gICAgICAgICAgICB7KHRoaXMucHJvcHMuZmF2b3JpdGVTdG9yZXNcbiAgICAgICAgICAgID88RnJpZGdlTWFnbmV0cyBzdG9yZXM9e3RoaXMucHJvcHMuZmF2b3JpdGVTdG9yZXN9IHN0eWxlPXt7bWFyZ2luQm90dG9tOlwiMTVweFwifX0vPlxuICAgICAgICAgICAgOjxGcmlkZ2VNYWduZXRzTm9GYXZvcml0ZXMgc3R5bGU9e3ttYXJnaW5Cb3R0b206XCIxNXB4XCJ9fS8+XG4gICAgICAgICAgICApfVxuICAgICAgICAgIDwvZGl2PlxuICAgICAgICA8L0xpc3Q+XG4gICAgICA8L2Rpdj5cbiAgICApXG4gIH1cbn1cblxuZXhwb3J0IGRlZmF1bHQgZnJpZGdlTWFnbmV0c1NlY3Rpb247XG4iXX0= */\n/*@ sourceURL=/home/crmock/pideenlaequina/front/components/fridgeMagnetsSection.js */"), __jsx(_material_ui_core_List__WEBPACK_IMPORTED_MODULE_4___default.a, {
+    }, ".divider.jsx-1096499017{padding-top:5px;padding-bottom:0px;}.featured.jsx-1096499017{background:linear-gradient(180deg,#ffcf0200 0%,#ffcf0280 100%);}.favorite.jsx-1096499017{background:linear-gradient(180deg,#ffcf0280 0%,#ffcf02ff 90%);}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2NybW9jay9waWRlZW5sYWVxdWluYS9mcm9udC9jb21wb25lbnRzL0ZyaWRnZU1hZ25ldHNTZWN0aW9uLmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQTBCVyxBQUcrQixBQUtpRCxBQUlELGdCQVI3QyxtQkFDckIsMkJBUUEsQ0FKQSIsImZpbGUiOiIvaG9tZS9jcm1vY2svcGlkZWVubGFlcXVpbmEvZnJvbnQvY29tcG9uZW50cy9GcmlkZ2VNYWduZXRzU2VjdGlvbi5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCwgeyBDb21wb25lbnQsIEZyYWdtZW50fSBmcm9tICdyZWFjdCdcbmltcG9ydCBGcmlkZ2VNYWduZXRzIGZyb20gJy4vRnJpZGdlTWFnbmV0cydcbmltcG9ydCBGcmlkZ2VNYWduZXRzTm9GYXZvcml0ZXMgZnJvbSAnLi9GcmlkZ2VNYWduZXRzTm9GYXZvcml0ZXMnXG5cbmltcG9ydCBMaXN0IGZyb20gJ0BtYXRlcmlhbC11aS9jb3JlL0xpc3QnXG5pbXBvcnQgTGlzdEl0ZW0gZnJvbSAnQG1hdGVyaWFsLXVpL2NvcmUvTGlzdEl0ZW0nXG5pbXBvcnQgTGlzdEl0ZW1UZXh0IGZyb20gJ0BtYXRlcmlhbC11aS9jb3JlL0xpc3RJdGVtVGV4dCdcbmltcG9ydCBMaXN0SXRlbUF2YXRhciBmcm9tICdAbWF0ZXJpYWwtdWkvY29yZS9MaXN0SXRlbUF2YXRhcidcbmltcG9ydCBBdmF0YXIgZnJvbSAnQG1hdGVyaWFsLXVpL2NvcmUvQXZhdGFyJ1xuaW1wb3J0IEZhdm9yaXRlSWNvbiBmcm9tICdAbWF0ZXJpYWwtdWkvaWNvbnMvRmF2b3JpdGUnXG5pbXBvcnQgU3Rhckljb24gZnJvbSAnQG1hdGVyaWFsLXVpL2ljb25zL1N0YXInXG5cblxuY2xhc3MgRnJpZGdlTWFnbmV0c1NlY3Rpb24gZXh0ZW5kcyBDb21wb25lbnQge1xuXG4gIGNvbnN0cnVjdG9yKHByb3BzKVxuICB7XG4gICAgc3VwZXIocHJvcHMpXG4gIH1cbiAgXG4gIHJlbmRlcigpIHtcbiAgICBcbiAgICByZXR1cm4gKFxuICAgICAgPGRpdj5cblxuICAgICAgICA8c3R5bGUganN4PlxuICAgICAgICAgIHtgXG4gICAgICAgICAgICAuZGl2aWRlcntcbiAgICAgICAgICAgICAgcGFkZGluZy10b3A6IDVweDtcbiAgICAgICAgICAgICAgcGFkZGluZy1ib3R0b206IDBweDtcbiAgICAgICAgICAgIH1cblxuICAgICAgICAgICAgLmZlYXR1cmVke1xuICAgICAgICAgICAgICBiYWNrZ3JvdW5kOiBsaW5lYXItZ3JhZGllbnQoMTgwZGVnLCAjZmZjZjAyMDAgMCUsICNmZmNmMDI4MCAxMDAlKTtcbiAgICAgICAgICAgIH1cblxuICAgICAgICAgICAgLmZhdm9yaXRle1xuICAgICAgICAgICAgICBiYWNrZ3JvdW5kOiBsaW5lYXItZ3JhZGllbnQoMTgwZGVnLCAjZmZjZjAyODAgMCUsICNmZmNmMDJmZiA5MCUpO1xuICAgICAgICAgICAgfVxuICAgICAgICAgIGB9XG4gICAgICAgIDwvc3R5bGU+XG5cbiAgICAgICAgPExpc3Qgc3R5bGU9e3twYWRkaW5nVG9wOicwJywgcGFkZGluZ0JvdHRvbTonMCd9fT5cbiAgICAgICAgICB7dGhpcy5wcm9wcy5mZWF0dXJlZFN0b3JlcyAhPSBudWxsICYmICg8ZGl2IGNsYXNzTmFtZT1cImRpdmlkZXIgZmVhdHVyZWRcIj5cbiAgICAgICAgICAgIDxMaXN0SXRlbT5cbiAgICAgICAgICAgICAgPExpc3RJdGVtQXZhdGFyPlxuICAgICAgICAgICAgICAgIDxBdmF0YXI+XG4gICAgICAgICAgICAgICAgICA8U3Rhckljb24gLz5cbiAgICAgICAgICAgICAgICA8L0F2YXRhcj5cbiAgICAgICAgICAgICAgPC9MaXN0SXRlbUF2YXRhcj5cbiAgICAgICAgICAgICAgPExpc3RJdGVtVGV4dCBwcmltYXJ5PVwiRGVzdGFjYWRvc1wiIHNlY29uZGFyeT1cIkVzcGVjaWFsbWVudGUgZXNjb2dpZGFzIHBhcmEgdMOtXCIgLz5cbiAgICAgICAgICAgIDwvTGlzdEl0ZW0+XG4gICAgICAgICAgICA8RnJpZGdlTWFnbmV0cyBzdG9yZXM9e3RoaXMucHJvcHMuZmVhdHVyZWRTdG9yZXN9IC8+XG4gICAgICAgICAgPC9kaXY+KX1cbiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImRpdmlkZXIgZmF2b3JpdGVcIj5cbiAgICAgICAgICAgIDxMaXN0SXRlbT5cbiAgICAgICAgICAgICAgPExpc3RJdGVtQXZhdGFyPlxuICAgICAgICAgICAgICAgIDxBdmF0YXI+XG4gICAgICAgICAgICAgICAgICA8RmF2b3JpdGVJY29uIC8+XG4gICAgICAgICAgICAgICAgPC9BdmF0YXI+XG4gICAgICAgICAgICAgIDwvTGlzdEl0ZW1BdmF0YXI+XG4gICAgICAgICAgICAgIDxMaXN0SXRlbVRleHQgcHJpbWFyeT1cIkZhdm9yaXRvc1wiIHNlY29uZGFyeT1cIlR1cyBlc3RhYmxlY2ltaWVudG9zIGZhdm9yaXRvc1wiIC8+XG4gICAgICAgICAgICA8L0xpc3RJdGVtPlxuICAgICAgICAgICAgeyh0aGlzLnByb3BzLmZhdm9yaXRlU3RvcmVzXG4gICAgICAgICAgICA/PEZyaWRnZU1hZ25ldHMgc3RvcmVzPXt0aGlzLnByb3BzLmZhdm9yaXRlU3RvcmVzfSBzdHlsZT17e21hcmdpbkJvdHRvbTpcIjE1cHhcIn19Lz5cbiAgICAgICAgICAgIDo8RnJpZGdlTWFnbmV0c05vRmF2b3JpdGVzIHN0eWxlPXt7bWFyZ2luQm90dG9tOlwiMTVweFwifX0vPlxuICAgICAgICAgICAgKX1cbiAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgPC9MaXN0PlxuICAgICAgPC9kaXY+XG4gICAgKVxuICB9XG59XG5cbmV4cG9ydCBkZWZhdWx0IEZyaWRnZU1hZ25ldHNTZWN0aW9uO1xuIl19 */\n/*@ sourceURL=/home/crmock/pideenlaequina/front/components/FridgeMagnetsSection.js */"), __jsx(_material_ui_core_List__WEBPACK_IMPORTED_MODULE_4___default.a, {
       style: {
         paddingTop: '0',
         paddingBottom: '0'
@@ -367,7 +364,7 @@ class fridgeMagnetsSection extends react__WEBPACK_IMPORTED_MODULE_1__["Component
         columnNumber: 9
       }
     }, this.props.featuredStores != null && __jsx("div", {
-      className: "jsx-2220928235" + " " + "divider featured",
+      className: "jsx-1096499017" + " " + "divider featured",
       __self: this,
       __source: {
         fileName: _jsxFileName,
@@ -411,7 +408,7 @@ class fridgeMagnetsSection extends react__WEBPACK_IMPORTED_MODULE_1__["Component
         lineNumber: 51,
         columnNumber: 15
       }
-    })), __jsx(_fridgeMagnets_js__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    })), __jsx(_FridgeMagnets__WEBPACK_IMPORTED_MODULE_2__["default"], {
       stores: this.props.featuredStores,
       __self: this,
       __source: {
@@ -420,7 +417,7 @@ class fridgeMagnetsSection extends react__WEBPACK_IMPORTED_MODULE_1__["Component
         columnNumber: 13
       }
     })), __jsx("div", {
-      className: "jsx-2220928235" + " " + "divider favorite",
+      className: "jsx-1096499017" + " " + "divider favorite",
       __self: this,
       __source: {
         fileName: _jsxFileName,
@@ -464,7 +461,7 @@ class fridgeMagnetsSection extends react__WEBPACK_IMPORTED_MODULE_1__["Component
         lineNumber: 62,
         columnNumber: 15
       }
-    })), this.props.favoriteStores ? __jsx(_fridgeMagnets_js__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    })), this.props.favoriteStores ? __jsx(_FridgeMagnets__WEBPACK_IMPORTED_MODULE_2__["default"], {
       stores: this.props.favoriteStores,
       style: {
         marginBottom: "15px"
@@ -475,7 +472,7 @@ class fridgeMagnetsSection extends react__WEBPACK_IMPORTED_MODULE_1__["Component
         lineNumber: 65,
         columnNumber: 14
       }
-    }) : __jsx(_fridgeMagnetsNoFavorites_js__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    }) : __jsx(_FridgeMagnetsNoFavorites__WEBPACK_IMPORTED_MODULE_3__["default"], {
       style: {
         marginBottom: "15px"
       },
@@ -490,13 +487,13 @@ class fridgeMagnetsSection extends react__WEBPACK_IMPORTED_MODULE_1__["Component
 
 }
 
-/* harmony default export */ __webpack_exports__["default"] = (fridgeMagnetsSection);
+/* harmony default export */ __webpack_exports__["default"] = (FridgeMagnetsSection);
 
 /***/ }),
 
-/***/ "./components/loading.js":
+/***/ "./components/Loading.js":
 /*!*******************************!*\
-  !*** ./components/loading.js ***!
+  !*** ./components/Loading.js ***!
   \*******************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -507,12 +504,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "/home/crmock/pideenlaequina/front/components/loading.js";
+var _jsxFileName = "/home/crmock/pideenlaequina/front/components/Loading.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 
-class loading extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
+class Loading extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
   render() {
     return __jsx("div", {
       className: "jsx-3244493474",
@@ -525,7 +522,7 @@ class loading extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
     }, __jsx(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
       id: "3244493474",
       __self: this
-    }, ".root.jsx-3244493474{height:100vh;width:100%;background:#ffcf02;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2NybW9jay9waWRlZW5sYWVxdWluYS9mcm9udC9jb21wb25lbnRzL2xvYWRpbmcuanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBVVcsQUFHNkIsYUFDRixXQUNTLG1CQUNQLDBFQUNPLDZGQUNJLG1HQUMzQiIsImZpbGUiOiIvaG9tZS9jcm1vY2svcGlkZWVubGFlcXVpbmEvZnJvbnQvY29tcG9uZW50cy9sb2FkaW5nLmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IFJlYWN0LCB7IENvbXBvbmVudCwgRnJhZ21lbnR9IGZyb20gJ3JlYWN0J1xuXG5jbGFzcyBsb2FkaW5nIGV4dGVuZHMgQ29tcG9uZW50IHtcbiAgXG4gIHJlbmRlcigpIHtcbiAgICBcbiAgICByZXR1cm4gKFxuICAgICAgPGRpdj5cblxuICAgICAgICA8c3R5bGUganN4PlxuICAgICAgICAgIHtgXG4gICAgICAgICAgICAucm9vdHtcbiAgICAgICAgICAgICAgICBoZWlnaHQ6MTAwdmg7XG4gICAgICAgICAgICAgICAgd2lkdGg6MTAwJTtcbiAgICAgICAgICAgICAgICBiYWNrZ3JvdW5kOiAjZmZjZjAyO1xuICAgICAgICAgICAgICAgIGRpc3BsYXk6ZmxleDtcbiAgICAgICAgICAgICAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgICAgICAgICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICAgICAgfVxuICAgICAgICAgIGB9XG4gICAgICAgIDwvc3R5bGU+XG4gICAgICAgIDxkaXYgY2xhc3NOYW1lPVwicm9vdFwiPlxuICAgICAgICAgICAgPGltZyBjbGFzc05hbWU9XCJsb2dvXCIgc3JjPVwiL2JyYW5kL2xvZ29fYmxhbmNvX25hcmFuamEuc3ZnXCIgd2lkdGg9XCI4MCVcIj48L2ltZz5cbiAgICAgICAgPC9kaXY+XG4gICAgICA8L2Rpdj5cbiAgICApXG4gIH1cbn1cblxuZXhwb3J0IGRlZmF1bHQgbG9hZGluZztcbiJdfQ== */\n/*@ sourceURL=/home/crmock/pideenlaequina/front/components/loading.js */"), __jsx("div", {
+    }, ".root.jsx-3244493474{height:100vh;width:100%;background:#ffcf02;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2NybW9jay9waWRlZW5sYWVxdWluYS9mcm9udC9jb21wb25lbnRzL0xvYWRpbmcuanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBVVcsQUFHNkIsYUFDRixXQUNTLG1CQUNQLDBFQUNPLDZGQUNJLG1HQUMzQiIsImZpbGUiOiIvaG9tZS9jcm1vY2svcGlkZWVubGFlcXVpbmEvZnJvbnQvY29tcG9uZW50cy9Mb2FkaW5nLmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IFJlYWN0LCB7IENvbXBvbmVudCwgRnJhZ21lbnR9IGZyb20gJ3JlYWN0J1xuXG5jbGFzcyBMb2FkaW5nIGV4dGVuZHMgQ29tcG9uZW50IHtcbiAgXG4gIHJlbmRlcigpIHtcbiAgICBcbiAgICByZXR1cm4gKFxuICAgICAgPGRpdj5cblxuICAgICAgICA8c3R5bGUganN4PlxuICAgICAgICAgIHtgXG4gICAgICAgICAgICAucm9vdHtcbiAgICAgICAgICAgICAgICBoZWlnaHQ6MTAwdmg7XG4gICAgICAgICAgICAgICAgd2lkdGg6MTAwJTtcbiAgICAgICAgICAgICAgICBiYWNrZ3JvdW5kOiAjZmZjZjAyO1xuICAgICAgICAgICAgICAgIGRpc3BsYXk6ZmxleDtcbiAgICAgICAgICAgICAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgICAgICAgICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICAgICAgfVxuICAgICAgICAgIGB9XG4gICAgICAgIDwvc3R5bGU+XG4gICAgICAgIDxkaXYgY2xhc3NOYW1lPVwicm9vdFwiPlxuICAgICAgICAgICAgPGltZyBjbGFzc05hbWU9XCJsb2dvXCIgc3JjPVwiL2JyYW5kL2xvZ29fYmxhbmNvX25hcmFuamEuc3ZnXCIgd2lkdGg9XCI4MCVcIj48L2ltZz5cbiAgICAgICAgPC9kaXY+XG4gICAgICA8L2Rpdj5cbiAgICApXG4gIH1cbn1cblxuZXhwb3J0IGRlZmF1bHQgTG9hZGluZztcbiJdfQ== */\n/*@ sourceURL=/home/crmock/pideenlaequina/front/components/Loading.js */"), __jsx("div", {
       className: "jsx-3244493474" + " " + "root",
       __self: this,
       __source: {
@@ -548,13 +545,13 @@ class loading extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
 
 }
 
-/* harmony default export */ __webpack_exports__["default"] = (loading);
+/* harmony default export */ __webpack_exports__["default"] = (Loading);
 
 /***/ }),
 
-/***/ "./components/magnet.js":
+/***/ "./components/Magnet.js":
 /*!******************************!*\
-  !*** ./components/magnet.js ***!
+  !*** ./components/Magnet.js ***!
   \******************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -569,21 +566,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _material_ui_core_Paper__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @material-ui/core/Paper */ "@material-ui/core/Paper");
 /* harmony import */ var _material_ui_core_Paper__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Paper__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _material_ui_core_FormControlLabel__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material-ui/core/FormControlLabel */ "@material-ui/core/FormControlLabel");
-/* harmony import */ var _material_ui_core_FormControlLabel__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_FormControlLabel__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _material_ui_core_Checkbox__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @material-ui/core/Checkbox */ "@material-ui/core/Checkbox");
-/* harmony import */ var _material_ui_core_Checkbox__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Checkbox__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _material_ui_icons_Favorite__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @material-ui/icons/Favorite */ "@material-ui/icons/Favorite");
-/* harmony import */ var _material_ui_icons_Favorite__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_Favorite__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _material_ui_icons_FavoriteBorder__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @material-ui/icons/FavoriteBorder */ "@material-ui/icons/FavoriteBorder");
-/* harmony import */ var _material_ui_icons_FavoriteBorder__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_FavoriteBorder__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _material_ui_icons_Storefront__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @material-ui/icons/Storefront */ "@material-ui/icons/Storefront");
-/* harmony import */ var _material_ui_icons_Storefront__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_Storefront__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _material_ui_icons_CreditCard__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @material-ui/icons/CreditCard */ "@material-ui/icons/CreditCard");
-/* harmony import */ var _material_ui_icons_CreditCard__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_CreditCard__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var _material_ui_icons_LocalShipping__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @material-ui/icons/LocalShipping */ "@material-ui/icons/LocalShipping");
-/* harmony import */ var _material_ui_icons_LocalShipping__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_LocalShipping__WEBPACK_IMPORTED_MODULE_10__);
-var _jsxFileName = "/home/crmock/pideenlaequina/front/components/magnet.js";
+/* harmony import */ var _material_ui_icons_Storefront__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material-ui/icons/Storefront */ "@material-ui/icons/Storefront");
+/* harmony import */ var _material_ui_icons_Storefront__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_Storefront__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _material_ui_icons_CreditCard__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @material-ui/icons/CreditCard */ "@material-ui/icons/CreditCard");
+/* harmony import */ var _material_ui_icons_CreditCard__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_CreditCard__WEBPACK_IMPORTED_MODULE_5__);
+var _jsxFileName = "/home/crmock/pideenlaequina/front/components/Magnet.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
@@ -592,12 +579,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 
 
-
-
-
-
-
-class fridgeMagnets extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
+class Magnet extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
   constructor(props) {
     super(props);
   }
@@ -609,18 +591,18 @@ class fridgeMagnets extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 39,
+        lineNumber: 32,
         columnNumber: 7
       }
     }, __jsx(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
       id: "201863143",
       __self: this
-    }, ".center.jsx-201863143{text-align:center;}.sideButton.jsx-201863143{position:absolute;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;z-index:2;}.bottom.jsx-201863143{botom:0;left:0;background:gainsboro;height:40px;width:100%;border-bottom-left-radius:15px;border-bottom-right-radius:15px;}.top.jsx-201863143{left:35px;top:-40px;height:80px;width:80px;border-radius:40px;}.butchery.jsx-201863143{background:lightpink;}.pharmacy.jsx-201863143{background:lightcyan;}.bakery.jsx-201863143{background:lavender;}.vegetableStore.jsx-201863143{background:green;}.liquorStore.jsx-201863143{background:deeppink;}.petStore.jsx-201863143{background:peru;}.hardwareStore.jsx-201863143{background:slategrey;}.restaurant.jsx-201863143{background:olivedrab;}.fastFoodRestaurant.jsx-201863143{background:tomato;}.groceryStore.jsx-201863143{background:gold;}.stationeryStore.jsx-201863143{background:steelblue;}.store.jsx-201863143{background:gainsboro;}.dryCleaner.jsx-201863143{background:skyblue;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2NybW9jay9waWRlZW5sYWVxdWluYS9mcm9udC9jb21wb25lbnRzL21hZ25ldC5qcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUF5Q1csQUFHaUMsQUFJQSxBQVFWLEFBVUUsQUFRVyxBQUlBLEFBSUQsQUFJSCxBQUlHLEFBSUosQUFJSyxBQUlBLEFBSUgsQUFJRixBQUlLLEFBSUEsQUFJRixRQWpFWixFQVVHLEtBVFcsQ0FxQ3ZCLEFBZ0JBLENBeEJBLENBMUNBLEFBSWUsQUEwRGYsQ0FnQkEsQ0F2RGMsQUFlZCxBQVFBLENBaEJBLEFBSUEsQUFvQkEsQUFJQSxBQVlBLEFBSUEsV0FsRGEsSUFWQyxPQVdPLEtBVlIsV0FDb0IsR0FVakMsNEJBVGtDLEVBWmIsOEJBYXJCLCtEQVp5QixtR0FDZCxVQUNYIiwiZmlsZSI6Ii9ob21lL2NybW9jay9waWRlZW5sYWVxdWluYS9mcm9udC9jb21wb25lbnRzL21hZ25ldC5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCwgeyBDb21wb25lbnQsIEZyYWdtZW50fSBmcm9tICdyZWFjdCdcbmltcG9ydCBMaW5rIGZyb20gJ25leHQvbGluaydcblxuaW1wb3J0IFBhcGVyIGZyb20gJ0BtYXRlcmlhbC11aS9jb3JlL1BhcGVyJ1xuaW1wb3J0IEZvcm1Db250cm9sTGFiZWwgZnJvbSAnQG1hdGVyaWFsLXVpL2NvcmUvRm9ybUNvbnRyb2xMYWJlbCdcbmltcG9ydCBDaGVja2JveCBmcm9tICdAbWF0ZXJpYWwtdWkvY29yZS9DaGVja2JveCdcblxuaW1wb3J0IEZhdm9yaXRlSWNvbiBmcm9tICdAbWF0ZXJpYWwtdWkvaWNvbnMvRmF2b3JpdGUnXG5pbXBvcnQgRmF2b3JpdGVCb3JkZXJJY29uIGZyb20gJ0BtYXRlcmlhbC11aS9pY29ucy9GYXZvcml0ZUJvcmRlcidcbmltcG9ydCBTdG9yZWZyb250SWNvbiBmcm9tICdAbWF0ZXJpYWwtdWkvaWNvbnMvU3RvcmVmcm9udCdcbmltcG9ydCBDcmVkaXRDYXJkSWNvbiBmcm9tICdAbWF0ZXJpYWwtdWkvaWNvbnMvQ3JlZGl0Q2FyZCdcbmltcG9ydCBMb2NhbFNoaXBwaW5nSWNvbiBmcm9tICdAbWF0ZXJpYWwtdWkvaWNvbnMvTG9jYWxTaGlwcGluZydcblxuXG5jbGFzcyBmcmlkZ2VNYWduZXRzIGV4dGVuZHMgQ29tcG9uZW50IHtcblxuICBjb25zdHJ1Y3Rvcihwcm9wcylcbiAge1xuICAgIHN1cGVyKHByb3BzKVxuICB9XG4gIFxuICByZW5kZXIoKSB7XG4gICAgY29uc3Qgc3RvcmVUeXBlcyA9IFtcbiAgICAgIFwiZHJ5Q2xlYW5lclwiLCBcbiAgICAgIFwic3RhdGlvbmVyeVN0b3JlXCIsIFxuICAgICAgXCJncm9jZXJ5U3RvcmVcIiwgXG4gICAgICBcImZhc3RGb29kUmVzdGF1cmFudFwiLCBcbiAgICAgIFwicmVzdGF1cmFudFwiLCBcbiAgICAgIFwiaGFyZHdhcmVTdG9yZVwiLCBcbiAgICAgIFwicGV0U3RvcmVcIiwgXG4gICAgICBcImxpcXVvclN0b3JlXCIsIFxuICAgICAgXCJ2ZWdldGFibGVTdG9yZVwiLCBcbiAgICAgIFwiYmFrZXJ5XCIsIFxuICAgICAgXCJwaGFybWFjeVwiLCAgXG4gICAgICBcImJ1dGNoZXJ5XCJcbiAgICBdXG5cbiAgICByZXR1cm4gKFxuICAgICAgPGRpdiBjbGFzc05hbWU9XCJyb290XCI+XG5cbiAgICAgICAgPHN0eWxlIGpzeD5cbiAgICAgICAgICB7YFxuICAgICAgICAgICAgLmNlbnRlcntcbiAgICAgICAgICAgICAgdGV4dC1hbGlnbjogY2VudGVyO1xuICAgICAgICAgICAgfVxuICAgICAgICAgICAgXG4gICAgICAgICAgICAuc2lkZUJ1dHRvbntcbiAgICAgICAgICAgICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgICAgICAgICAgICBkaXNwbGF5OiBmbGV4O1xuICAgICAgICAgICAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgICAgICAgICAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgICAgICAgICAgICAgei1pbmRleDoyO1xuICAgICAgICAgICAgfVxuXG4gICAgICAgICAgICAuYm90dG9te1xuICAgICAgICAgICAgICBib3RvbTogMDtcbiAgICAgICAgICAgICAgbGVmdDogMDtcbiAgICAgICAgICAgICAgYmFja2dyb3VuZDogZ2FpbnNib3JvO1xuICAgICAgICAgICAgICBoZWlnaHQ6IDQwcHg7XG4gICAgICAgICAgICAgIHdpZHRoOiAxMDAlOyBcbiAgICAgICAgICAgICAgYm9yZGVyLWJvdHRvbS1sZWZ0LXJhZGl1czogMTVweDtcbiAgICAgICAgICAgICAgYm9yZGVyLWJvdHRvbS1yaWdodC1yYWRpdXM6IDE1cHg7XG4gICAgICAgICAgICB9XG5cbiAgICAgICAgICAgIC50b3B7XG4gICAgICAgICAgICAgIGxlZnQ6IDM1cHg7XG4gICAgICAgICAgICAgIHRvcDogLTQwcHg7XG4gICAgICAgICAgICAgIGhlaWdodDogODBweDtcbiAgICAgICAgICAgICAgd2lkdGg6IDgwcHg7IFxuICAgICAgICAgICAgICBib3JkZXItcmFkaXVzOiA0MHB4O1xuICAgICAgICAgICAgfVxuXG4gICAgICAgICAgICAuYnV0Y2hlcnl7XG4gICAgICAgICAgICAgIGJhY2tncm91bmQ6IGxpZ2h0cGluaztcbiAgICAgICAgICAgIH1cblxuICAgICAgICAgICAgLnBoYXJtYWN5e1xuICAgICAgICAgICAgICBiYWNrZ3JvdW5kOiBsaWdodGN5YW47XG4gICAgICAgICAgICB9XG5cbiAgICAgICAgICAgIC5iYWtlcnl7XG4gICAgICAgICAgICAgIGJhY2tncm91bmQ6IGxhdmVuZGVyO1xuICAgICAgICAgICAgfVxuXG4gICAgICAgICAgICAudmVnZXRhYmxlU3RvcmV7XG4gICAgICAgICAgICAgIGJhY2tncm91bmQ6IGdyZWVuO1xuICAgICAgICAgICAgfVxuXG4gICAgICAgICAgICAubGlxdW9yU3RvcmV7XG4gICAgICAgICAgICAgIGJhY2tncm91bmQ6IGRlZXBwaW5rO1xuICAgICAgICAgICAgfVxuXG4gICAgICAgICAgICAucGV0U3RvcmV7XG4gICAgICAgICAgICAgIGJhY2tncm91bmQ6IHBlcnU7XG4gICAgICAgICAgICB9XG5cbiAgICAgICAgICAgIC5oYXJkd2FyZVN0b3Jle1xuICAgICAgICAgICAgICBiYWNrZ3JvdW5kOiBzbGF0ZWdyZXk7XG4gICAgICAgICAgICB9XG5cbiAgICAgICAgICAgIC5yZXN0YXVyYW50e1xuICAgICAgICAgICAgICBiYWNrZ3JvdW5kOiBvbGl2ZWRyYWI7XG4gICAgICAgICAgICB9XG5cbiAgICAgICAgICAgIC5mYXN0Rm9vZFJlc3RhdXJhbnR7XG4gICAgICAgICAgICAgIGJhY2tncm91bmQ6IHRvbWF0bztcbiAgICAgICAgICAgIH1cblxuICAgICAgICAgICAgLmdyb2NlcnlTdG9yZXtcbiAgICAgICAgICAgICAgYmFja2dyb3VuZDogZ29sZDtcbiAgICAgICAgICAgIH1cblxuICAgICAgICAgICAgLnN0YXRpb25lcnlTdG9yZXtcbiAgICAgICAgICAgICAgYmFja2dyb3VuZDogc3RlZWxibHVlO1xuICAgICAgICAgICAgfVxuXG4gICAgICAgICAgICAuc3RvcmV7XG4gICAgICAgICAgICAgIGJhY2tncm91bmQ6IGdhaW5zYm9ybztcbiAgICAgICAgICAgIH1cblxuICAgICAgICAgICAgLmRyeUNsZWFuZXJ7XG4gICAgICAgICAgICAgIGJhY2tncm91bmQ6IHNreWJsdWU7XG4gICAgICAgICAgICB9XG4gICAgICAgICAgYH1cbiAgICAgICAgPC9zdHlsZT5cbiAgICAgICAgICA8UGFwZXIgZWxldmF0aW9uPXsxMH0gc3R5bGU9e3t3aWR0aDpcIjE0MHB4XCIsIG1hcmdpblRvcDpcIjUwcHhcIiwgbWFyZ2luQm90dG9tOlwiNXB4XCIsIG1hcmdpbkxlZnQ6XCI1cHhcIiwgbWFyZ2luUmlnaHQ6XCI1cHhcIiwgcGFkZGluZ0xlZnQ6XCI1cHhcIiwgcGFkZGluZ1JpZ2h0OlwiNXB4XCIsIHBhZGRpbmdUb3A6XCI0NXB4XCIsIHBhZGRpbmdCb3R0b206XCI0MHB4XCIsIHBvc2l0aW9uOidyZWxhdGl2ZScsIGJvcmRlclJhZGl1czonMTVweCd9fT5cbiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT17XCJzaWRlQnV0dG9uIHRvcCBcIisodGhpcy5wcm9wcy5zdG9yZS50eXBlIT1udWxsICYmIHN0b3JlVHlwZXMuaW5jbHVkZXModGhpcy5wcm9wcy5zdG9yZS50eXBlKSA/dGhpcy5wcm9wcy5zdG9yZS50eXBlOlwic3RvcmVcIil9PlxuICAgICAgICAgICAgICA8U3RvcmVmcm9udEljb24gZm9udFNpemU9XCJsYXJnZVwiLz4gXG4gICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJjZW50ZXJcIj5cbiAgICAgICAgICAgICAgPHAgc3R5bGU9e3toZWlnaHQ6XCI3MHB4XCJ9fT5cbiAgICAgICAgICAgICAgPHN0cm9uZz57dGhpcy5wcm9wcy5zdG9yZS5uYW1lfTwvc3Ryb25nPlxuICAgICAgICAgICAgICA8YnI+PC9icj5cbiAgICAgICAgICAgICAgPHNtYWxsPnsodGhpcy5wcm9wcy5zdG9yZS50eXBlIT1udWxsP3RoaXMucHJvcHMuc3RvcmUudHlwZTpcIlRpZW5kYVwiKX08L3NtYWxsPlxuICAgICAgICAgICAgICA8YnI+PC9icj5cbiAgICAgICAgICAgICAgPHNtYWxsPnsodGhpcy5wcm9wcy5zdG9yZS5hY2NlcHRzQ2FyZHM/PHNwYW4+PENyZWRpdENhcmRJY29uLz4gQWNlcHRhIFRhcmpldGFzPC9zcGFuPjpcIlwiKX0gPC9zbWFsbD5cbiAgICAgICAgICAgICAgPGJyPjwvYnI+XG4gICAgICAgICAgICAgIDxzbWFsbD57dGhpcy5wcm9wcy5zdG9yZS5hZGRyZXNzfTwvc21hbGw+XG4gICAgICAgICAgICAgIDwvcD5cbiAgICAgICAgICAgICAgPHA+XG4gICAgICAgICAgICAgIFxuICAgICAgICAgICAgICA8L3A+XG4gICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgPExpbmsgaHJlZj1cIi9hYm91dFwiPlxuICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInNpZGVCdXR0b24gYm90dG9tIGNlbnRlclwiPlxuICAgICAgICAgICAgICBIYWNlciBwZWRpZG9cbiAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgPC9MaW5rPlxuICAgICAgICA8L1BhcGVyPlxuICAgICAgPC9kaXY+XG4gICAgKVxuICB9XG59XG5cbmV4cG9ydCBkZWZhdWx0IGZyaWRnZU1hZ25ldHM7XG4iXX0= */\n/*@ sourceURL=/home/crmock/pideenlaequina/front/components/magnet.js */"), __jsx(_material_ui_core_Paper__WEBPACK_IMPORTED_MODULE_3___default.a, {
-      elevation: 10,
+    }, ".center.jsx-201863143{text-align:center;}.sideButton.jsx-201863143{position:absolute;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;z-index:2;}.bottom.jsx-201863143{botom:0;left:0;background:gainsboro;height:40px;width:100%;border-bottom-left-radius:15px;border-bottom-right-radius:15px;}.top.jsx-201863143{left:35px;top:-40px;height:80px;width:80px;border-radius:40px;}.butchery.jsx-201863143{background:lightpink;}.pharmacy.jsx-201863143{background:lightcyan;}.bakery.jsx-201863143{background:lavender;}.vegetableStore.jsx-201863143{background:green;}.liquorStore.jsx-201863143{background:deeppink;}.petStore.jsx-201863143{background:peru;}.hardwareStore.jsx-201863143{background:slategrey;}.restaurant.jsx-201863143{background:olivedrab;}.fastFoodRestaurant.jsx-201863143{background:tomato;}.groceryStore.jsx-201863143{background:gold;}.stationeryStore.jsx-201863143{background:steelblue;}.store.jsx-201863143{background:gainsboro;}.dryCleaner.jsx-201863143{background:skyblue;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2NybW9jay9waWRlZW5sYWVxdWluYS9mcm9udC9jb21wb25lbnRzL01hZ25ldC5qcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFrQ1csQUFHaUMsQUFJQSxBQVFWLEFBVUUsQUFRVyxBQUlBLEFBSUQsQUFJSCxBQUlHLEFBSUosQUFJSyxBQUlBLEFBSUgsQUFJRixBQUlLLEFBSUEsQUFJRixRQWpFWixFQVVHLEtBVFcsQ0FxQ3ZCLEFBZ0JBLENBeEJBLENBMUNBLEFBSWUsQUEwRGYsQ0FnQkEsQ0F2RGMsQUFlZCxBQVFBLENBaEJBLEFBSUEsQUFvQkEsQUFJQSxBQVlBLEFBSUEsV0FsRGEsSUFWQyxPQVdPLEtBVlIsV0FDb0IsR0FVakMsNEJBVGtDLEVBWmIsOEJBYXJCLCtEQVp5QixtR0FDZCxVQUNYIiwiZmlsZSI6Ii9ob21lL2NybW9jay9waWRlZW5sYWVxdWluYS9mcm9udC9jb21wb25lbnRzL01hZ25ldC5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCwgeyBDb21wb25lbnQsIEZyYWdtZW50fSBmcm9tICdyZWFjdCdcbmltcG9ydCBMaW5rIGZyb20gJ25leHQvbGluaydcblxuaW1wb3J0IFBhcGVyIGZyb20gJ0BtYXRlcmlhbC11aS9jb3JlL1BhcGVyJ1xuaW1wb3J0IFN0b3JlZnJvbnRJY29uIGZyb20gJ0BtYXRlcmlhbC11aS9pY29ucy9TdG9yZWZyb250J1xuaW1wb3J0IENyZWRpdENhcmRJY29uIGZyb20gJ0BtYXRlcmlhbC11aS9pY29ucy9DcmVkaXRDYXJkJ1xuXG5jbGFzcyBNYWduZXQgZXh0ZW5kcyBDb21wb25lbnQge1xuXG4gIGNvbnN0cnVjdG9yKHByb3BzKVxuICB7XG4gICAgc3VwZXIocHJvcHMpXG4gIH1cbiAgXG4gIHJlbmRlcigpIHtcbiAgICBjb25zdCBzdG9yZVR5cGVzID0gW1xuICAgICAgXCJkcnlDbGVhbmVyXCIsIFxuICAgICAgXCJzdGF0aW9uZXJ5U3RvcmVcIiwgXG4gICAgICBcImdyb2NlcnlTdG9yZVwiLCBcbiAgICAgIFwiZmFzdEZvb2RSZXN0YXVyYW50XCIsIFxuICAgICAgXCJyZXN0YXVyYW50XCIsIFxuICAgICAgXCJoYXJkd2FyZVN0b3JlXCIsIFxuICAgICAgXCJwZXRTdG9yZVwiLCBcbiAgICAgIFwibGlxdW9yU3RvcmVcIiwgXG4gICAgICBcInZlZ2V0YWJsZVN0b3JlXCIsIFxuICAgICAgXCJiYWtlcnlcIiwgXG4gICAgICBcInBoYXJtYWN5XCIsICBcbiAgICAgIFwiYnV0Y2hlcnlcIlxuICAgIF1cblxuICAgIHJldHVybiAoXG4gICAgICA8ZGl2IGNsYXNzTmFtZT1cInJvb3RcIj5cblxuICAgICAgICA8c3R5bGUganN4PlxuICAgICAgICAgIHtgXG4gICAgICAgICAgICAuY2VudGVye1xuICAgICAgICAgICAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gICAgICAgICAgICB9XG4gICAgICAgICAgICBcbiAgICAgICAgICAgIC5zaWRlQnV0dG9ue1xuICAgICAgICAgICAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgICAgICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICAgICAgICB6LWluZGV4OjI7XG4gICAgICAgICAgICB9XG5cbiAgICAgICAgICAgIC5ib3R0b217XG4gICAgICAgICAgICAgIGJvdG9tOiAwO1xuICAgICAgICAgICAgICBsZWZ0OiAwO1xuICAgICAgICAgICAgICBiYWNrZ3JvdW5kOiBnYWluc2Jvcm87XG4gICAgICAgICAgICAgIGhlaWdodDogNDBweDtcbiAgICAgICAgICAgICAgd2lkdGg6IDEwMCU7IFxuICAgICAgICAgICAgICBib3JkZXItYm90dG9tLWxlZnQtcmFkaXVzOiAxNXB4O1xuICAgICAgICAgICAgICBib3JkZXItYm90dG9tLXJpZ2h0LXJhZGl1czogMTVweDtcbiAgICAgICAgICAgIH1cblxuICAgICAgICAgICAgLnRvcHtcbiAgICAgICAgICAgICAgbGVmdDogMzVweDtcbiAgICAgICAgICAgICAgdG9wOiAtNDBweDtcbiAgICAgICAgICAgICAgaGVpZ2h0OiA4MHB4O1xuICAgICAgICAgICAgICB3aWR0aDogODBweDsgXG4gICAgICAgICAgICAgIGJvcmRlci1yYWRpdXM6IDQwcHg7XG4gICAgICAgICAgICB9XG5cbiAgICAgICAgICAgIC5idXRjaGVyeXtcbiAgICAgICAgICAgICAgYmFja2dyb3VuZDogbGlnaHRwaW5rO1xuICAgICAgICAgICAgfVxuXG4gICAgICAgICAgICAucGhhcm1hY3l7XG4gICAgICAgICAgICAgIGJhY2tncm91bmQ6IGxpZ2h0Y3lhbjtcbiAgICAgICAgICAgIH1cblxuICAgICAgICAgICAgLmJha2VyeXtcbiAgICAgICAgICAgICAgYmFja2dyb3VuZDogbGF2ZW5kZXI7XG4gICAgICAgICAgICB9XG5cbiAgICAgICAgICAgIC52ZWdldGFibGVTdG9yZXtcbiAgICAgICAgICAgICAgYmFja2dyb3VuZDogZ3JlZW47XG4gICAgICAgICAgICB9XG5cbiAgICAgICAgICAgIC5saXF1b3JTdG9yZXtcbiAgICAgICAgICAgICAgYmFja2dyb3VuZDogZGVlcHBpbms7XG4gICAgICAgICAgICB9XG5cbiAgICAgICAgICAgIC5wZXRTdG9yZXtcbiAgICAgICAgICAgICAgYmFja2dyb3VuZDogcGVydTtcbiAgICAgICAgICAgIH1cblxuICAgICAgICAgICAgLmhhcmR3YXJlU3RvcmV7XG4gICAgICAgICAgICAgIGJhY2tncm91bmQ6IHNsYXRlZ3JleTtcbiAgICAgICAgICAgIH1cblxuICAgICAgICAgICAgLnJlc3RhdXJhbnR7XG4gICAgICAgICAgICAgIGJhY2tncm91bmQ6IG9saXZlZHJhYjtcbiAgICAgICAgICAgIH1cblxuICAgICAgICAgICAgLmZhc3RGb29kUmVzdGF1cmFudHtcbiAgICAgICAgICAgICAgYmFja2dyb3VuZDogdG9tYXRvO1xuICAgICAgICAgICAgfVxuXG4gICAgICAgICAgICAuZ3JvY2VyeVN0b3Jle1xuICAgICAgICAgICAgICBiYWNrZ3JvdW5kOiBnb2xkO1xuICAgICAgICAgICAgfVxuXG4gICAgICAgICAgICAuc3RhdGlvbmVyeVN0b3Jle1xuICAgICAgICAgICAgICBiYWNrZ3JvdW5kOiBzdGVlbGJsdWU7XG4gICAgICAgICAgICB9XG5cbiAgICAgICAgICAgIC5zdG9yZXtcbiAgICAgICAgICAgICAgYmFja2dyb3VuZDogZ2FpbnNib3JvO1xuICAgICAgICAgICAgfVxuXG4gICAgICAgICAgICAuZHJ5Q2xlYW5lcntcbiAgICAgICAgICAgICAgYmFja2dyb3VuZDogc2t5Ymx1ZTtcbiAgICAgICAgICAgIH1cbiAgICAgICAgICBgfVxuICAgICAgICA8L3N0eWxlPlxuICAgICAgICAgIDxQYXBlciBlbGV2YXRpb249ezV9IHN0eWxlPXt7d2lkdGg6XCIxNDBweFwiLCBtYXJnaW5Ub3A6XCI1MHB4XCIsIG1hcmdpbkJvdHRvbTpcIjIwcHhcIiwgbWFyZ2luTGVmdDpcIjVweFwiLCBtYXJnaW5SaWdodDpcIjVweFwiLCBwYWRkaW5nTGVmdDpcIjVweFwiLCBwYWRkaW5nUmlnaHQ6XCI1cHhcIiwgcGFkZGluZ1RvcDpcIjQ1cHhcIiwgcGFkZGluZ0JvdHRvbTpcIjQwcHhcIiwgcG9zaXRpb246J3JlbGF0aXZlJywgYm9yZGVyUmFkaXVzOicxNXB4J319PlxuICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPXtcInNpZGVCdXR0b24gdG9wIFwiKyh0aGlzLnByb3BzLnN0b3JlLnR5cGUhPW51bGwgJiYgc3RvcmVUeXBlcy5pbmNsdWRlcyh0aGlzLnByb3BzLnN0b3JlLnR5cGUpID90aGlzLnByb3BzLnN0b3JlLnR5cGU6XCJzdG9yZVwiKX0+XG4gICAgICAgICAgICAgIDxTdG9yZWZyb250SWNvbiBmb250U2l6ZT1cImxhcmdlXCIvPiBcbiAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImNlbnRlclwiPlxuICAgICAgICAgICAgICA8cCBzdHlsZT17e2hlaWdodDpcIjcwcHhcIn19PlxuICAgICAgICAgICAgICA8c3Ryb25nPnt0aGlzLnByb3BzLnN0b3JlLm5hbWV9PC9zdHJvbmc+XG4gICAgICAgICAgICAgIDxicj48L2JyPlxuICAgICAgICAgICAgICA8c21hbGw+eyh0aGlzLnByb3BzLnN0b3JlLnR5cGUhPW51bGw/dGhpcy5wcm9wcy5zdG9yZS50eXBlOlwiVGllbmRhXCIpfTwvc21hbGw+XG4gICAgICAgICAgICAgIDxicj48L2JyPlxuICAgICAgICAgICAgICA8c21hbGw+eyh0aGlzLnByb3BzLnN0b3JlLmFjY2VwdHNDYXJkcz88c3Bhbj48Q3JlZGl0Q2FyZEljb24vPiBBY2VwdGEgVGFyamV0YXM8L3NwYW4+OlwiXCIpfSA8L3NtYWxsPlxuICAgICAgICAgICAgICA8YnI+PC9icj5cbiAgICAgICAgICAgICAgPHNtYWxsPnt0aGlzLnByb3BzLnN0b3JlLmFkZHJlc3N9PC9zbWFsbD5cbiAgICAgICAgICAgICAgPC9wPlxuICAgICAgICAgICAgICA8cD5cbiAgICAgICAgICAgICAgXG4gICAgICAgICAgICAgIDwvcD5cbiAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICA8TGluayBocmVmPVwiL2Fib3V0XCI+XG4gICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwic2lkZUJ1dHRvbiBib3R0b20gY2VudGVyXCI+XG4gICAgICAgICAgICAgIEhhY2VyIHBlZGlkb1xuICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICA8L0xpbms+XG4gICAgICAgIDwvUGFwZXI+XG4gICAgICA8L2Rpdj5cbiAgICApXG4gIH1cbn1cblxuZXhwb3J0IGRlZmF1bHQgTWFnbmV0O1xuIl19 */\n/*@ sourceURL=/home/crmock/pideenlaequina/front/components/Magnet.js */"), __jsx(_material_ui_core_Paper__WEBPACK_IMPORTED_MODULE_3___default.a, {
+      elevation: 5,
       style: {
         width: "140px",
         marginTop: "50px",
-        marginBottom: "5px",
+        marginBottom: "20px",
         marginLeft: "5px",
         marginRight: "5px",
         paddingLeft: "5px",
@@ -633,7 +615,7 @@ class fridgeMagnets extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 126,
+        lineNumber: 119,
         columnNumber: 11
       }
     }, __jsx("div", {
@@ -641,15 +623,15 @@ class fridgeMagnets extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 127,
+        lineNumber: 120,
         columnNumber: 11
       }
-    }, __jsx(_material_ui_icons_Storefront__WEBPACK_IMPORTED_MODULE_8___default.a, {
+    }, __jsx(_material_ui_icons_Storefront__WEBPACK_IMPORTED_MODULE_4___default.a, {
       fontSize: "large",
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 128,
+        lineNumber: 121,
         columnNumber: 15
       }
     })), __jsx("div", {
@@ -657,7 +639,7 @@ class fridgeMagnets extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 130,
+        lineNumber: 123,
         columnNumber: 11
       }
     }, __jsx("p", {
@@ -668,7 +650,7 @@ class fridgeMagnets extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 131,
+        lineNumber: 124,
         columnNumber: 15
       }
     }, __jsx("strong", {
@@ -676,7 +658,7 @@ class fridgeMagnets extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 132,
+        lineNumber: 125,
         columnNumber: 15
       }
     }, this.props.store.name), __jsx("br", {
@@ -684,7 +666,7 @@ class fridgeMagnets extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 133,
+        lineNumber: 126,
         columnNumber: 15
       }
     }), __jsx("small", {
@@ -692,7 +674,7 @@ class fridgeMagnets extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 134,
+        lineNumber: 127,
         columnNumber: 15
       }
     }, this.props.store.type != null ? this.props.store.type : "Tienda"), __jsx("br", {
@@ -700,7 +682,7 @@ class fridgeMagnets extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 135,
+        lineNumber: 128,
         columnNumber: 15
       }
     }), __jsx("small", {
@@ -708,7 +690,7 @@ class fridgeMagnets extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 136,
+        lineNumber: 129,
         columnNumber: 15
       }
     }, this.props.store.acceptsCards ? __jsx("span", {
@@ -716,14 +698,14 @@ class fridgeMagnets extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 136,
+        lineNumber: 129,
         columnNumber: 54
       }
-    }, __jsx(_material_ui_icons_CreditCard__WEBPACK_IMPORTED_MODULE_9___default.a, {
+    }, __jsx(_material_ui_icons_CreditCard__WEBPACK_IMPORTED_MODULE_5___default.a, {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 136,
+        lineNumber: 129,
         columnNumber: 60
       }
     }), " Acepta Tarjetas") : "", " "), __jsx("br", {
@@ -731,7 +713,7 @@ class fridgeMagnets extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 137,
+        lineNumber: 130,
         columnNumber: 15
       }
     }), __jsx("small", {
@@ -739,7 +721,7 @@ class fridgeMagnets extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 138,
+        lineNumber: 131,
         columnNumber: 15
       }
     }, this.props.store.address)), __jsx("p", {
@@ -747,7 +729,7 @@ class fridgeMagnets extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 140,
+        lineNumber: 133,
         columnNumber: 15
       }
     })), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
@@ -755,7 +737,7 @@ class fridgeMagnets extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 144,
+        lineNumber: 137,
         columnNumber: 11
       }
     }, __jsx("div", {
@@ -763,7 +745,7 @@ class fridgeMagnets extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 145,
+        lineNumber: 138,
         columnNumber: 15
       }
     }, "Hacer pedido"))));
@@ -771,13 +753,13 @@ class fridgeMagnets extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
 
 }
 
-/* harmony default export */ __webpack_exports__["default"] = (fridgeMagnets);
+/* harmony default export */ __webpack_exports__["default"] = (Magnet);
 
 /***/ }),
 
-/***/ "./components/sideMenu.js":
+/***/ "./components/SideMenu.js":
 /*!********************************!*\
-  !*** ./components/sideMenu.js ***!
+  !*** ./components/SideMenu.js ***!
   \********************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -818,7 +800,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _material_ui_icons_Edit__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_Edit__WEBPACK_IMPORTED_MODULE_15__);
 /* harmony import */ var _material_ui_icons_Info__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @material-ui/icons/Info */ "@material-ui/icons/Info");
 /* harmony import */ var _material_ui_icons_Info__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_Info__WEBPACK_IMPORTED_MODULE_16__);
-var _jsxFileName = "/home/crmock/pideenlaequina/front/components/sideMenu.js";
+var _jsxFileName = "/home/crmock/pideenlaequina/front/components/SideMenu.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
@@ -838,7 +820,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
-class sideMenu extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
+class SideMenu extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   constructor(props) {
     super(props);
     this.state = {
@@ -875,7 +857,7 @@ class sideMenu extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
           columnNumber: 11
         }
       }), __jsx(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_5___default.a, {
-        href: "/register",
+        onClick: this.props.auth0Login,
         size: "large",
         color: "primary",
         variant: "contained",
@@ -893,7 +875,7 @@ class sideMenu extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
           columnNumber: 11
         }
       }, "Registrarse"), __jsx(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_5___default.a, {
-        href: "/login",
+        onClick: this.props.auth0Login,
         size: "small",
         style: {
           widht: '70%',
@@ -1161,13 +1143,13 @@ class sideMenu extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
 
 }
 
-/* harmony default export */ __webpack_exports__["default"] = (sideMenu);
+/* harmony default export */ __webpack_exports__["default"] = (SideMenu);
 
 /***/ }),
 
-/***/ "./components/welcomeSection.js":
+/***/ "./components/WelcomeSection.js":
 /*!**************************************!*\
-  !*** ./components/welcomeSection.js ***!
+  !*** ./components/WelcomeSection.js ***!
   \**************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -1180,134 +1162,248 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _material_ui_core_Button__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material-ui/core/Button */ "@material-ui/core/Button");
 /* harmony import */ var _material_ui_core_Button__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _material_ui_icons_Map__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @material-ui/icons/Map */ "@material-ui/icons/Map");
-/* harmony import */ var _material_ui_icons_Map__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_Map__WEBPACK_IMPORTED_MODULE_3__);
-var _jsxFileName = "/home/crmock/pideenlaequina/front/components/welcomeSection.js";
+/* harmony import */ var _material_ui_icons_Storefront__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @material-ui/icons/Storefront */ "@material-ui/icons/Storefront");
+/* harmony import */ var _material_ui_icons_Storefront__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_material_ui_icons_Storefront__WEBPACK_IMPORTED_MODULE_3__);
+var _jsxFileName = "/home/crmock/pideenlaequina/front/components/WelcomeSection.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
 
-class searchSection extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
+
+
+class WellcomeSection extends react__WEBPACK_IMPORTED_MODULE_1__["Component"] {
   constructor(props) {
     super(props);
+
+    _defineProperty(this, "handleAddressClickOpen", () => {
+      this.addressDialogOpen(true);
+    });
+
+    _defineProperty(this, "handleAddressClose", value => {
+      this.addressDialogOpen(true);
+      this.setSelectedValue(value);
+    });
+
     this.state = {
       stores: null
     };
   }
 
   render() {
-    return __jsx("div", {
-      className: "jsx-3283840078",
+    const conTiendas = __jsx("div", {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 18,
+        lineNumber: 28,
+        columnNumber: 7
+      }
+    }, __jsx("p", {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 29,
+        columnNumber: 9
+      }
+    }, __jsx(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_2___default.a, {
+      variant: "contained",
+      color: "primary",
+      size: "large",
+      href: "/search",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 30,
+        columnNumber: 11
+      }
+    }, "Hacer pedido")));
+
+    const sinTiendas = __jsx("div", {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 43,
+        columnNumber: 7
+      }
+    }, __jsx("h3", {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 44,
+        columnNumber: 9
+      }
+    }, "pero te tenemos cubiert@..."), __jsx("span", {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 45,
+        columnNumber: 9
+      }
+    }, __jsx("small", {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 45,
+        columnNumber: 15
+      }
+    }, "Puedes hacer un pedido en cualquier tienda o establecimiento incluso si no est\xE1 listado, nosotros nos encargamos.")), __jsx("p", {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 46,
+        columnNumber: 9
+      }
+    }, __jsx("small", {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 46,
+        columnNumber: 12
+      }
+    }, "(tambi\xE9n puedes cambiar de \xFAbicaci\xF3n ingresando una nueva direcci\xF3n)")), __jsx("p", {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 47,
+        columnNumber: 9
+      }
+    }, __jsx(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_2___default.a, {
+      variant: "contained",
+      color: "primary",
+      href: "/agregarTienda",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 47,
+        columnNumber: 12
+      }
+    }, __jsx("small", {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 47,
+        columnNumber: 78
+      }
+    }, "Hacer pedido"))));
+
+    return __jsx("div", {
+      className: "jsx-480591321",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 52,
         columnNumber: 7
       }
     }, __jsx(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
-      id: "3283840078",
+      id: "480591321",
       __self: this
-    }, ".root.jsx-3283840078{height:250px;background:white;padding-left:15px;padding-right:15px;padding-top:50px;padding-bottom:10px;text-align:center;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2NybW9jay9waWRlZW5sYWVxdWluYS9mcm9udC9jb21wb25lbnRzL3dlbGNvbWVTZWN0aW9uLmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQW9CVyxBQUcyQixhQUNJLGlCQUNDLGtCQUNDLG1CQUNGLGlCQUNHLG9CQUNGLGtCQUNuQiIsImZpbGUiOiIvaG9tZS9jcm1vY2svcGlkZWVubGFlcXVpbmEvZnJvbnQvY29tcG9uZW50cy93ZWxjb21lU2VjdGlvbi5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCwgeyBDb21wb25lbnQsIEZyYWdtZW50fSBmcm9tICdyZWFjdCdcbmltcG9ydCBCdXR0b24gZnJvbSAnQG1hdGVyaWFsLXVpL2NvcmUvQnV0dG9uJztcbmltcG9ydCBNYXBJY29uIGZyb20gJ0BtYXRlcmlhbC11aS9pY29ucy9NYXAnO1xuXG5jbGFzcyBzZWFyY2hTZWN0aW9uIGV4dGVuZHMgQ29tcG9uZW50IHtcblxuICBjb25zdHJ1Y3Rvcihwcm9wcylcbiAge1xuICAgIHN1cGVyKHByb3BzKVxuICAgIHRoaXMuc3RhdGU9IHtcbiAgICAgIHN0b3JlczpudWxsXG4gICAgfVxuICB9XG4gIFxuICByZW5kZXIoKSB7XG4gICAgXG4gICAgcmV0dXJuIChcbiAgICAgIDxkaXY+XG5cbiAgICAgICAgPHN0eWxlIGpzeD5cbiAgICAgICAgICB7YFxuICAgICAgICAgICAgLnJvb3R7XG4gICAgICAgICAgICAgIGhlaWdodDoyNTBweDtcbiAgICAgICAgICAgICAgYmFja2dyb3VuZDp3aGl0ZTtcbiAgICAgICAgICAgICAgcGFkZGluZy1sZWZ0OjE1cHg7XG4gICAgICAgICAgICAgIHBhZGRpbmctcmlnaHQ6MTVweDtcbiAgICAgICAgICAgICAgcGFkZGluZy10b3A6NTBweDtcbiAgICAgICAgICAgICAgcGFkZGluZy1ib3R0b206MTBweDtcbiAgICAgICAgICAgICAgdGV4dC1hbGlnbjpjZW50ZXI7XG4gICAgICAgICAgICB9XG4gICAgICAgICAgYH1cbiAgICAgICAgPC9zdHlsZT5cbiAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJyb290XCI+XG4gICAgICAgICAgICA8aDEgc3R5bGU9e3ttYXJnaW46JzAnfX0+SG9sYSBDYW1pbG8hPC9oMT5cbiAgICAgICAgICAgIDxwPjxzbWFsbD5UdSBkaXJlY2Npw7NuOiBDcmEgMTMgIyAxNTIgLSA4MCBBUCA3MTU8L3NtYWxsPjxicj48L2JyPjxCdXR0b24+PHNtYWxsPkNhbWJpYXI8L3NtYWxsPjwvQnV0dG9uPjwvcD5cbiAgICAgICAgICAgIDxwPkhheiB0dSBwZWRpZG8gZW4gYWxndW5hIGRlIGxhcyAyNTAgdGllbmRhcyB5IG5lZ29jaW9zIGNlcmNhIGRlIHTDrS48L3A+XG4gICAgICAgICAgICA8cD5TZXLDoXMgYXRlbmRpZG8gcG9yIHN1IGR1ZcOxby48L3A+XG4gICAgICAgICAgICA8QnV0dG9uXG4gICAgICAgICAgICAgIHZhcmlhbnQ9XCJjb250YWluZWRcIlxuICAgICAgICAgICAgICBjb2xvcj1cInByaW1hcnlcIlxuICAgICAgICAgICAgICBzaXplPVwibGFyZ2VcIlxuICAgICAgICAgICAgICBzdGFydEljb249ezxNYXBJY29uIC8+fVxuICAgICAgICAgICAgICBocmVmPVwiL3NlYXJjaFwiXG4gICAgICAgICAgICA+XG4gICAgICAgICAgICAgIFZlciBlbCBtYXBhXG4gICAgICAgICAgICA8L0J1dHRvbj5cbiAgICAgICAgPC9kaXY+XG4gICAgICA8L2Rpdj5cbiAgICApXG4gIH1cbn1cblxuZXhwb3J0IGRlZmF1bHQgc2VhcmNoU2VjdGlvbjtcbiJdfQ== */\n/*@ sourceURL=/home/crmock/pideenlaequina/front/components/welcomeSection.js */"), __jsx("div", {
-      className: "jsx-3283840078" + " " + "root",
+    }, ".root.jsx-480591321{background:white;padding-left:15px;padding-right:15px;padding-top:10px;padding-bottom:10px;text-align:center;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL2NybW9jay9waWRlZW5sYWVxdWluYS9mcm9udC9jb21wb25lbnRzL1dlbGNvbWVTZWN0aW9uLmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQXNEVyxBQUcrQixpQkFDQyxrQkFDQyxtQkFDRixpQkFDRyxvQkFDRixrQkFDbkIiLCJmaWxlIjoiL2hvbWUvY3Jtb2NrL3BpZGVlbmxhZXF1aW5hL2Zyb250L2NvbXBvbmVudHMvV2VsY29tZVNlY3Rpb24uanMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgUmVhY3QsIHsgQ29tcG9uZW50LCBGcmFnbWVudH0gZnJvbSAncmVhY3QnXG5pbXBvcnQgQnV0dG9uIGZyb20gJ0BtYXRlcmlhbC11aS9jb3JlL0J1dHRvbic7XG5pbXBvcnQgU3RvcmVmcm9udEljb24gZnJvbSAnQG1hdGVyaWFsLXVpL2ljb25zL1N0b3JlZnJvbnQnXG5cblxuY2xhc3MgV2VsbGNvbWVTZWN0aW9uIGV4dGVuZHMgQ29tcG9uZW50IHtcblxuICBjb25zdHJ1Y3Rvcihwcm9wcylcbiAge1xuICAgIHN1cGVyKHByb3BzKVxuICAgIHRoaXMuc3RhdGU9IHtcbiAgICAgIHN0b3JlczpudWxsXG4gICAgfVxuICB9XG5cbiAgaGFuZGxlQWRkcmVzc0NsaWNrT3BlbiA9ICgpID0+IHtcbiAgICB0aGlzLmFkZHJlc3NEaWFsb2dPcGVuKHRydWUpO1xuICB9O1xuXG4gIGhhbmRsZUFkZHJlc3NDbG9zZSA9ICh2YWx1ZSkgPT4ge1xuICAgIHRoaXMuYWRkcmVzc0RpYWxvZ09wZW4odHJ1ZSk7XG4gICAgdGhpcy5zZXRTZWxlY3RlZFZhbHVlKHZhbHVlKTtcbiAgfTtcbiAgXG4gIHJlbmRlcigpIHtcblxuICAgIGNvbnN0IGNvblRpZW5kYXMgPSAoXG4gICAgICA8ZGl2PlxuICAgICAgICA8cD5cbiAgICAgICAgICA8QnV0dG9uXG4gICAgICAgICAgICB2YXJpYW50PVwiY29udGFpbmVkXCJcbiAgICAgICAgICAgIGNvbG9yPVwicHJpbWFyeVwiXG4gICAgICAgICAgICBzaXplPVwibGFyZ2VcIlxuICAgICAgICAgICAgaHJlZj1cIi9zZWFyY2hcIlxuICAgICAgICAgID5cbiAgICAgICAgICAgIEhhY2VyIHBlZGlkbyAgXG4gICAgICAgICAgPC9CdXR0b24+XG4gICAgICAgIDwvcD5cbiAgICAgIDwvZGl2PlxuICAgIClcblxuICAgIGNvbnN0IHNpblRpZW5kYXMgPSAoXG4gICAgICA8ZGl2PlxuICAgICAgICA8aDM+cGVybyB0ZSB0ZW5lbW9zIGN1YmllcnRALi4uPC9oMz5cbiAgICAgICAgPHNwYW4+PHNtYWxsPlB1ZWRlcyBoYWNlciB1biBwZWRpZG8gZW4gY3VhbHF1aWVyIHRpZW5kYSBvIGVzdGFibGVjaW1pZW50byBpbmNsdXNvIHNpIG5vIGVzdMOhIGxpc3RhZG8sIG5vc290cm9zIG5vcyBlbmNhcmdhbW9zLjwvc21hbGw+PC9zcGFuPlxuICAgICAgICA8cD48c21hbGw+KHRhbWJpw6luIHB1ZWRlcyBjYW1iaWFyIGRlIMO6YmljYWNpw7NuIGluZ3Jlc2FuZG8gdW5hIG51ZXZhIGRpcmVjY2nDs24pPC9zbWFsbD48L3A+XG4gICAgICAgIDxwPjxCdXR0b24gdmFyaWFudD1cImNvbnRhaW5lZFwiIGNvbG9yPVwicHJpbWFyeVwiIGhyZWY9XCIvYWdyZWdhclRpZW5kYVwiPjxzbWFsbD5IYWNlciBwZWRpZG88L3NtYWxsPjwvQnV0dG9uPjwvcD5cbiAgICAgIDwvZGl2PlxuICAgIClcblxuICAgIHJldHVybiAoXG4gICAgICA8ZGl2PlxuXG4gICAgICAgIDxzdHlsZSBqc3g+XG4gICAgICAgICAge2BcbiAgICAgICAgICAgIC5yb290e1xuICAgICAgICAgICAgICBiYWNrZ3JvdW5kOndoaXRlO1xuICAgICAgICAgICAgICBwYWRkaW5nLWxlZnQ6MTVweDtcbiAgICAgICAgICAgICAgcGFkZGluZy1yaWdodDoxNXB4O1xuICAgICAgICAgICAgICBwYWRkaW5nLXRvcDoxMHB4O1xuICAgICAgICAgICAgICBwYWRkaW5nLWJvdHRvbToxMHB4O1xuICAgICAgICAgICAgICB0ZXh0LWFsaWduOmNlbnRlcjtcbiAgICAgICAgICAgIH1cbiAgICAgICAgICBgfVxuICAgICAgICA8L3N0eWxlPlxuXG4gICAgICAgIDxkaXYgY2xhc3NOYW1lPVwicm9vdFwiPlxuICAgICAgICAgICAgPGgxPsKhSG9sYSB7dGhpcy5wcm9wcy5uYW1lfSE8L2gxPlxuICAgICAgICAgICAgPHNwYW4+XG4gICAgICAgICAgICAgIDxzbWFsbD5UdSBkaXJlY2Npw7NuOiB7dGhpcy5wcm9wcy5hZGRyZXNzfTwvc21hbGw+XG4gICAgICAgICAgICAgIDxicj48L2JyPlxuICAgICAgICAgICAgICA8QnV0dG9uPjxzbWFsbD5DYW1iaWFyPC9zbWFsbD48L0J1dHRvbj5cbiAgICAgICAgICAgIDwvc3Bhbj5cbiAgICAgICAgICAgIDxkaXYgc3R5bGU9e3tkaXNwbGF5OiAnZmxleCcsIGZsZXhEaXJlY3Rpb246XCJjb2x1bW5cIiwganVzdGlmeUNvbnRlbnQ6ICdjZW50ZXInLCBhbGlnbkl0ZW1zOiAnY2VudGVyJywgd2lkdGg6JzEwMCUnLCBtYXJnaW5Ub3A6JzEwcHgnfX0+XG4gICAgICAgICAgICAgIDxTdG9yZWZyb250SWNvbiBmb250U2l6ZT1cImxhcmdlXCIvPlxuICAgICAgICAgICAgICA8aDIgc3R5bGU9e3ttYXJnaW5Cb3R0b206JzAnLCBtYXJnaW5Ub3A6JzVweCd9fT4mbmJzcDt7dGhpcy5wcm9wcy5udW1TdG9yZXN9Jm5ic3A7VGllbmRhczwvaDI+XG4gICAgICAgICAgICAgIDxzcGFuPiBhICBtZW5vcyBkZSAxIGttPC9zcGFuPlxuICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICB7KHRoaXMucHJvcHMubnVtU3RvcmVzPjA/Y29uVGllbmRhczpzaW5UaWVuZGFzKX1cbiAgICAgICAgPC9kaXY+XG4gICAgICA8L2Rpdj5cbiAgICApXG4gIH1cbn1cblxuZXhwb3J0IGRlZmF1bHQgV2VsbGNvbWVTZWN0aW9uO1xuIl19 */\n/*@ sourceURL=/home/crmock/pideenlaequina/front/components/WelcomeSection.js */"), __jsx("div", {
+      className: "jsx-480591321" + " " + "root",
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 33,
+        lineNumber: 67,
         columnNumber: 9
       }
     }, __jsx("h1", {
-      style: {
-        margin: '0'
-      },
-      className: "jsx-3283840078",
+      className: "jsx-480591321",
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 34,
+        lineNumber: 68,
         columnNumber: 13
       }
-    }, "Hola Camilo!"), __jsx("p", {
-      className: "jsx-3283840078",
+    }, "\xA1Hola ", this.props.name, "!"), __jsx("span", {
+      className: "jsx-480591321",
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 35,
+        lineNumber: 69,
         columnNumber: 13
       }
     }, __jsx("small", {
-      className: "jsx-3283840078",
+      className: "jsx-480591321",
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 35,
-        columnNumber: 16
+        lineNumber: 70,
+        columnNumber: 15
       }
-    }, "Tu direcci\xF3n: Cra 13 # 152 - 80 AP 715"), __jsx("br", {
-      className: "jsx-3283840078",
+    }, "Tu direcci\xF3n: ", this.props.address), __jsx("br", {
+      className: "jsx-480591321",
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 35,
-        columnNumber: 69
+        lineNumber: 71,
+        columnNumber: 15
       }
     }), __jsx(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_2___default.a, {
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 35,
-        columnNumber: 78
+        lineNumber: 72,
+        columnNumber: 15
       }
     }, __jsx("small", {
-      className: "jsx-3283840078",
+      className: "jsx-480591321",
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 35,
-        columnNumber: 86
+        lineNumber: 72,
+        columnNumber: 23
       }
-    }, "Cambiar"))), __jsx("p", {
-      className: "jsx-3283840078",
+    }, "Cambiar"))), __jsx("div", {
+      style: {
+        display: 'flex',
+        flexDirection: "column",
+        justifyContent: 'center',
+        alignItems: 'center',
+        width: '100%',
+        marginTop: '10px'
+      },
+      className: "jsx-480591321",
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 36,
+        lineNumber: 74,
         columnNumber: 13
       }
-    }, "Haz tu pedido en alguna de las 250 tiendas y negocios cerca de t\xED."), __jsx("p", {
-      className: "jsx-3283840078",
+    }, __jsx(_material_ui_icons_Storefront__WEBPACK_IMPORTED_MODULE_3___default.a, {
+      fontSize: "large",
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 37,
-        columnNumber: 13
+        lineNumber: 75,
+        columnNumber: 15
       }
-    }, "Ser\xE1s atendido por su due\xF1o."), __jsx(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_2___default.a, {
-      variant: "contained",
-      color: "primary",
-      size: "large",
-      startIcon: __jsx(_material_ui_icons_Map__WEBPACK_IMPORTED_MODULE_3___default.a, {
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 42,
-          columnNumber: 26
-        }
-      }),
-      href: "/search",
+    }), __jsx("h2", {
+      style: {
+        marginBottom: '0',
+        marginTop: '5px'
+      },
+      className: "jsx-480591321",
       __self: this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 38,
-        columnNumber: 13
+        lineNumber: 76,
+        columnNumber: 15
       }
-    }, "Ver el mapa")));
+    }, "\xA0", this.props.numStores, "\xA0Tiendas"), __jsx("span", {
+      className: "jsx-480591321",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 77,
+        columnNumber: 15
+      }
+    }, " a  menos de 1 km")), this.props.numStores > 0 ? conTiendas : sinTiendas));
   }
 
 }
 
-/* harmony default export */ __webpack_exports__["default"] = (searchSection);
+/* harmony default export */ __webpack_exports__["default"] = (WellcomeSection);
 
 /***/ }),
 
@@ -3256,10 +3352,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "react-dom");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _components_Context__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Context */ "./components/Context.js");
-/* harmony import */ var _components_loading_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/loading.js */ "./components/loading.js");
-/* harmony import */ var _components_sideMenu_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/sideMenu.js */ "./components/sideMenu.js");
-/* harmony import */ var _components_welcomeSection_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/welcomeSection.js */ "./components/welcomeSection.js");
-/* harmony import */ var _components_fridgeMagnetsSection_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/fridgeMagnetsSection.js */ "./components/fridgeMagnetsSection.js");
+/* harmony import */ var _components_Loading__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Loading */ "./components/Loading.js");
+/* harmony import */ var _components_SideMenu__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/SideMenu */ "./components/SideMenu.js");
+/* harmony import */ var _components_WelcomeSection__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/WelcomeSection */ "./components/WelcomeSection.js");
+/* harmony import */ var _components_FridgeMagnetsSection__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/FridgeMagnetsSection */ "./components/FridgeMagnetsSection.js");
 var _jsxFileName = "/home/crmock/pideenlaequina/front/pages/index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -3271,60 +3367,63 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 const App = props => {
-  const ready = (s, f) => __jsx("div", {
+  return __jsx(_components_Context__WEBPACK_IMPORTED_MODULE_2__["default"].Consumer, {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 12,
       columnNumber: 5
     }
-  }, __jsx(_components_sideMenu_js__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 13,
-      columnNumber: 7
-    }
-  }), __jsx(_components_welcomeSection_js__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    __self: undefined,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 14,
-      columnNumber: 7
-    }
-  }), __jsx(_components_fridgeMagnetsSection_js__WEBPACK_IMPORTED_MODULE_6__["default"], {
-    stores: s,
-    featuredStores: f,
+  }, context => !context.isReady ? __jsx(_components_Loading__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 15,
-      columnNumber: 7
+      columnNumber: 10
     }
-  }));
-
-  return __jsx(_components_Context__WEBPACK_IMPORTED_MODULE_2__["default"].Consumer, {
+  }) : __jsx("div", {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 17,
+      columnNumber: 11
+    }
+  }, __jsx(_components_SideMenu__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    user: context.user,
+    auth0Login: context.loginWithRedirect,
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18,
+      columnNumber: 13
+    }
+  }), __jsx(_components_WelcomeSection__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    name: context.user != null && context.user.name != null ? context.user.name : null,
+    address: context.address,
+    numStores: context.stores !== null ? context.stores.length : 0,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 19,
-      columnNumber: 5
+      columnNumber: 13
     }
-  }, context => !context.isReady && context.isLoading ? __jsx(_components_loading_js__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  }), context.stores !== null && context.stores.length > 0 && __jsx(_components_FridgeMagnetsSection__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    favoriteStores: context.user != null ? context.user.favoriteStores : [],
+    featuredStores: context.featuredStores,
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22,
-      columnNumber: 10
+      lineNumber: 30,
+      columnNumber: 15
     }
-  }) : ready(context.stores, context.featuredStores));
+  })));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (App);
 
 /***/ }),
 
-/***/ 4:
+/***/ 5:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/
@@ -3380,17 +3479,6 @@ module.exports = require("@material-ui/core/Button");
 
 /***/ }),
 
-/***/ "@material-ui/core/Checkbox":
-/*!*********************************************!*\
-  !*** external "@material-ui/core/Checkbox" ***!
-  \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("@material-ui/core/Checkbox");
-
-/***/ }),
-
 /***/ "@material-ui/core/Divider":
 /*!********************************************!*\
   !*** external "@material-ui/core/Divider" ***!
@@ -3421,17 +3509,6 @@ module.exports = require("@material-ui/core/Drawer");
 /***/ (function(module, exports) {
 
 module.exports = require("@material-ui/core/Fab");
-
-/***/ }),
-
-/***/ "@material-ui/core/FormControlLabel":
-/*!*****************************************************!*\
-  !*** external "@material-ui/core/FormControlLabel" ***!
-  \*****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("@material-ui/core/FormControlLabel");
 
 /***/ }),
 
@@ -3556,17 +3633,6 @@ module.exports = require("@material-ui/icons/Favorite");
 
 /***/ }),
 
-/***/ "@material-ui/icons/FavoriteBorder":
-/*!****************************************************!*\
-  !*** external "@material-ui/icons/FavoriteBorder" ***!
-  \****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("@material-ui/icons/FavoriteBorder");
-
-/***/ }),
-
 /***/ "@material-ui/icons/Info":
 /*!******************************************!*\
   !*** external "@material-ui/icons/Info" ***!
@@ -3575,17 +3641,6 @@ module.exports = require("@material-ui/icons/FavoriteBorder");
 /***/ (function(module, exports) {
 
 module.exports = require("@material-ui/icons/Info");
-
-/***/ }),
-
-/***/ "@material-ui/icons/LocalShipping":
-/*!***************************************************!*\
-  !*** external "@material-ui/icons/LocalShipping" ***!
-  \***************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("@material-ui/icons/LocalShipping");
 
 /***/ }),
 

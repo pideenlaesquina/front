@@ -30,9 +30,7 @@ module.exports = async (req, res) => {
         let place = jres.results[0]
 
         collection.insert({
-            lat:
-            
-            element.lat, 
+            lat:element.lat, 
             lng:element.lng, 
             googlemaps_lat:place.geometry.location.lat, 
             googlemaps_lng:place.geometry.location.lng, 
