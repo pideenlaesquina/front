@@ -14,7 +14,7 @@ module.exports = async (req, res) => {
       lng: { $gt: querry_lng - delta, $lt: querry_lng + delta }
     }).limit(5).toArray()
 
-    res.status(200).json({ stores:[] })
+    res.status(200).json({ stores })
   }
   else {
     res.status(400).json({ error: "missing parameters" })
