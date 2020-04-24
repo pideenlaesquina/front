@@ -29,23 +29,11 @@ class FridgeMagnetsSection extends Component {
               padding-top: 5px;
               padding-bottom: 0px;
             }
-
-            .first{
-              background: linear-gradient(180deg, #ffcf0200 0%, #ffcf0280 100%);
-            }
-
-            .second{
-              background: linear-gradient(180deg, #ffcf0280 0%, #ffcf02ff 90%);
-            }
-
-            .alone{
-              background: linear-gradient(180deg, #ffcf0200 0%, #ffcf02ff 90%);
-            }
           `}
         </style>
 
         <List style={{paddingTop:'0', paddingBottom:'0'}}>
-          {this.props.featuredStores != null && (<div className="divider first">
+          {this.props.featuredStores != null && (<div className="dividers">
             <ListItem>
               <ListItemAvatar>
                 <Avatar>
@@ -55,8 +43,8 @@ class FridgeMagnetsSection extends Component {
               <ListItemText primary="Destacados" secondary="Especialmente escogidas para tí" />
             </ListItem>
             <FridgeMagnets stores={this.props.featuredStores} />
-          </div>
-          <div className={"divider "+(this.props.featuredStores != nullfavorite?"second":"alone")}>
+          </div>)}
+          <div className="divider">
             <ListItem>
               <ListItemAvatar>
                 <Avatar>

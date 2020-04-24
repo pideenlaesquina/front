@@ -10,11 +10,19 @@ import FridgeMagnetsSection from '../components/FridgeMagnetsSection'
 const App = (props) => {
   return(
     <Context.Consumer>
+      <style jsx>
+        {`
+          .root{
+            background: linear-gradient(180deg, #ffcf0200 50%, #ffcf02ff 90%);
+          }
+        `}
+      </style>
+
       {context => (
         !context.isReady
         ?<Loading/>
         :(
-          <div>
+          <div className="root">
             <SideMenu 
               user={context.user} 
               auth0Login={context.loginWithRedirect}

@@ -63,6 +63,7 @@ class WellcomeSection extends Component {
             }
           `}
         </style>
+        
 
         <div className="root">
             <h1>¡Hola {this.props.name}!</h1>
