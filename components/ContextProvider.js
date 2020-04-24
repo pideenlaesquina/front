@@ -15,6 +15,7 @@ class ContextProvider extends Component {
 
       featuredStores:null,
       stores:null,
+      orders:null,
 
       authClient: null,
       isAuthenticated: false,
@@ -143,6 +144,7 @@ class ContextProvider extends Component {
       address,
       featuredStores,
       stores,
+      orders,
 
       authClient,
       isAuthenticated,
@@ -156,6 +158,7 @@ class ContextProvider extends Component {
       address,
       featuredStores,
       stores,
+      orders,
 
       isAuthenticated,
       user,

@@ -32,32 +32,21 @@ class SideMenu extends Component {
     if(this.props.user == null)
     {
       menu = (
-        <div>
-          <Avatar alt="Remy Sharp" src="/brand/logo_fondo_naranja.svg" style={{width:'150px', height:'150px', marginLeft:'auto', marginRight:'auto', marginTop:'20px', marginBottom:"20px"}}/>
-          <Button
-            onClick={this.props.auth0Login} 
-            size="large"
-            color="primary" 
-            variant="contained"
-            style={{widht:'70%', marginRight:'20%', marginLeft:'20%', marginTop:'20px', marginBottom:'10px'}}
-          >
-            Registrarse
-          </Button>
-          <Button 
-            onClick={this.props.auth0Login} 
-            size='small'
-            style={{widht:'70%', marginRight:'27%', marginLeft:'26%', marginTop:'20px', marginBottom:'10px'}}
-          >
-            Iniciar sesión
-          </Button>
-        </div>
+        <Button
+          onClick={this.props.auth0Login} 
+          size="large"
+          color="primary" 
+          variant="contained"
+          style={{widht:'70%', marginRight:'20%', marginLeft:'20%', marginTop:'20px', marginBottom:'10px'}}
+        >
+          Iniciar
+        </Button>
       )
     }
     else
     {
       menu = (
         <div>
-          <Avatar alt="Remy Sharp" src="/noProfilePicture.svg" style={{width:'100px', height:'100px', marginLeft:'auto', marginRight:'auto', marginTop:'20px', marginBottom:"20px"}}/>
           <p style={{textAlign:'center'}}>
             {this.props.user.name}
             <br></br>
@@ -76,10 +65,11 @@ class SideMenu extends Component {
             </small>
           </p>
           <Button
+            onClick={this.props.auth0Logout} 
             size="small" 
             variant="contained"
             startIcon={<ExitToAppIcon />}
-            style={{widht:'70%', marginRight:'18%', marginLeft:'18%', marginTop:'0px', marginBottom:'10px'}}
+            style={{widht:'70%', marginRight:'18%', marginLeft:'18%', marginTop:'0px', marginBottom:'20px'}}
           >
             Cerrar sesión
           </Button>
@@ -87,15 +77,16 @@ class SideMenu extends Component {
           <List>
             <ListItem button>
               <ListItemIcon>
-                <Badge badgeContent={4} max={10} color="primary">
-                  <DirectionsBikeSharpIcon />
-                </Badge>
+                {(this.props.numOrders>0
+                  ?(<Badge badgeContent={this.props.numOrders} max={10} color="primary">
+                      <DirectionsBikeSharpIcon />
+                    </Badge>)
+                  :<DirectionsBikeSharpIcon />
+                )}
               </ListItemIcon>
               <ListItemText primary='Pedidos' />
             </ListItem>
           </List>
-          
-          
         </div>
       )
     }
@@ -106,6 +97,8 @@ class SideMenu extends Component {
           <MenuIcon />
         </Fab>
         <Drawer anchor='left' open={this.state.drawerIsOpen} onClose={()=>this.setState({drawerIsOpen:false})}>
+          <Avatar alt="Remy Sharp" src="/brand/logo_fondo_naranja.svg" style={{width:'150px', height:'150px', marginLeft:'auto', marginRight:'auto', marginTop:'20px', marginBottom:"20px"}}/>
+          
           <div style={{width:"250px", height:"100%", position:"relative"}}>
             {menu}
             <Divider />

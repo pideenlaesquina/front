@@ -15,7 +15,12 @@ const App = (props) => {
         ?<Loading/>
         :(
           <div>
-            <SideMenu user={context.user} auth0Login={context.loginWithRedirect}/>
+            <SideMenu 
+              user={context.user} 
+              auth0Login={context.loginWithRedirect}
+              auth0Logout={context.logout}
+              numOrders={(context.orders!==null?context.orders.length:0)}
+              />
             <WelcomeSection 
               name={(
                 context.user!=null 
