@@ -10,8 +10,8 @@ class ContextProvider extends Component {
   {
     super(props)
     this. state = {
-      location:null,
-      address:null,
+      deviceLocation:null,
+      selectedLocation:null,
 
       featuredStores:null,
       stores:null,
@@ -28,26 +28,40 @@ class ContextProvider extends Component {
   }
 
   componentDidMount() {
-    this.initialLocation()
+    this.deviceLocation()
     this.initializeAuth0()
   }
 
   componentDidUpdate(prevProps, prevState) {
-    if(this.state.location !== null  
-      && (prevState.location !== this.state.location))
+    if(this.state.authClient!==null
+      && this.state.deviceLocation!==null
+      && this.state.selectedLocation===null)
     {
-      this.featuredStores(this.state.location.lat, this.state.location.lng)
-      this.stores(this.state.location.lat, this.state.location.lng)
-      this.addressFromLocation(this.state.location.lat, this.state.location.lng)
+      if(this.state.user!==null
+        && this.state.user.addresses!==null
+        && this.state.user.addresses!==[])
+      {
+        let location = this.state.user.addresses[0]
+      }
+      else
+      {
+        let location = this.state.deviceLocation
+      }
+      this.state.updateSelectedLocation(location.lat, location.lng, location.address, location.type)
+    }
+    
+    if(this.state.selectedLocation !== null  
+      && (prevState.selectedLocation !== this.state.selectedLocation))
+    {
+      this.featuredStores(this.state.selectedLocation.lat, this.state.selectedLocation.lng)
+      this.stores(this.state.selectedLocation.lat, this.state.selectedLocation.lng)
     }
 
     if(
         !this.state.isReady 
-        && this.state.location !== null
-        && this.state.address !== null
+        && this.state.selectedLocation !== null
         && this.state.stores !== null
-        && this.state.featuredStores !== null
-        && this.state.authClient !== null)
+        && this.state.featuredStores !== null)
     {
       let now = new Date()
       let towait = 2000 - (now.getTime() - this.startedAt.getTime())
@@ -65,28 +79,43 @@ class ContextProvider extends Component {
     }
   }
   
-  initialLocation = async () => {
+  deviceLocation = async () => {
     await navigator.geolocation.getCurrentPosition(
-      position => this.setState({ 
-        location:{
-          lat:position.coords.latitude, 
-          lng:position.coords.longitude
-        }
-      }), 
+      position => this.locationFromBrowser(position), 
       err => this.locationFromIp()
     )
   }
 
-  updateLocation(newLat, newLng)
+  updateSelectedLocation(newLat, newLng, address, type)
   {
+    let location = {
+      lat:parseFloat(newLat), 
+      lng:parseFloat(newLng),
+      address: address,
+      type: type
+    }
+
     this.setState({ 
-      location:{
-        lat:parseFloat(newLat), 
-        lng:parseFloat(newLng)
-      }
+      selectedLocation:location
     })
 
-    localStorage.setItem('_selectedLocationLat', newLat)  
+    //localStorage.setItem('_selectedLocationL', location)  
+  }
+
+  updateDeviceLocation(newLat, newLng, address)
+  {
+    let location = {
+      lat:parseFloat(newLat), 
+      lng:parseFloat(newLng),
+      address: address,
+      type: "device"
+    }
+
+    this.setState({ 
+      deviceLocation:location
+    })
+
+    //localStorage.setItem('_deviceLocation', location)  
   }
 
   initializeAuth0 = async () => {
@@ -108,8 +137,18 @@ class ContextProvider extends Component {
   {
     let url = '/api/locationFromIp'
     let res = await fetch(url).then(response=>response.json())
+    let address = await this.addressFromLocation(lat,lng)
 
-    this.setState({ location:res.location })
+    this.updateDeviceLocation(res.location.lat, res.location.lng, address)
+  }
+
+  async locationFromBrowser(position)
+  {
+    let lat = position.coords.latitude
+    let lng = position.coords.longitude
+    let address = await this.addressFromLocation(lat,lng)
+
+    this.updateDeviceLocation(lat, lng, address)
   }
 
   async addressFromLocation(lat, lng)
@@ -117,7 +156,7 @@ class ContextProvider extends Component {
     let url = '/api/addressFromLocation?lat='+ lat +'&lng='+lng
     let res = await fetch(url).then(response=>response.json())
 
-    this.setState({ address:res.address })
+    return res.address
   }
 
   async featuredStores(lat, lng)

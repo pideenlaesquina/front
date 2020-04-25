@@ -70,19 +70,14 @@ var ContextProvider = /*#__PURE__*/function (_Component) {
 
     _this = _super.call(this, props);
 
-    Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_7__["default"])(Object(_babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__["default"])(_this), "initialLocation", function _callee() {
+    Object(_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_7__["default"])(Object(_babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_3__["default"])(_this), "deviceLocation", function _callee() {
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.async(function _callee$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
             case 0:
               _context.next = 2;
               return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(navigator.geolocation.getCurrentPosition(function (position) {
-                return _this.setState({
-                  location: {
-                    lat: position.coords.latitude,
-                    lng: position.coords.longitude
-                  }
-                });
+                return _this.locationFromBrowser(position);
               }, function (err) {
                 return _this.locationFromIp();
               }));
@@ -154,10 +149,11 @@ var ContextProvider = /*#__PURE__*/function (_Component) {
     });
 
     _this.state = {
-      location: null,
-      address: null,
+      deviceLocation: null,
+      selectedLocation: null,
       featuredStores: null,
       stores: null,
+      orders: null,
       authClient: null,
       isAuthenticated: false,
       user: null,
@@ -170,7 +166,7 @@ var ContextProvider = /*#__PURE__*/function (_Component) {
   Object(_babel_runtime_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_2__["default"])(ContextProvider, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      this.initialLocation();
+      this.deviceLocation();
       this.initializeAuth0();
     }
   }, {
@@ -178,13 +174,22 @@ var ContextProvider = /*#__PURE__*/function (_Component) {
     value: function componentDidUpdate(prevProps, prevState) {
       var _this2 = this;
 
-      if (this.state.location !== null && prevState.location !== this.state.location) {
-        this.featuredStores(this.state.location.lat, this.state.location.lng);
-        this.stores(this.state.location.lat, this.state.location.lng);
-        this.addressFromLocation(this.state.location.lat, this.state.location.lng);
+      if (this.state.authClient !== null && this.state.deviceLocation !== null && this.state.selectedLocation === null) {
+        if (this.state.user !== null && this.state.user.addresses !== null && this.state.user.addresses !== []) {
+          var _location = this.state.user.addresses[0];
+        } else {
+          var _location2 = this.state.deviceLocation;
+        }
+
+        this.state.updateSelectedLocation(location.lat, location.lng, location.address, location.type);
       }
 
-      if (!this.state.isReady && this.state.location !== null && this.state.address !== null && this.state.stores !== null && this.state.featuredStores !== null && this.state.authClient !== null) {
+      if (this.state.selectedLocation !== null && prevState.selectedLocation !== this.state.selectedLocation) {
+        this.featuredStores(this.state.selectedLocation.lat, this.state.selectedLocation.lng);
+        this.stores(this.state.selectedLocation.lat, this.state.selectedLocation.lng);
+      }
+
+      if (!this.state.isReady && this.state.selectedLocation !== null && this.state.stores !== null && this.state.featuredStores !== null) {
         var now = new Date();
         var towait = 2000 - (now.getTime() - this.startedAt.getTime());
 
@@ -202,20 +207,35 @@ var ContextProvider = /*#__PURE__*/function (_Component) {
       }
     }
   }, {
-    key: "updateLocation",
-    value: function updateLocation(newLat, newLng) {
+    key: "updateSelectedLocation",
+    value: function updateSelectedLocation(newLat, newLng, address, type) {
+      var location = {
+        lat: parseFloat(newLat),
+        lng: parseFloat(newLng),
+        address: address,
+        type: type
+      };
       this.setState({
-        location: {
-          lat: parseFloat(newLat),
-          lng: parseFloat(newLng)
-        }
-      });
-      localStorage.setItem('_selectedLocationLat', newLat);
+        selectedLocation: location
+      }); //localStorage.setItem('_selectedLocationL', location)  
+    }
+  }, {
+    key: "updateDeviceLocation",
+    value: function updateDeviceLocation(newLat, newLng, address) {
+      var location = {
+        lat: parseFloat(newLat),
+        lng: parseFloat(newLng),
+        address: address,
+        type: "device"
+      };
+      this.setState({
+        deviceLocation: location
+      }); //localStorage.setItem('_deviceLocation', location)  
     }
   }, {
     key: "locationFromIp",
     value: function locationFromIp() {
-      var url, res;
+      var url, res, address;
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.async(function locationFromIp$(_context3) {
         while (1) {
           switch (_context3.prev = _context3.next) {
@@ -228,13 +248,40 @@ var ContextProvider = /*#__PURE__*/function (_Component) {
 
             case 3:
               res = _context3.sent;
-              this.setState({
-                location: res.location
-              });
+              _context3.next = 6;
+              return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(this.addressFromLocation(lat, lng));
 
-            case 5:
+            case 6:
+              address = _context3.sent;
+              this.updateDeviceLocation(res.location.lat, res.location.lng, address);
+
+            case 8:
             case "end":
               return _context3.stop();
+          }
+        }
+      }, null, this, null, Promise);
+    }
+  }, {
+    key: "locationFromBrowser",
+    value: function locationFromBrowser(position) {
+      var lat, lng, address;
+      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.async(function locationFromBrowser$(_context4) {
+        while (1) {
+          switch (_context4.prev = _context4.next) {
+            case 0:
+              lat = position.coords.latitude;
+              lng = position.coords.longitude;
+              _context4.next = 4;
+              return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(this.addressFromLocation(lat, lng));
+
+            case 4:
+              address = _context4.sent;
+              this.updateDeviceLocation(lat, lng, address);
+
+            case 6:
+            case "end":
+              return _context4.stop();
           }
         }
       }, null, this, null, Promise);
@@ -243,38 +290,11 @@ var ContextProvider = /*#__PURE__*/function (_Component) {
     key: "addressFromLocation",
     value: function addressFromLocation(lat, lng) {
       var url, res;
-      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.async(function addressFromLocation$(_context4) {
-        while (1) {
-          switch (_context4.prev = _context4.next) {
-            case 0:
-              url = '/api/addressFromLocation?lat=' + lat + '&lng=' + lng;
-              _context4.next = 3;
-              return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(fetch(url).then(function (response) {
-                return response.json();
-              }));
-
-            case 3:
-              res = _context4.sent;
-              this.setState({
-                address: res.address
-              });
-
-            case 5:
-            case "end":
-              return _context4.stop();
-          }
-        }
-      }, null, this, null, Promise);
-    }
-  }, {
-    key: "featuredStores",
-    value: function featuredStores(lat, lng) {
-      var url, res;
-      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.async(function featuredStores$(_context5) {
+      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.async(function addressFromLocation$(_context5) {
         while (1) {
           switch (_context5.prev = _context5.next) {
             case 0:
-              url = '/api/featuredStores?lat=' + lat + '&lng=' + lng;
+              url = '/api/addressFromLocation?lat=' + lat + '&lng=' + lng;
               _context5.next = 3;
               return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(fetch(url).then(function (response) {
                 return response.json();
@@ -282,26 +302,24 @@ var ContextProvider = /*#__PURE__*/function (_Component) {
 
             case 3:
               res = _context5.sent;
-              this.setState({
-                featuredStores: res.stores
-              }); //localStorage.setItem('_featuredStores', JSON.stringify(res.stores))  
+              return _context5.abrupt("return", res.address);
 
             case 5:
             case "end":
               return _context5.stop();
           }
         }
-      }, null, this, null, Promise);
+      }, null, null, null, Promise);
     }
   }, {
-    key: "stores",
-    value: function stores(lat, lng) {
+    key: "featuredStores",
+    value: function featuredStores(lat, lng) {
       var url, res;
-      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.async(function stores$(_context6) {
+      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.async(function featuredStores$(_context6) {
         while (1) {
           switch (_context6.prev = _context6.next) {
             case 0:
-              url = '/api/stores?lat=' + lat + '&lng=' + lng;
+              url = '/api/featuredStores?lat=' + lat + '&lng=' + lng;
               _context6.next = 3;
               return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(fetch(url).then(function (response) {
                 return response.json();
@@ -310,12 +328,39 @@ var ContextProvider = /*#__PURE__*/function (_Component) {
             case 3:
               res = _context6.sent;
               this.setState({
+                featuredStores: res.stores
+              }); //localStorage.setItem('_featuredStores', JSON.stringify(res.stores))  
+
+            case 5:
+            case "end":
+              return _context6.stop();
+          }
+        }
+      }, null, this, null, Promise);
+    }
+  }, {
+    key: "stores",
+    value: function stores(lat, lng) {
+      var url, res;
+      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.async(function stores$(_context7) {
+        while (1) {
+          switch (_context7.prev = _context7.next) {
+            case 0:
+              url = '/api/stores?lat=' + lat + '&lng=' + lng;
+              _context7.next = 3;
+              return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(fetch(url).then(function (response) {
+                return response.json();
+              }));
+
+            case 3:
+              res = _context7.sent;
+              this.setState({
                 stores: res.stores
               }); //localStorage.setItem('_stores', JSON.stringify(res.stores))  
 
             case 5:
             case "end":
-              return _context6.stop();
+              return _context7.stop();
           }
         }
       }, null, this, null, Promise);
@@ -328,6 +373,7 @@ var ContextProvider = /*#__PURE__*/function (_Component) {
           address = _this$state.address,
           featuredStores = _this$state.featuredStores,
           stores = _this$state.stores,
+          orders = _this$state.orders,
           authClient = _this$state.authClient,
           isAuthenticated = _this$state.isAuthenticated,
           user = _this$state.user,
@@ -337,6 +383,7 @@ var ContextProvider = /*#__PURE__*/function (_Component) {
         address: address,
         featuredStores: featuredStores,
         stores: stores,
+        orders: orders,
         isAuthenticated: isAuthenticated,
         user: user,
         isReady: isReady,
@@ -358,7 +405,7 @@ var ContextProvider = /*#__PURE__*/function (_Component) {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 171,
+          lineNumber: 213,
           columnNumber: 13
         }
       }, this.props.children);

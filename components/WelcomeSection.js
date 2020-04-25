@@ -1,6 +1,7 @@
 import React, { Component, Fragment} from 'react'
 import Button from '@material-ui/core/Button';
 import StorefrontIcon from '@material-ui/icons/Storefront'
+import AddressDialog from '../components/AddressDialog'
 
 
 class WellcomeSection extends Component {
@@ -54,7 +55,6 @@ class WellcomeSection extends Component {
         <style jsx>
           {`
             .root{
-              background:white;
               padding-left:15px;
               padding-right:15px;
               padding-top:10px;
@@ -63,15 +63,10 @@ class WellcomeSection extends Component {
             }
           `}
         </style>
-        
 
         <div className="root">
             <h1>¡Hola {this.props.name}!</h1>
-            <span>
-              <small>Tu dirección: {this.props.address}</small>
-              <br></br>
-              <Button><small>Cambiar</small></Button>
-            </span>
+            <AddressDialog currentLocation={this.props.currentLocation} addresses={this.props.addresses}/>
             <div style={{display: 'flex', flexDirection:"column", justifyContent: 'center', alignItems: 'center', width:'100%', marginTop:'10px'}}>
               <StorefrontIcon fontSize="large"/>
               <h2 style={{marginBottom:'0', marginTop:'5px'}}>&nbsp;{this.props.numStores}&nbsp;Tiendas</h2>

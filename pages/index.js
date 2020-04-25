@@ -36,7 +36,13 @@ const App = (props) => {
                 ? context.user.name
                 :null
               )} 
-              address={context.address}
+              addresses={(
+                context.user!=null
+                &&context.user.addresses!=null
+                ?context.user.addresses
+                :[]
+              )}
+              currentLocation={context.currentLocation}
               numStores={(context.stores!==null?context.stores.length:0)}
             />
             {( (context.stores !== null && context.stores.length > 0)
