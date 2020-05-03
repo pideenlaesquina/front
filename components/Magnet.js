@@ -1,5 +1,4 @@
 import React, { Component, Fragment} from 'react'
-import Link from 'next/link'
 
 import Paper from '@material-ui/core/Paper'
 import StorefrontIcon from '@material-ui/icons/Storefront'
@@ -10,6 +9,11 @@ class Magnet extends Component {
   constructor(props)
   {
     super(props)
+  }
+
+  handleClick()
+  {
+    this.props.openSelectedStore(this.props.store)
   }
   
   render() {
@@ -134,11 +138,9 @@ class Magnet extends Component {
               
               </p>
           </div>
-          <Link href="/about">
-              <div className="sideButton bottom center">
+            <div className="sideButton bottom center" onClick={()=>this.handleClick()}>
               Hacer pedido
-              </div>
-          </Link>
+            </div>
         </Paper>
       </div>
     )

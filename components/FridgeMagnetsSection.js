@@ -42,7 +42,10 @@ class FridgeMagnetsSection extends Component {
               </ListItemAvatar>
               <ListItemText primary="Destacados" secondary="Especialmente escogidas para tí" />
             </ListItem>
-            <FridgeMagnets stores={this.props.featuredStores} />
+            <FridgeMagnets 
+              stores={this.props.featuredStores} 
+              openSelectedStore={(newStore)=>this.props.openSelectedStore(newStore)}
+            />
           </div>)}
           <div className="divider">
             <ListItem>
@@ -53,8 +56,11 @@ class FridgeMagnetsSection extends Component {
               </ListItemAvatar>
               <ListItemText primary="Favoritos" secondary="Tus establecimientos favoritos" />
             </ListItem>
-            {(this.props.favoriteStores
-            ?<FridgeMagnets stores={this.props.favoriteStores} style={{marginBottom:"15px"}}/>
+            {(this.props.favoriteStores !== null && this.props.favoriteStores !== []
+            ?<FridgeMagnets 
+              stores={this.props.favoriteStores} style={{marginBottom:"15px"}}
+              openSelectedStore={(newStore)=>this.props.openSelectedStore(newStore)}
+            />
             :<FridgeMagnetsNoFavorites style={{marginBottom:"15px"}}/>
             )}
           </div>

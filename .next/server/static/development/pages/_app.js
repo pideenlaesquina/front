@@ -93,229 +93,6 @@ module.exports =
 /************************************************************************/
 /******/ ({
 
-/***/ "./components/Context.js":
-/*!*******************************!*\
-  !*** ./components/Context.js ***!
-  \*******************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-
-const LocationContext = react__WEBPACK_IMPORTED_MODULE_0___default.a.createContext();
-/* harmony default export */ __webpack_exports__["default"] = (LocationContext);
-
-/***/ }),
-
-/***/ "./components/ContextProvider.js":
-/*!***************************************!*\
-  !*** ./components/ContextProvider.js ***!
-  \***************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _Context__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Context */ "./components/Context.js");
-/* harmony import */ var _auth0_auth0_spa_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @auth0/auth0-spa-js */ "@auth0/auth0-spa-js");
-/* harmony import */ var _auth0_auth0_spa_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_auth0_auth0_spa_js__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "/home/crmock/pideenlaequina/front/components/ContextProvider.js";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-
-
- // create a provider
-
-class ContextProvider extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
-  constructor(props) {
-    super(props);
-
-    _defineProperty(this, "deviceLocation", async () => {
-      await navigator.geolocation.getCurrentPosition(position => this.locationFromBrowser(position), err => this.locationFromIp());
-    });
-
-    _defineProperty(this, "initializeAuth0", async () => {
-      const config = {
-        domain: 'acacerca.auth0.com',
-        //process.env.AUTH0_DOMAIN,
-        client_id: 'd8Pv88MjaYWNSUKUHnO9JcudrUPZ6THl',
-        //process.env.AUTH0_CLIENT_ID,
-        redirect_uri: window.location.origin,
-        cacheLocation: 'localstorage'
-      };
-      const auth0Client = await _auth0_auth0_spa_js__WEBPACK_IMPORTED_MODULE_2___default()(config);
-      const isAuthenticated = await auth0Client.isAuthenticated();
-      const user = isAuthenticated ? await auth0Client.getUser() : null;
-      this.setState({
-        authClient: auth0Client,
-        isAuthenticated,
-        user
-      });
-    });
-
-    this.state = {
-      deviceLocation: null,
-      selectedLocation: null,
-      featuredStores: null,
-      stores: null,
-      orders: null,
-      authClient: null,
-      isAuthenticated: false,
-      user: null,
-      isReady: false
-    };
-    this.startedAt = new Date();
-  }
-
-  componentDidMount() {
-    this.deviceLocation();
-    this.initializeAuth0();
-  }
-
-  componentDidUpdate(prevProps, prevState) {
-    if (this.state.authClient !== null && this.state.deviceLocation !== null && this.state.selectedLocation === null) {
-      if (this.state.user !== null && this.state.user.addresses !== null && this.state.user.addresses !== []) {
-        let location = this.state.user.addresses[0];
-      } else {
-        let location = this.state.deviceLocation;
-      }
-
-      this.state.updateSelectedLocation(location.lat, location.lng, location.address, location.type);
-    }
-
-    if (this.state.selectedLocation !== null && prevState.selectedLocation !== this.state.selectedLocation) {
-      this.featuredStores(this.state.selectedLocation.lat, this.state.selectedLocation.lng);
-      this.stores(this.state.selectedLocation.lat, this.state.selectedLocation.lng);
-    }
-
-    if (!this.state.isReady && this.state.selectedLocation !== null && this.state.stores !== null && this.state.featuredStores !== null) {
-      let now = new Date();
-      let towait = 2000 - (now.getTime() - this.startedAt.getTime());
-
-      if (towait > 0) {
-        setTimeout(() => {
-          this.setState({
-            isReady: true
-          });
-        }, towait);
-      } else {
-        this.setState({
-          isReady: true
-        });
-      }
-    }
-  }
-
-  updateSelectedLocation(newLat, newLng, address, type) {
-    let location = {
-      lat: parseFloat(newLat),
-      lng: parseFloat(newLng),
-      address: address,
-      type: type
-    };
-    this.setState({
-      selectedLocation: location
-    }); //localStorage.setItem('_selectedLocationL', location)  
-  }
-
-  updateDeviceLocation(newLat, newLng, address) {
-    let location = {
-      lat: parseFloat(newLat),
-      lng: parseFloat(newLng),
-      address: address,
-      type: "device"
-    };
-    this.setState({
-      deviceLocation: location
-    }); //localStorage.setItem('_deviceLocation', location)  
-  }
-
-  async locationFromIp() {
-    let url = '/api/locationFromIp';
-    let res = await fetch(url).then(response => response.json());
-    let address = await this.addressFromLocation(lat, lng);
-    this.updateDeviceLocation(res.location.lat, res.location.lng, address);
-  }
-
-  async locationFromBrowser(position) {
-    let lat = position.coords.latitude;
-    let lng = position.coords.longitude;
-    let address = await this.addressFromLocation(lat, lng);
-    this.updateDeviceLocation(lat, lng, address);
-  }
-
-  async addressFromLocation(lat, lng) {
-    let url = '/api/addressFromLocation?lat=' + lat + '&lng=' + lng;
-    let res = await fetch(url).then(response => response.json());
-    return res.address;
-  }
-
-  async featuredStores(lat, lng) {
-    let url = '/api/featuredStores?lat=' + lat + '&lng=' + lng;
-    let res = await fetch(url).then(response => response.json());
-    this.setState({
-      featuredStores: res.stores
-    }); //localStorage.setItem('_featuredStores', JSON.stringify(res.stores))  
-  }
-
-  async stores(lat, lng) {
-    let url = '/api/stores?lat=' + lat + '&lng=' + lng;
-    let res = await fetch(url).then(response => response.json());
-    this.setState({
-      stores: res.stores
-    }); //localStorage.setItem('_stores', JSON.stringify(res.stores))  
-  }
-
-  render() {
-    const {
-      location,
-      address,
-      featuredStores,
-      stores,
-      orders,
-      authClient,
-      isAuthenticated,
-      user,
-      isReady
-    } = this.state;
-    const values = {
-      location,
-      address,
-      featuredStores,
-      stores,
-      orders,
-      isAuthenticated,
-      user,
-      isReady,
-      loginWithRedirect: (...p) => authClient.loginWithRedirect(...p),
-      getTokenSilently: (...p) => authClient.getTokenSilently(...p),
-      getIdTokenClaims: (...p) => authClient.getIdTokenClaims(...p),
-      logout: (...p) => authClient.logout(...p)
-    };
-    return __jsx(_Context__WEBPACK_IMPORTED_MODULE_1__["default"].Provider, {
-      value: values,
-      __self: this,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 213,
-        columnNumber: 13
-      }
-    }, this.props.children);
-  }
-
-}
-
-/* harmony default export */ __webpack_exports__["default"] = (ContextProvider);
-
-/***/ }),
-
 /***/ "./node_modules/@brainhubeu/react-carousel/lib/style.css":
 /*!***************************************************************!*\
   !*** ./node_modules/@brainhubeu/react-carousel/lib/style.css ***!
@@ -339,11 +116,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return MyApp; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_ContextProvider__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/ContextProvider */ "./components/ContextProvider.js");
-/* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../styles.css */ "./styles.css");
-/* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_styles_css__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _brainhubeu_react_carousel_lib_style_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @brainhubeu/react-carousel/lib/style.css */ "./node_modules/@brainhubeu/react-carousel/lib/style.css");
-/* harmony import */ var _brainhubeu_react_carousel_lib_style_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_brainhubeu_react_carousel_lib_style_css__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../styles.css */ "./styles.css");
+/* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_styles_css__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _brainhubeu_react_carousel_lib_style_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @brainhubeu/react-carousel/lib/style.css */ "./node_modules/@brainhubeu/react-carousel/lib/style.css");
+/* harmony import */ var _brainhubeu_react_carousel_lib_style_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_brainhubeu_react_carousel_lib_style_css__WEBPACK_IMPORTED_MODULE_2__);
 var _jsxFileName = "/home/crmock/pideenlaequina/front/pages/_app.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -352,26 +128,18 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
 
 
-
 function MyApp({
   Component,
   pageProps
 }) {
-  return __jsx(_components_ContextProvider__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  return __jsx(Component, _extends({}, pageProps, {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9,
+      lineNumber: 8,
       columnNumber: 5
     }
-  }, __jsx(Component, _extends({}, pageProps, {
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 10,
-      columnNumber: 7
-    }
-  })));
+  }));
 }
 
 /***/ }),
@@ -396,17 +164,6 @@ function MyApp({
 
 module.exports = __webpack_require__(/*! private-next-pages/_app.js */"./pages/_app.js");
 
-
-/***/ }),
-
-/***/ "@auth0/auth0-spa-js":
-/*!**************************************!*\
-  !*** external "@auth0/auth0-spa-js" ***!
-  \**************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("@auth0/auth0-spa-js");
 
 /***/ }),
 

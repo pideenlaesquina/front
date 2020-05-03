@@ -22,6 +22,11 @@ class WellcomeSection extends Component {
     this.addressDialogOpen(true);
     this.setSelectedValue(value);
   };
+
+  handleClickNoStores()
+  {
+    alert("Esta funcionalidad todavía no está disponible")
+  }
   
   render() {
 
@@ -32,7 +37,7 @@ class WellcomeSection extends Component {
             variant="contained"
             color="primary"
             size="large"
-            href="/search"
+            onClick={()=>this.props.openSearch()}
           >
             Hacer pedido  
           </Button>
@@ -45,7 +50,7 @@ class WellcomeSection extends Component {
         <h3>pero te tenemos cubiert@...</h3>
         <span><small>Puedes hacer un pedido en cualquier tienda o establecimiento incluso si no está listado, nosotros nos encargamos.</small></span>
         <p><small>(también puedes cambiar de úbicación ingresando una nueva dirección)</small></p>
-        <p><Button variant="contained" color="primary" href="/agregarTienda"><small>Hacer pedido</small></Button></p>
+        <p><Button variant="contained" color="primary" onClick={()=>this.handleClickNoStores()}><small>Hacer pedido</small></Button></p>
       </div>
     )
 
@@ -66,7 +71,11 @@ class WellcomeSection extends Component {
 
         <div className="root">
             <h1>¡Hola {this.props.name}!</h1>
-            <AddressDialog currentLocation={this.props.currentLocation} addresses={this.props.addresses}/>
+            <AddressDialog 
+              deviceLocation={this.props.deviceLocation} 
+              selectedLocation={this.props.selectedLocation} 
+              addresses={this.props.addresses}
+            />
             <div style={{display: 'flex', flexDirection:"column", justifyContent: 'center', alignItems: 'center', width:'100%', marginTop:'10px'}}>
               <StorefrontIcon fontSize="large"/>
               <h2 style={{marginBottom:'0', marginTop:'5px'}}>&nbsp;{this.props.numStores}&nbsp;Tiendas</h2>

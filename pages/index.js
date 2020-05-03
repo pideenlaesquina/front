@@ -1,61 +1,218 @@
-import React, { Component, useContext} from 'react'
+import React, { Component } from 'react'
 import ReactDOM from 'react-dom';
-import Context from '../components/Context';
+import Head from 'next/head'
 import Loading from '../components/Loading';
+import Ready from '../components/Ready';
+import createAuth0Client from '@auth0/auth0-spa-js';
 
-import SideMenu from '../components/SideMenu'
-import WelcomeSection from '../components/WelcomeSection'
-import FridgeMagnetsSection from '../components/FridgeMagnetsSection'
+class Index extends Component {
+   
+  constructor(props)
+  {
+    super(props)
+    this. state = {
+      deviceLocation:null,
+      selectedLocation:null,
 
-const App = (props) => {
-  return(
-    <Context.Consumer>
-      <style jsx>
-        {`
-          .root{
-            background: linear-gradient(180deg, #ffcf0200 50%, #ffcf02ff 90%);
-          }
-        `}
-      </style>
+      featuredStores:null,
+      stores:null,
+      orders:null,
 
-      {context => (
-        !context.isReady
-        ?<Loading/>
-        :(
-          <div className="root">
-            <SideMenu 
-              user={context.user} 
-              auth0Login={context.loginWithRedirect}
-              auth0Logout={context.logout}
-              numOrders={(context.orders!==null?context.orders.length:0)}
-              />
-            <WelcomeSection 
-              name={(
-                context.user!=null 
-                && context.user.name!=null 
-                ? context.user.name
-                :null
-              )} 
-              addresses={(
-                context.user!=null
-                &&context.user.addresses!=null
-                ?context.user.addresses
-                :[]
-              )}
-              currentLocation={context.currentLocation}
-              numStores={(context.stores!==null?context.stores.length:0)}
-            />
-            {( (context.stores !== null && context.stores.length > 0)
-            &&<FridgeMagnetsSection 
-              favoriteStores={(context.user!=null?context.user.favoriteStores:[])} 
-              featuredStores={context.featuredStores}
-            />
-            )}
-          </div>
-        )
-      )}
-    </Context.Consumer>
-  )
+      authClient: null,
+      isAuthenticated: false,
+      user:null,
+
+      isReady:false
+    }
+  }
+
+  componentDidMount() {
+    this.deviceLocation()
+    this.initializeAuth0()
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if(this.state.authClient!==null
+      && this.state.deviceLocation!==null
+      && this.state.selectedLocation===null)
+    { 
+      let location = null
+      if(this.state.user!==null
+        && this.state.user.addresses!==null
+        && this.state.user.addresses!==[])
+      {
+        location = this.state.user.addresses[0]
+      }
+      else
+      {
+        location = this.state.deviceLocation
+      }
+      this.updateSelectedLocation(location.lat, location.lng, location.address, location.type)
+    }
+    
+    if(this.state.selectedLocation !== null  
+      && JSON.stringify(prevState.selectedLocation) !== JSON.stringify(this.state.selectedLocation) )
+    {
+      this.featuredStores(this.state.selectedLocation.lat, this.state.selectedLocation.lng)
+      this.stores(this.state.selectedLocation.lat, this.state.selectedLocation.lng)
+    }
+
+    if(
+      !this.state.isReady 
+      && this.state.selectedLocation !== null
+      && this.state.stores !== null
+      && this.state.featuredStores !== null)
+    {
+      this.setState({ isReady:true })
+    }
+  }
+  
+  deviceLocation = async () => {
+    await navigator.geolocation.getCurrentPosition(
+      position => this.locationFromBrowser(position), 
+      err => this.locationFromIp()
+    )
+  }
+
+  updateSelectedLocation(newLat, newLng, address, type)
+  {
+    let location = {
+      lat:parseFloat(newLat), 
+      lng:parseFloat(newLng),
+      address: address,
+      type: type
+    }
+    
+    this.setState({ 
+      selectedLocation:location
+    })
+
+    //localStorage.setItem('_selectedLocationL', location)  
+  }
+
+  updateDeviceLocation(newLat, newLng, address)
+  {
+    let location = {
+      lat:parseFloat(newLat), 
+      lng:parseFloat(newLng),
+      address: address,
+      type: "device"
+    }
+    
+    this.setState({ 
+      deviceLocation:location
+    })
+
+    //localStorage.setItem('_deviceLocation', location)  
+  }
+
+  initializeAuth0 = async () => {
+    const config = {
+      domain: 'acacerca.auth0.com',//process.env.AUTH0_DOMAIN,
+      client_id: 'd8Pv88MjaYWNSUKUHnO9JcudrUPZ6THl',//process.env.AUTH0_CLIENT_ID,
+      redirect_uri: window.location.origin,
+      cacheLocation: 'localstorage'
+    }
+
+    const auth0Client = await createAuth0Client(config)
+    const isAuthenticated = await auth0Client.isAuthenticated()
+    const user = isAuthenticated ? await auth0Client.getUser() : null
+
+    this.setState({ authClient:auth0Client, isAuthenticated, user })
+  }
+
+  async locationFromIp()
+  {
+    let url = '/api/locationFromIp'
+    let res = await fetch(url).then(response=>response.json())
+    let address = await this.addressFromLocation(lat,lng)
+
+    this.updateDeviceLocation(res.location.lat, res.location.lng, address)
+  }
+
+  async locationFromBrowser(position)
+  {
+    let lat = position.coords.latitude
+    let lng = position.coords.longitude
+    let address = await this.addressFromLocation(lat,lng)
+
+    this.updateDeviceLocation(lat, lng, address)
+  }
+
+  async addressFromLocation(lat, lng)
+  {
+    let url = '/api/addressFromLocation?lat='+ lat +'&lng='+lng
+    let res = await fetch(url).then(response=>response.json())
+
+    return res.address
+  }
+
+  async featuredStores(lat, lng)
+  {
+    let url = '/api/featuredStores?lat='+ lat +'&lng='+lng
+    let res = await fetch(url).then(response=>response.json())
+    
+    this.setState({ featuredStores:res.stores })
+    //localStorage.setItem('_featuredStores', JSON.stringify(res.stores))  
+  }
+
+  async stores(lat, lng)
+  {
+    let url = '/api/stores?lat='+ lat +'&lng='+lng
+    let res = await fetch(url).then(response=>response.json())
+    
+    this.setState({ stores:res.stores })
+    //localStorage.setItem('_stores', JSON.stringify(res.stores))  
+  }
+
+  render() {
+    const { 
+      deviceLocation,
+      selectedLocation,
+      featuredStores,
+      stores,
+      orders,
+
+      authClient,
+      isAuthenticated,
+      user,
+
+      isReady
+    } = this.state;
+
+    const values = { 
+      deviceLocation,
+      selectedLocation,
+      featuredStores,
+      stores,
+      orders,
+
+      isAuthenticated,
+      user,
+
+      isReady,
+
+      loginWithRedirect: (...p) => authClient.loginWithRedirect(...p),
+      getTokenSilently: (...p) => authClient.getTokenSilently(...p),
+      getIdTokenClaims: (...p) => authClient.getIdTokenClaims(...p),
+      logout: (...p) => authClient.logout(...p)
+    }
+
+    let google_url = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBt0ZCE1kAklBJiBnCYGX6kl0tglLcKlLI'
+
+    return(
+      <div>
+        <Head>
+          <script type="text/javascript" src={google_url} ></script>
+        </Head>
+        {(
+          !this.state.isReady
+          ?<Loading/>
+          :<Ready {...values}/>
+        )}
+      </div>
+    )
+  }
 }
 
-export default App;
+export default Index

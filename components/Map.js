@@ -1,7 +1,5 @@
 import React from 'react'
-import Head from 'next/head'
-
-import NoStores from './noStores.js'
+import distance from './Distance'
 
 const initialZoom = 15
 
@@ -13,43 +11,77 @@ class Map extends React.Component {
     this.state = {
       map: null,
       userMarker:null,
-      storeMarkers:[]
+      storeMarkers:[],
+      selectedStore: null
     }
   }
 
-  shouldComponentUpdate() {
-    if(this.props.pos == null)
-    {
-      return false
-    }
-    return true
+  componentDidMount()
+  {
+    this.setState({map:null}) 
   }
 
   componentDidUpdate(prevProps, prevState) 
   {
-    if(this.props.pos != null && this.props.stores != null)
+    if(this.props.pos !== null 
+      && (
+        (this.props.stores !== null && this.props.stores!== undefined)
+        || (this.props.selectedStore !== null && this.props.selectedStore!== undefined)
+      )
+    )
     {
-      if(this.state.map == null)
+      if(this.state.map === null)
       {
         let map=this.getMap(this.props.pos)
         let userMarker=this.placeUserMarker(map, this.props.pos)
-        let storeMarkers = this.placeAllStoreMarkers(map, this.props.stores)
+        let storeMarkers=null 
+        let selectedStore=null
+
+        if(this.props.stores!==null && this.props.stores!== undefined)
+        {
+          storeMarkers = this.placeAllStoreMarkers(map, this.props.stores)
+        }
+        
+        if(this.props.selectedStore!==null && this.props.selectedStore!== undefined)
+        {
+          selectedStore = this.placeAStoreMarker(map, this.props.selectedStore, true)
+        }
 
         this.setState ({
           userMarker:userMarker,
           map: map,
-          storeMarkers: storeMarkers
+          storeMarkers: storeMarkers,
+          selectedStore: selectedStore
         })
       }
-      else if(prevProps.pos != this.props.pos)
+      
+      if(this.state.map !== null && prevProps.pos !== this.props.pos)
       {
         let userMarker=this.placeUserMarker(this.state.map, this.props.pos)
+        this.removeAllStoreMarkers()
+
+        this.setState ({
+          userMarker:userMarker
+        })
+      }
+
+      if(this.state.map !== null && prevProps.stores !== this.props.stores)
+      {
         this.removeAllStoreMarkers()
         let storeMarkers = this.placeAllStoreMarkers(this.state.map, this.props.stores)
 
         this.setState ({
-          userMarker:userMarker,
           storeMarkers: storeMarkers
+        })
+      }
+      
+      if(this.state.map !== null && prevProps.selectedStore !== this.props.selectedStore)
+      {
+        this.removeSelectedStoreMarker()
+        let selectedStore = this.placeAStoreMarker(this.state.map, this.props.selectedStore)
+
+        this.setState ({
+          selectedStore: selectedStore
         })
       }
     }
@@ -60,14 +92,15 @@ class Map extends React.Component {
     let map = null
     if(this.state.map == null)
     {
-      map = new google.maps.Map(document.getElementById('map'), {
+      map = new google.maps.Map(document.getElementById(this.props.htmlId), {
         center: pos,
         zoom: initialZoom,
         zoomControl:false,
         mapTypeControl: false,
         fullscreenControl: false,
         clickableIcons: false,
-        streetViewControl: false
+        streetViewControl: false,
+        gestureHandling: 'greedy'
       })
     }
     else
@@ -77,7 +110,7 @@ class Map extends React.Component {
     return map
   }
 
-  placeUserMarker(map, pos)
+  placeUserMarker(map, pos, pan=true)
   {
     if(this.state.userMarker != null)
     {
@@ -92,14 +125,18 @@ class Map extends React.Component {
     })
 
     marker.setMap(map);
-    this.panToPos(map, pos)
+
+    if(pan)
+    {
+      this.panToPos(map, pos)
+    }
 
     return marker
   }
 
-  panToPos(map, pos)
+  panToPos(map, pos, zoom=initialZoom)
   {
-    map.setZoom(initialZoom);
+    map.setZoom(zoom);
     map.panTo(pos);
   }
 
@@ -130,22 +167,86 @@ class Map extends React.Component {
     }
   }
 
-  placeAStoreMarker(map, store)
+  removeSelectedStoreMarker()
   {
-    store.type = (store.type==null?"store":store.type.toLowerCase())
-    let icon_normal = './map/' + store.type + "_icon.svg";
+    this.state.selectedStore.setMap(null)
+  }
+
+  placeAStoreMarker(map, store, selected=false)
+  {
+    let categories=[
+      'pharmacy', 
+      'bakery', 
+      'vegetableStore', 
+      'hardwareStore',
+      'butchery', 
+      'drycleaner',
+      'stationeryStore',
+      'petStore',
+      'liquorStore',
+      'fastFood',
+      'restaurant',
+      'groeceryStore',
+      'store'
+    ]
+
+    let labels=[
+      'Droguería',
+      'Panadería',
+      'Fruver',
+      'Ferretería',
+      'Carnicería',
+      'Lavandería',
+      'Papelería',
+      'Mascotas',
+      'Licorera',
+      'Comida rápida',
+      'Restaurante',
+      'Tienda',
+      'Otro'
+    ]
+
+    if(store.type===null)
+    {
+      store.type="store"
+    }
+
+    if(!categories.includes(store.type))
+    {
+      store.type="store"
+    }
+    
+    let i = categories.indexOf(store.type)
+    store.typeLabel = labels[i]
+
+    let icon = '';
+    if(selected)
+    {
+      icon = './map/' + store.type + "_icon_selected.svg";
+    }
+    else
+    {
+      icon = './map/' + store.type + "_icon.svg";
+    }
     let icon_hover = './map/' + store.type + "_icon_hover.svg";
     
     let marker = new google.maps.Marker({
       position: {lat:store.lat, lng:store.lng},
-      icon: icon_normal,
+      icon: icon,
       title:store.name,
       draggable:false,
-      id:store._id, //custom data
+      //custom data
+      selected:selected,
+      id:store._id,
+      distance:distance(this.props.pos.lat, this.props.pos.lng, store.lat, store.lng),
+      onClickFunction: ((id)=>this.handleStoreMarkerClick(id))
     })
 
     google.maps.event.addListener(marker, 'click', function() {
-      console.log("click " +marker.id)       
+      if(!marker.selected)
+      {
+        marker.onClickFunction(marker.id)
+      }
     })
 
     google.maps.event.addListener(marker, 'mouseover', function() {
@@ -153,23 +254,40 @@ class Map extends React.Component {
     })
 
     google.maps.event.addListener(marker, 'mouseout', function() {
-      marker.setIcon(icon_normal);    
+      marker.setIcon(icon);    
     })
 
     marker.setMap(map)
     return marker
   }
 
-  render () {
-    let google_url = process.env.GOOGLE_MAPS_API_URL + "/js?key="+process.env.GOOGLE_MAPS_API_KEY
+  findStore(id)
+  {
+    for (let i = 0; i < this.props.stores.length; i++) {
+      const element = this.props.stores[i];
 
+      if(element._id === id)
+      {
+        return element
+      }
+    }
+    return null
+  }
+
+  handleStoreMarkerClick(id)
+  {
+    let store = this.findStore(id)
+
+    if(store !== null)
+    {
+      this.props.openSelectedStore(store)
+    }
+  }
+
+  render () {
     return (
       <div style={{height:"100%", width:'100%'}}>
-        <Head>
-          <script src={google_url} ></script>
-        </Head>
-        <div id="map" style={{height:"100%", width:'100%'}}></div>
-        {this.state.map && this.props.stores.length==0?<NoStores/>:""}
+        <div id={this.props.htmlId} style={{height:"100%", width:'100%'}}></div>
       </div>
     )
   }

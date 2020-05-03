@@ -31,7 +31,11 @@ class FridgeMagnets extends Component {
           this.props.stores==null
             ?""
             :this.props.stores.map((store) => (
-              <div className="" key={store.id}><Magnet store={store}/></div>
+              <Magnet 
+                store={store} 
+                key={"featured_"+store._id}
+                openSelectedStore={(newStore)=>this.props.openSelectedStore(newStore)}
+              />
             ))
           )}
         </Carousel>
