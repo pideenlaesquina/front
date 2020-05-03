@@ -7,12 +7,12 @@
     "IPIFY_URL": "https://api.ipify.org",
     "IPGEOLOCATION_API_KEY": "@ipgeolocation-api",
     "IPGEOLOCATION_API_URL":"https://api.ipgeolocation.io/",
-    "PUSHER_APP_ID":"@landing-pusher-app-ip",
+    "PUSHER_APP_ID":"@landing-pusher-app-id",
     "PUSHER_APP_KEY":"@landing-pusher-app-key",
     "PUSHER_APP_SECRET":"@landing-pusher-app-secret",
     "PUSHER_APP_CLUSTER":"@landing-pusher-app-cluster",
     "AUTH0_DOMAIN":"@landing-auth0-domain",
-    "AUTH0_CLIENT_ID":"@landing-auth0-cliend-id"
+    "AUTH0_CLIENT_ID":"@landing-auth0-client-id"
   },
   "headers": [
     {

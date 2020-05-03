@@ -1,6 +1,6 @@
 import React, { Component, Fragment} from 'react'
 import FridgeMagnets from './FridgeMagnets'
-import FridgeMagnetsNoFavorites from './FridgeMagnetsNoFavorites'
+import FridgeMagnetsNoFavorites from '../components/FridgeMagnetsNoFavorites'
 
 import List from '@material-ui/core/List'
 import ListItem from '@material-ui/core/ListItem'
@@ -27,7 +27,15 @@ class FridgeMagnetsSection extends Component {
           {`
             .divider{
               padding-top: 5px;
-              padding-bottom: 0px;
+              padding-bottom: 25px;
+            }
+
+            .featured{
+              background: linear-gradient(180deg, #ffcf0200 0%, #ffcf02ffgit 100%);
+            }
+
+            .favorite{
+              background: #ffcf02ff;
             }
           `}
         </style>
